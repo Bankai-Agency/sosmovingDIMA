@@ -8,7 +8,7 @@
 
 We're cloning https://www.sosmovingla.net/ (a Webflow site, 551 pages) into Next.js. The approach is **NOT** a rewrite with Tailwind/React components. Instead, we extract the original HTML from each page and render it via `dangerouslySetInnerHTML` with the original Webflow CSS. The goal is a **pixel-perfect 1:1 clone** that deploys on Vercel and can be gradually migrated to React components later.
 
-**Current status:** HTML and CSS work perfectly. **JavaScript is completely broken** - sliders, accordions, tabs, animations don't work because scripts load in the wrong order.
+**Current status:** HTML, CSS, and most JavaScript now works. Sliders, accordions, FAQ, chatbot, exit popup, touchbar animation, and photo scroll are all functional. Some Webflow IX2 page-specific animations (hover effects, scroll-triggered reveals) may still be missing due to a jQuery version mismatch (`t is not a function` error in IX2 engine).
 
 ---
 
@@ -84,6 +84,7 @@ Contains inline styles from the original `<style>` tags:
 - Rating wrapper widths
 - Review text truncation
 - Misc overrides
+- **CSS infinite scroll animation** for the about-company photo grid (`scrollUp` / `scrollDown` keyframes)
 
 **Important:** The original site uses `rem` units everywhere with a responsive root `font-size`:
 - Desktop: `html { font-size: 20px; }`
@@ -94,96 +95,33 @@ Contains inline styles from the original `<style>` tags:
 
 ---
 
-## JavaScript - THE MAIN PROBLEM
+## JavaScript - SOLVED (mostly)
 
-### What the original site loads (in order)
+### ScriptLoader (`src/components/ScriptLoader.tsx`)
 
-The original Webflow site loads scripts **synchronously** (no defer, no async) in this exact order:
+A client-side React component that loads all scripts in the correct sequential order using `useEffect` + dynamic `<script>` injection. This replaced the broken `<script defer>` approach.
 
+**Loading order:**
 ```
-1. jQuery 3.5.1 (synchronous, from local file)
-2. Webflow chunk files (synchronous):
-   - webflow.schunk.f2efb3c5440a81cf.js (used on ALL 550 pages)
-   - webflow.schunk.81d31091c363b462.js (used on ALL 550 pages)
-   - webflow.schunk.f919141e3448519b.js (used on 3 pages only)
-   - webflow.schunk.9dfb96661114d3db.js (used on 3 pages only)
-3. Webflow main bundle (synchronous, page-specific):
-   - webflow.987c289e.*.js - used on homepage + gallery (2 pages)
-   - webflow.8ef64be1.*.js - used on most city/service/blog pages (~545 pages)
-   - webflow.4c1b5164.*.js - used on book-online + free-estimate (2 pages)
-   - webflow.cf90aa9a.*.js - used on moving-services (1 page)
-4. GSAP 3.14.2 (synchronous)
-5. ScrollTrigger (synchronous)
-6. ScrollToPlugin (synchronous)
-7. Inline: gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
-8. Inline scripts: chatbot, exit popup, form validation, touchbar animation
-9. DOMContentLoaded handler: loadResources() which dynamically loads:
-   - jQuery 3.7.1 (overwrites 3.5.1)
-   - Slick Carousel
-   - Masonry
-   - Select2
-   - Datepicker
-   - InputMask
-   - Finsweet scrolldisable
-   - Custom script.js from jsdelivr (https://cdn.jsdelivr.net/gh/Evgeny2723/sos-moving@0ad49c3/script.js)
-   - Custom style.css from jsdelivr
+Step 0: Fetch /wf-page-map.json + /wf-bundle-map.json
+        Set data-wf-page on <html> for IX2 animations
+Step 1: jQuery 3.7.1 (await)
+Step 2: 2 common Webflow chunk files (await sequentially)
+Step 3: Page-specific Webflow main bundle (await, determined by wf-bundle-map.json)
+Step 4: GSAP + ScrollTrigger + ScrollToPlugin (await)
+Step 5: Extra CSS (slick, datepicker, select2, custom style.css)
+Step 6: jQuery plugins in parallel (Slick, Masonry, scrolldisable, InputMask, Datepicker, Select2)
+Step 7: Custom script.js from jsdelivr CDN (await)
+Step 8: custom-scripts.js (await)
 ```
 
-### What's in our `layout.tsx` now (BROKEN)
+### `public/wf-page-map.json`
+Maps 550 URL paths to their `data-wf-page` IDs (extracted from `_legacy/` HTML files). Used by ScriptLoader to set `data-wf-page` attribute on `<html>` before Webflow JS loads.
 
-Currently all scripts have `defer` attribute. This causes problems:
-1. `defer` makes scripts non-blocking but execution order between external scripts is not always guaranteed across browsers in Next.js context
-2. Webflow JS needs jQuery to be available when it executes
-3. `custom-scripts.js` starts with `gsap.registerPlugin()` which needs GSAP loaded first
-4. `custom-scripts.js` also has a `loadResources()` function that tries to load scripts from `assets/libs/jsdelivr/...` paths that DON'T EXIST in our `public/` folder
-
-### What the Webflow JS does
-
-The Webflow main JS bundle is a webpack/rspack bundle that handles ALL Webflow interactions:
-- **Sliders** (`.w-slider`) - location carousel, reviews, video reviews, latest news
-- **Tabs** (`.w-tabs`) - service areas
-- **Dropdowns** (`.w-dropdown`) - navbar dropdowns
-- **Accordion** - FAQ items
-- **IX2 animations** - page-specific interactions triggered by scroll, click, etc.
-- **Navbar** (`.w-nav`) - mobile menu
-
-Without this JS running correctly, the page is just static HTML with no interactivity.
-
-### What MUST happen to fix JS
-
-**Option A (recommended): Client-side ScriptLoader component**
-
-Create a React client component that dynamically loads scripts in the correct order:
-
-```
-Step 1: Load jQuery 3.7.1
-Step 2: Load Webflow chunk files (the 2 common ones)
-Step 3: Load correct Webflow main bundle (page-specific)
-Step 4: Load GSAP + ScrollTrigger + ScrollToPlugin
-Step 5: Load jQuery plugins (Slick, Masonry, Select2, Datepicker, InputMask, scrolldisable)
-Step 6: Load custom script.js from jsdelivr CDN
-Step 7: Execute custom scripts (exit popup, touchbar, form validation)
-```
-
-**Option B: Fix `layout.tsx` script tags**
-
-Remove `defer` and load scripts synchronously. But Next.js may not handle raw `<script>` tags correctly in server components.
-
-### The `data-wf-page` problem
-
-The original `<html>` tag has attributes:
-```html
-<html data-wf-domain="" data-wf-page="65a92d1fd36f5f043d607154" data-wf-site="645ab1d97922876b775bef4f">
-```
-
-- `data-wf-site` = `645ab1d97922876b775bef4f` (same for ALL pages)
-- `data-wf-page` = unique per page (used by IX2 for page-specific animations)
-
-Our `layout.tsx` has `<html lang="en" className="w-mod-js">` - missing both attributes. The Webflow IX2 engine may need `data-wf-site` to initialize. Built-in components (slider, tabs, dropdown) should work without `data-wf-page` since they use DOM-based initialization.
+### `public/wf-bundle-map.json`
+Maps 550 URL paths to their correct Webflow main JS bundle filename. ScriptLoader loads only the needed bundle per page.
 
 ### Different Webflow bundles per page type
-
-This is important! Different pages load different Webflow main JS files:
 
 | Bundle | Pages |
 |---|---|
@@ -192,48 +130,48 @@ This is important! Different pages load different Webflow main JS files:
 | `webflow.4c1b5164.e6782c011d2684fd.js` | Book Online, Free Estimate (2 pages) |
 | `webflow.cf90aa9a.d07593ecc8d89ceb.js` | Moving Services (1 page) |
 
-All share the same 2 common chunk files:
-- `webflow.schunk.f2efb3c5440a81cf.js`
-- `webflow.schunk.81d31091c363b462.js`
+### `public/custom-scripts.js`
 
-3 pages also need extra chunks:
-- `webflow.schunk.f919141e3448519b.js`
-- `webflow.schunk.9dfb96661114d3db.js`
+Cleaned-up version containing only runtime logic (no duplicate script loaders):
 
-The ScriptLoader needs to know which bundle to load per page. Or we can try loading ALL bundles (they use webpack chunk loading so extras might be harmless).
+1. **Chatbot loader** - Loads Chatbase on desktop, excludes certain pages
+2. **Passive event listeners** - For INP optimization
+3. **Exit popup** - Shows on mouse leave (desktop) or after 45s (mobile)
+4. **Form validation** - Validates required fields
+5. **Touchbar + Navbar animation** - GSAP scroll animation with safety check for GSAP availability
 
-### `public/custom-scripts.js` - What it contains
+### Known JS Issue: Webflow IX2 `t is not a function`
 
-6 sections extracted from inline `<script>` tags:
+The Webflow IX2 engine throws `jQuery.Deferred exception: t is not a function` during initialization. This is likely caused by jQuery version mismatch (original site used 3.5.1, we load 3.7.1). Impact:
+- Built-in Webflow components (sliders, tabs, dropdowns, navbar) **WORK** despite this error
+- Page-specific IX2 animations (hover effects, scroll-triggered reveals) **may not work**
+- The about-company photo scroll was fixed with a CSS-only animation as a workaround
 
-1. **GSAP register** (line 1): `gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);`
-2. **Chatbot loader** (lines 5-124): Loads Chatbase chatbot on desktop, excludes certain pages
-3. **loadScript/loadStyle/loadResources** (lines 129-192): Dynamic script loader that loads jQuery, plugins, and custom script.js. **PROBLEM**: Uses local paths like `assets/libs/jsdelivr/...` that don't exist. Must be changed to CDN URLs:
-   - `assets/libs/jsdelivr/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js` -> `https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js`
-   - `assets/libs/jsdelivr/npm/select2@4.1.0-rc.0/dist/js/select2.min.js` -> `https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js`
-   - `assets/libs/jsdelivr/gh/Evgeny2723/sos-moving@552da70/style.css` -> `https://cdn.jsdelivr.net/gh/Evgeny2723/sos-moving@552da70/style.css`
-   - `assets/libs/jsdelivr/gh/Evgeny2723/sos-moving@0ad49c3/script.js` -> `https://cdn.jsdelivr.net/gh/Evgeny2723/sos-moving@0ad49c3/script.js`
-4. **Exit popup** (lines 196-252): Shows popup when mouse leaves viewport (desktop) or after 45s (mobile)
-5. **Form validation** (lines 256-278): Validates required fields before submit
-6. **Touchbar + Navbar animation** (lines 283-312): GSAP scroll animation - touchbar slides up, navbar slides away on scroll
+**Possible fix:** Load jQuery 3.5.1 instead of 3.7.1, or patch the specific failing function.
 
 ---
 
 ## What's in `public/`
 
-### Assets (from original Webflow CDN)
 ```
 public/
 ├── assets/
 │   └── cdn/
 │       └── 645ab1d97922876b775bef4f/
-│           ├── css/sosmovingla.webflow.shared.7488016f9.min.css  (same as webflow.css)
-│           ├── js/  (Webflow JS files - duplicated at root)
+│           ├── css/sosmovingla.webflow.shared.7488016f9.min.css
+│           ├── js/  (Webflow JS files)
 │           └── [2500+ images: .avif, .webp, .png, .svg, .jpg]
-├── pages/              (537 extracted HTML files)
-├── webflow.css         (154KB - main stylesheet)
-├── webflow.*.js        (4 main bundles + 4 chunk files)
-├── custom-scripts.js   (11KB - inline scripts combined)
+├── images/                (reorganized images with proper names)
+│   ├── general/           (hero, company photos, icons)
+│   ├── blog/              (blog post thumbnails)
+│   ├── cities/            (city background images)
+│   └── services/          (service page images)
+├── pages/                 (537 extracted HTML files)
+├── webflow.css            (154KB - main stylesheet)
+├── webflow.*.js           (4 main bundles + 4 chunk files)
+├── custom-scripts.js      (cleaned-up inline scripts)
+├── wf-page-map.json       (550 URL → data-wf-page ID mappings)
+├── wf-bundle-map.json     (550 URL → Webflow bundle filename mappings)
 └── favicon/
 ```
 
@@ -245,31 +183,50 @@ Contains the original 551 HTML pages downloaded from Webflow. Each is a full HTM
 ## Extraction Scripts
 
 ### `scripts/extract-pages-html.mjs`
-Extracts `<body>` content from each `_legacy/` HTML file, rewrites asset paths to absolute, and saves to `public/pages/`. This is how we got the 537 HTML files.
+Extracts `<body>` content from each `_legacy/` HTML file, rewrites asset paths to absolute, and saves to `public/pages/`.
 
 ### `scripts/extract-all.mjs`
-Extracts structured data (cities JSON, services JSON, blog Markdown, reviews, FAQ) for the future component-based approach. Not currently used in the live site.
+Extracts structured data (cities JSON, services JSON, blog Markdown, reviews, FAQ) for the future component-based approach. Not currently used.
 
 ---
 
-## Visible Bugs (as reported by the owner)
+## What's Working (verified in browser)
 
-1. **Sliders don't work** - Locations carousel, Reviews, Video Reviews, Latest News all display as static grids/lists instead of carousels
-2. **FAQ accordion is fully open** - All FAQ items expanded by default, should be closed
-3. **Service Areas tabs are all open** - Should show one region at a time
-4. **No scroll animations** - GSAP-powered animations (touchbar, navbar hide, section reveals) don't play
-5. **Navbar mobile menu probably broken** - Webflow JS handles this
-6. **Forms probably broken** - Select2, Datepicker, InputMask not loading
-7. **Exit popup not working** - Script not running
+- ✅ Hero section with video background
+- ✅ Google + Yelp review badges (logos load correctly)
+- ✅ About company photo scroll animation (CSS infinite scroll)
+- ✅ Video reviews slider with thumbnails + play buttons
+- ✅ Text reviews slider
+- ✅ Gallery slider with navigation arrows
+- ✅ Latest News slider
+- ✅ Locations slider
+- ✅ FAQ accordion (closed by default)
+- ✅ Service Areas accordion (closed by default)
+- ✅ Services grid
+- ✅ "Why SOS Moving" section
+- ✅ Footer with all links
+- ✅ Exit popup (triggers on mouse leave or timeout)
+- ✅ Chatbot (loads on desktop after delay)
+- ✅ Navbar with dropdowns
+- ✅ Touchbar + Navbar scroll animation (GSAP)
 
-All caused by the same root issue: **JavaScript not loading in correct order**.
+## Remaining Issues
+
+1. **IX2 hover/scroll animations** - Some Webflow IX2 page-specific animations may not trigger (the `t is not a function` error). Impact is minor since most visible features work.
+2. **Forms untested end-to-end** - Select2, Datepicker, InputMask load but haven't been tested with form submission.
+3. **Mobile untested** - No mobile testing done yet.
+4. **Blog/city/service pages untested** - Only homepage verified so far.
+5. **Some pages may have missing images** - Only homepage images fully verified. Other pages may reference images not yet downloaded.
 
 ---
 
 ## Git History
 
 ```
-d8a0797 Fix missing images (yelp logo, play button, video thumbnails)  <- LATEST
+83861f2 Add data-wf-page per route + CSS photo scroll animation       <- LATEST
+a0cd92c Fix JS loading order with ScriptLoader + download missing images
+935ddd5 Add PROJECT-CONTEXT.md with full project state and WIP script fixes
+d8a0797 Fix missing images (yelp logo, play button, video thumbnails)
 4c548bb Switch to original Webflow HTML + CSS approach for 1:1 match
 920a32c Pixel-perfect redesign matching original sosmovingla.net       <- Tailwind attempt (rejected)
 0438184 Optimize for Vercel deployment
@@ -298,7 +255,7 @@ The long-term plan (documented in `.claude/plans/`) is to gradually replace `dan
 4. Replace jQuery libraries with React equivalents (Embla Carousel, Framer Motion, etc.)
 5. Eventually connect Sanity CMS for blog
 
-**But this is PHASE 2.** Phase 1 is getting the 1:1 clone working with all JS interactions.
+**But this is PHASE 2.** Phase 1 (1:1 clone with working JS) is mostly complete.
 
 ---
 
@@ -306,11 +263,15 @@ The long-term plan (documented in `.claude/plans/`) is to gradually replace `dan
 
 | File | Purpose |
 |---|---|
-| `src/app/layout.tsx` | Root layout - loads CSS + JS. **FIX SCRIPTS HERE** |
-| `src/app/globals.css` | Responsive font-size + Webflow overrides |
+| `src/app/layout.tsx` | Root layout - loads Webflow CSS, Google Fonts, ScriptLoader |
+| `src/app/globals.css` | Responsive font-size + Webflow overrides + photo scroll animation |
+| `src/components/ScriptLoader.tsx` | Client component - loads all JS in correct order |
 | `src/lib/page-renderer.ts` | Reads HTML from `public/pages/` |
+| `src/types/global.d.ts` | TypeScript types for global window objects (gsap, jQuery, etc.) |
 | `public/webflow.css` | Original Webflow CSS (154KB) |
-| `public/custom-scripts.js` | Combined inline scripts. **FIX PATHS HERE** |
+| `public/custom-scripts.js` | Chatbot, exit popup, form validation, touchbar animation |
+| `public/wf-page-map.json` | 550 URL path → data-wf-page ID mappings |
+| `public/wf-bundle-map.json` | 550 URL path → Webflow bundle filename mappings |
 | `public/pages/*.html` | 537 extracted page HTML files |
 | `public/webflow.*.js` | 8 Webflow JS files (4 bundles + 4 chunks) |
 | `_legacy/` | Original HTML files (git-ignored, local only) |
@@ -320,43 +281,27 @@ The long-term plan (documented in `.claude/plans/`) is to gradually replace `dan
 
 ## IMMEDIATE NEXT STEPS
 
-### Step 1: Fix script loading (THE CRITICAL FIX)
+### Step 1: Test other page types
+- Open a city page (e.g. `/beverly-hills-movers`) and verify all sections work
+- Open a service page (e.g. `/services/apartment-movers`)
+- Open a blog post
+- Open `/free-estimate` and test the form
 
-Create `src/components/ScriptLoader.tsx` - a client component using `useEffect` to load scripts in order:
+### Step 2: Fix IX2 if needed
+- Try loading jQuery 3.5.1 instead of 3.7.1 to see if `t is not a function` resolves
+- If that fixes IX2, the photo scroll CSS animation can be kept as a bonus
 
-```
-1. jQuery (await)
-2. Webflow chunks (await)
-3. Webflow main bundle (await - ideally page-specific, or load all 4)
-4. GSAP + plugins (await)
-5. Slick, Masonry, Select2, Datepicker, InputMask, scrolldisable (await Promise.all)
-6. Custom script.js from jsdelivr (await)
-7. Run remaining custom scripts (touchbar, exit popup, form validation)
-```
+### Step 3: Mobile testing
+- Test responsive behavior on mobile viewports
+- Verify touchbar animation works on mobile
 
-### Step 2: Fix `custom-scripts.js`
+### Step 4: Missing images audit
+- Run a script to check all `src=` references in `public/pages/*.html` against actual files in `public/`
+- Download any missing images from the Webflow CDN
 
-- Change `assets/libs/jsdelivr/...` paths to CDN URLs
-- OR remove the `loadResources()` function entirely if ScriptLoader handles all loading
-- Keep: chatbot, exit popup, form validation, touchbar animation
-
-### Step 3: Update `layout.tsx`
-
-- Remove all `<script defer>` tags from `<body>`
-- Add `<ScriptLoader />` component
-- Add `data-wf-site="645ab1d97922876b775bef4f"` to `<html>` tag
-- Consider adding `data-wf-page` per page (may need per-route logic)
-
-### Step 4: Test
-
-- Sliders should carousel
-- FAQ should be collapsed
-- Service Areas should show one tab
-- Touchbar should animate on scroll
-- Exit popup should trigger on mouse leave
-- Forms should have input masks, datepickers, select2
-
-### Step 5: Push to GitHub and verify on Vercel
+### Step 5: Full Vercel verification
+- Verify all 537+ routes work on production deploy
+- Check Lighthouse scores
 
 ---
 
