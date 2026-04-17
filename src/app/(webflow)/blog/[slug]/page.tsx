@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import { getNestedPageHTML } from '@/lib/page-renderer';
-import { readdirSync } from 'fs';
+import { readdirSync, existsSync } from 'fs';
 import { join } from 'path';
+import { renderPage } from '@/lib/render-page';
 
 export async function generateStaticParams() {
   const dir = join(process.cwd(), 'public/pages');
@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const html = getNestedPageHTML('blog', slug);
-  if (!html) notFound();
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  const pageSlug = `blog__${slug}`;
+  if (!existsSync(join(process.cwd(), 'public/pages', `${pageSlug}.html`))) notFound();
+  return renderPage(pageSlug);
 }

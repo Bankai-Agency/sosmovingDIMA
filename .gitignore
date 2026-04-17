@@ -6,3 +6,4 @@ _legacy/
 next-env.d.ts
 .env*.local
 image-audit-report.txt
+.tmp/

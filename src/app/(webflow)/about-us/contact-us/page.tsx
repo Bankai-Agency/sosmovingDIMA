@@ -1,7 +1,2 @@
-import { getNestedPageHTML } from '@/lib/page-renderer';
-
-export default function Page() {
-  const html = getNestedPageHTML('about-us', 'contact-us');
-  if (!html) return <div>Page not found</div>;
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
-}
+import { renderPage } from '@/lib/render-page';
+export default function Page() { return renderPage('about-us__contact-us'); }

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import { getPageHTML } from '@/lib/page-renderer';
-import { readdirSync } from 'fs';
+import { readdirSync, existsSync } from 'fs';
 import { join } from 'path';
+import { renderPage } from '@/lib/render-page';
 
 export async function generateStaticParams() {
   const dir = join(process.cwd(), 'public/pages');
@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 export default async function CityPage({ params }: { params: Promise<{ citySlug: string }> }) {
   const { citySlug } = await params;
-  const html = getPageHTML(citySlug);
-  if (!html) notFound();
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  const pagesDir = join(process.cwd(), 'public/pages');
+  if (!existsSync(join(pagesDir, `${citySlug}.html`))) notFound();
+  return renderPage(citySlug);
 }

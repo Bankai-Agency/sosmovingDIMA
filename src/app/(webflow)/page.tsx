@@ -1,7 +1,5 @@
-import { getPageHTML } from '@/lib/page-renderer';
+import { renderPage } from '@/lib/render-page';
 
 export default function HomePage() {
-  const html = getPageHTML('index');
-  if (!html) return <div>Page not found</div>;
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  return renderPage('index');
 }
