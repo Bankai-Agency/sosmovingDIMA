@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ScriptLoader from "@/components/ScriptLoader";
+import { SharedHtmlBlock } from "@/components/shared/SharedHtmlBlock";
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +27,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic" rel="stylesheet" />
       </head>
       <body>
+        <SharedHtmlBlock name="exit-popup" />
+        <SharedHtmlBlock name="navbar" />
         {children}
+        <SharedHtmlBlock name="footer" />
         <ScriptLoader />
       </body>
     </html>
