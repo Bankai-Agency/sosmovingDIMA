@@ -45,7 +45,9 @@ export default function ScriptLoader() {
         }
 
         // ── Step 1: jQuery (everything depends on it) ──
-        await loadScript('https://code.jquery.com/jquery-3.7.1.min.js');
+        // Pinned to 3.5.1 to match original Webflow site — 3.7.1 breaks IX2
+        // with "t is not a function" error in the animation engine.
+        await loadScript('https://code.jquery.com/jquery-3.5.1.min.js');
 
         // ── Step 2: Webflow chunk files (must load before main bundle) ──
         // Common chunks used by all pages

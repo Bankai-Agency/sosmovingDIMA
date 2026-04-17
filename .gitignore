@@ -5,3 +5,4 @@ _legacy/
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+image-audit-report.txt
