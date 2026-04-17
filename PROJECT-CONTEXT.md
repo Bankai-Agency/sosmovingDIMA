@@ -8,7 +8,7 @@
 
 We're cloning https://www.sosmovingla.net/ (a Webflow site, 551 pages) into Next.js. The approach is **NOT** a rewrite with Tailwind/React components. Instead, we extract the original HTML from each page and render it via `dangerouslySetInnerHTML` with the original Webflow CSS. The goal is a **pixel-perfect 1:1 clone** that deploys on Vercel and can be gradually migrated to React components later.
 
-**Current status:** HTML, CSS, and most JavaScript now works. Sliders, accordions, FAQ, chatbot, exit popup, touchbar animation, and photo scroll are all functional. Some Webflow IX2 page-specific animations (hover effects, scroll-triggered reveals) may still be missing due to a jQuery version mismatch (`t is not a function` error in IX2 engine).
+**Current status:** HTML, CSS, and JavaScript now work. Sliders, accordions, FAQ, tabs, dropdowns, chatbot, exit popup, touchbar animation, and photo scroll are all functional via `ScriptLoader`. 505 base images downloaded from the Webflow CDN (team avatars, location backgrounds, video thumbnails, Google logo, service icons). Responsive variants (`-p-500/800/1080/1600`) auto-generated with `sharp` — most already existed, 14 remaining variants were generated from bases. About-company photo scroll uses a CSS `@keyframes` workaround because Webflow IX2 fails with `t is not a function` under jQuery 3.7.1 (the original site pinned 3.5.1). Other IX2 hover/scroll animations still don't fully work — CSS workarounds applied where needed.
 
 ---
 
@@ -142,12 +142,12 @@ Cleaned-up version containing only runtime logic (no duplicate script loaders):
 
 ### Known JS Issue: Webflow IX2 `t is not a function`
 
-The Webflow IX2 engine throws `jQuery.Deferred exception: t is not a function` during initialization. This is likely caused by jQuery version mismatch (original site used 3.5.1, we load 3.7.1). Impact:
-- Built-in Webflow components (sliders, tabs, dropdowns, navbar) **WORK** despite this error
-- Page-specific IX2 animations (hover effects, scroll-triggered reveals) **may not work**
-- The about-company photo scroll was fixed with a CSS-only animation as a workaround
+The Webflow IX2 engine throws `jQuery.Deferred exception: t is not a function` during initialization. This is caused by a jQuery version mismatch (original site used 3.5.1, we load 3.7.1). Impact:
+- Built-in Webflow components (sliders, tabs, dropdowns, accordions, navbar) **WORK** despite this error — confirmed in browser.
+- Page-specific IX2 animations (hover effects, scroll-triggered reveals) **don't fully work**.
+- The about-company photo scroll was fixed with a CSS-only infinite-scroll animation (`@keyframes scrollUp` / `scrollDown` in `globals.css`) as a workaround.
 
-**Possible fix:** Load jQuery 3.5.1 instead of 3.7.1, or patch the specific failing function.
+**Possible fix (not yet applied):** Load jQuery 3.5.1 instead of 3.7.1, or patch the specific failing function. For now CSS workarounds are preferred where an IX2 effect is important to visual parity.
 
 ---
 
@@ -161,11 +161,12 @@ public/
 │           ├── css/sosmovingla.webflow.shared.7488016f9.min.css
 │           ├── js/  (Webflow JS files)
 │           └── [2500+ images: .avif, .webp, .png, .svg, .jpg]
-├── images/                (reorganized images with proper names)
-│   ├── general/           (hero, company photos, icons)
-│   ├── blog/              (blog post thumbnails)
-│   ├── cities/            (city background images)
-│   └── services/          (service page images)
+├── images/                (downloaded from Webflow CDN, ~1660 files total)
+│   ├── general/           (~587 files — hero, company photos, service icons, Google logo, video thumbnails, location backgrounds)
+│   ├── blog/              (~942 files — blog post thumbnails + responsive variants)
+│   ├── cities/            (~114 files — city hero backgrounds + responsive variants)
+│   ├── services/          (~16 files — service page hero images)
+│   └── team/              (~4 files — team avatars)
 ├── pages/                 (537 extracted HTML files)
 ├── webflow.css            (154KB - main stylesheet)
 ├── webflow.*.js           (4 main bundles + 4 chunk files)
@@ -188,6 +189,12 @@ Extracts `<body>` content from each `_legacy/` HTML file, rewrites asset paths t
 ### `scripts/extract-all.mjs`
 Extracts structured data (cities JSON, services JSON, blog Markdown, reviews, FAQ) for the future component-based approach. Not currently used.
 
+### `scripts/extract-sections.mjs`
+Helper for extracting specific page sections. Used during investigation, not in the build pipeline.
+
+### `scripts/generate-responsive-images.mjs`
+Scans every `public/pages/*.html` for `src=` and `srcset=` references to `/images/...`, detects Webflow's `-p-500/800/1080/1600.{webp|jpg|png|avif}` variant pattern, and — when a referenced variant is missing but its base file exists — regenerates the variant using `sharp` (quality 82 for webp/jpeg, 60 for avif). The most recent run generated 14 missing variants; all others already exist on disk. Re-run this whenever new base images are added.
+
 ---
 
 ## What's Working (verified in browser)
@@ -202,7 +209,7 @@ Extracts structured data (cities JSON, services JSON, blog Markdown, reviews, FA
 - ✅ Locations slider
 - ✅ FAQ accordion (closed by default)
 - ✅ Service Areas accordion (closed by default)
-- ✅ Services grid
+- ✅ Services grid — "SOS Moving Services" section on the homepage. **Note (user correction):** the Apartment Movers / Commercial / Packing / White Glove / Storage / Movers images ARE icons in this grid, not standalone images. Previously they were thought missing; they are present and referenced from `public/images/general/`.
 - ✅ "Why SOS Moving" section
 - ✅ Footer with all links
 - ✅ Exit popup (triggers on mouse leave or timeout)
@@ -212,18 +219,20 @@ Extracts structured data (cities JSON, services JSON, blog Markdown, reviews, FA
 
 ## Remaining Issues
 
-1. **IX2 hover/scroll animations** - Some Webflow IX2 page-specific animations may not trigger (the `t is not a function` error). Impact is minor since most visible features work.
+1. **IX2 hover/scroll animations** - Page-specific Webflow IX2 animations (hover effects, scroll-triggered reveals) don't fully fire because of the `t is not a function` error caused by the jQuery 3.5.1 → 3.7.1 mismatch. CSS workarounds are used where parity is important (e.g. about-company photo scroll). A real fix would be to pin jQuery 3.5.1 or patch the IX2 bundle.
 2. **Forms untested end-to-end** - Select2, Datepicker, InputMask load but haven't been tested with form submission.
 3. **Mobile untested** - No mobile testing done yet.
 4. **Blog/city/service pages untested** - Only homepage verified so far.
-5. **Some pages may have missing images** - Only homepage images fully verified. Other pages may reference images not yet downloaded.
+5. **Image coverage** - 505 base images + responsive variants downloaded; most referenced images now exist, but a full audit of `src`/`srcset` vs filesystem across all 537 pages hasn't been re-run since the last batch. The `scripts/generate-responsive-images.mjs` run reports 14 regenerated variants, the rest were already present.
 
 ---
 
 ## Git History
 
 ```
-83861f2 Add data-wf-page per route + CSS photo scroll animation       <- LATEST
+fe50c51 Download 505 missing images from Webflow CDN                    <- LATEST
+c7fdb0d Update PROJECT-CONTEXT.md with latest progress
+83861f2 Add data-wf-page per route + CSS photo scroll animation
 a0cd92c Fix JS loading order with ScriptLoader + download missing images
 935ddd5 Add PROJECT-CONTEXT.md with full project state and WIP script fixes
 d8a0797 Fix missing images (yelp logo, play button, video thumbnails)
@@ -276,6 +285,7 @@ The long-term plan (documented in `.claude/plans/`) is to gradually replace `dan
 | `public/webflow.*.js` | 8 Webflow JS files (4 bundles + 4 chunks) |
 | `_legacy/` | Original HTML files (git-ignored, local only) |
 | `scripts/extract-pages-html.mjs` | Extraction script |
+| `scripts/generate-responsive-images.mjs` | Generates missing `-p-500/800/1080/1600` variants from base images via `sharp` |
 
 ---
 
@@ -296,8 +306,9 @@ The long-term plan (documented in `.claude/plans/`) is to gradually replace `dan
 - Verify touchbar animation works on mobile
 
 ### Step 4: Missing images audit
-- Run a script to check all `src=` references in `public/pages/*.html` against actual files in `public/`
-- Download any missing images from the Webflow CDN
+- Re-run the image coverage check after the 505-file CDN download.
+- `scripts/generate-responsive-images.mjs` already handles variant regeneration; run it again after adding any new base images.
+- Remaining concern: pages that reference images whose BASE file is also absent (the generator only fills variants when a base exists).
 
 ### Step 5: Full Vercel verification
 - Verify all 537+ routes work on production deploy
