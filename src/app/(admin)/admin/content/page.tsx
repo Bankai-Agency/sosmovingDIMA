@@ -17,12 +17,12 @@ export default function ContentPage() {
       <TopBar
         title="Контент"
         actions={
-          <button
-            type="button"
-            className="h-10 rounded-md bg-dark px-4 text-[15px] font-semibold text-white transition-colors hover:bg-dark/90"
+          <Link
+            href="/admin/content/new"
+            className="inline-flex h-10 items-center rounded-md bg-dark px-4 text-[15px] font-semibold text-white transition-colors hover:bg-dark/90"
           >
             + Новая статья
-          </button>
+          </Link>
         }
       />
       <div className="flex-1 p-6">
