@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { openQuoteModal } from "@/components/mainpage2/ui/QuoteModal";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -9,23 +12,41 @@ type ButtonProps = {
   className?: string;
   type?: "button" | "submit";
   onClick?: () => void;
+  /** Hide the trailing arrow icon (default: show) */
+  noIcon?: boolean;
 };
 
-/**
- * Pill button — based on startduck.com .u-button spec:
- * border-radius: 100vw (full pill), font-weight: 500, letter-spacing: -0.03em,
- * line-height: 100%, padding 1.25em equivalent (px-8 py-4).
- * Primary variant filled with our accent yellow.
- */
+function ArrowIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
+  );
+}
+
 const base =
-  "inline-flex items-center justify-center rounded-full font-medium leading-none tracking-[-0.03em] whitespace-nowrap px-8 py-4 text-base transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "pill-btn inline-flex items-center justify-center gap-3 h-12 px-6 rounded-full font-semibold leading-none tracking-[-0.02em] whitespace-nowrap text-[0.9375rem] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 const variants = {
-  primary: "bg-accent text-accent-text hover:bg-accent-hover",
+  primary: "pill-btn--primary bg-accent text-accent-text",
   outline:
-    "border border-white/20 text-white hover:bg-white/10 backdrop-blur-[40px]",
-  ghost: "text-white hover:bg-white/10",
+    "pill-btn--outline border border-white/20 text-white backdrop-blur-[40px]",
+  ghost: "pill-btn--ghost text-white",
 };
+
+// Hrefs that should open the quote-modal instead of navigating.
+const QUOTE_HREFS = new Set(["/free-estimate", "/book-online"]);
 
 export function Button({
   children,
@@ -34,20 +55,55 @@ export function Button({
   className = "",
   type = "button",
   onClick,
+  noIcon = false,
 }: ButtonProps) {
   const classes = `${base} ${variants[variant]} ${className}`;
+  const body = (
+    <>
+      {children}
+      {!noIcon && <ArrowIcon />}
+    </>
+  );
+  const content = (
+    <>
+      <span className="pill-btn-sizer" aria-hidden="true">
+        {body}
+      </span>
+      <span className="pill-label">{body}</span>
+      <span className="pill-label-hover" aria-hidden="true">
+        {body}
+      </span>
+    </>
+  );
+
+  // Intercept quote-CTA links — open the modal instead of navigating.
+  if (href && QUOTE_HREFS.has(href)) {
+    return (
+      <Link
+        href={href}
+        onClick={(e) => {
+          e.preventDefault();
+          openQuoteModal();
+          onClick?.();
+        }}
+        className={classes}
+      >
+        {content}
+      </Link>
+    );
+  }
 
   if (href) {
     return (
       <Link href={href} className={classes}>
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
     <button type={type} onClick={onClick} className={classes}>
-      {children}
+      {content}
     </button>
   );
 }

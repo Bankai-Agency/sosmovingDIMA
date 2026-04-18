@@ -36,114 +36,113 @@ const benefits = [
 
 export function WhySos() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const ROTATE_MS = 5000;
 
-  // Auto-rotate every 5s unless user interacts
+  // Auto-rotate every ROTATE_MS — resets whenever `active` changes (including manual click)
   useEffect(() => {
-    if (paused) return;
-    timerRef.current = setInterval(() => {
+    const id = setTimeout(() => {
       setActive((i) => (i + 1) % benefits.length);
-    }, 5000);
-    return () => clearInterval(timerRef.current);
-  }, [paused]);
+    }, ROTATE_MS);
+    return () => clearTimeout(id);
+  }, [active]);
 
   const current = benefits[active];
 
   return (
     <section id="why-sos" className="py-20 md:py-28">
-      <Container>
-        <SectionLabel>Why choose us</SectionLabel>
-        <RevealText
-          as="h2"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-10 md:mb-14"
-        >
-          Not your average movers
-        </RevealText>
+      {/* Full-bleed image — viewport width AND height */}
+      <div
+        className="relative overflow-hidden bg-black w-screen h-screen left-1/2 -translate-x-1/2"
+      >
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={current.image}
+              alt={current.title}
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority={false}
+            />
+            {/* Top + bottom gradients for text legibility (title on top, tabs on bottom) */}
+            <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+          </motion.div>
+        </AnimatePresence>
 
-        {/* Big image with title overlay */}
-        <div
-          className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-black aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/10]"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          <AnimatePresence mode="sync">
-            <motion.div
-              key={active}
-              initial={{ opacity: 0, scale: 1.02 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-0"
+        {/* Heading overlay — top */}
+        <div className="absolute inset-x-0 top-0 z-10 p-6 sm:p-10 md:p-14">
+          <div className="mx-auto w-full max-w-7xl flex flex-col gap-6">
+            <SectionLabel>Why choose us</SectionLabel>
+            <RevealText
+              as="h2"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] max-w-3xl"
             >
-              <Image
-                src={current.image}
-                alt={current.title}
-                fill
-                sizes="100vw"
-                className="object-cover"
-                priority={false}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-black/10" />
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Title/text overlay */}
-          <div className="absolute inset-x-0 top-0 z-10 p-6 sm:p-10 md:p-14">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={`text-${active}`}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="max-w-xl"
-              >
-                <h3 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1] tracking-[-0.03em] mb-4">
-                  {current.title}
-                </h3>
-                <p className="text-white/85 text-base sm:text-lg md:text-xl leading-[1.4] tracking-[-0.01em]">
-                  {current.text}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+              Not your average movers
+            </RevealText>
           </div>
         </div>
 
-        {/* Numbered tab-pills */}
-        <div className="mt-4 sm:mt-5 grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
-          {benefits.map((b, i) => {
-            const isActive = i === active;
-            return (
-              <button
-                key={i}
-                type="button"
-                onClick={() => {
-                  setActive(i);
-                  setPaused(true);
-                }}
-                className={`group text-left rounded-xl p-4 sm:p-5 transition-colors duration-300 ${
-                  isActive
-                    ? "bg-accent text-accent-text"
-                    : "bg-surface text-white hover:bg-surface-hover border border-white/5"
-                }`}
-                aria-pressed={isActive}
-              >
-                <span
-                  className={`block font-mono text-xs tracking-[0.08em] mb-6 sm:mb-10 ${
-                    isActive ? "text-accent-text/60" : "text-text-muted"
-                  }`}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="block font-mono font-bold uppercase text-sm sm:text-base leading-[1.15] tracking-[-0.02em]">
-                  {b.label}
-                </span>
-              </button>
-            );
-          })}
+        {/* Tabs overlay — bottom, pinned inside image */}
+        <div className="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-6 md:p-8">
+          <div className="mx-auto w-full max-w-7xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3">
+              {benefits.map((b, i) => {
+                const isActive = i === active;
+                return (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActive(i)}
+                    className={`group relative overflow-hidden text-left rounded-xl p-4 sm:p-5 transition-colors duration-300 backdrop-blur-md ${
+                      isActive
+                        ? "bg-white/10 text-white"
+                        : "bg-black/30 text-white hover:bg-black/40 border border-white/10"
+                    }`}
+                    aria-pressed={isActive}
+                  >
+                    {isActive && (
+                      <motion.span
+                        key={`progress-${active}`}
+                        aria-hidden="true"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{
+                          duration: ROTATE_MS / 1000,
+                          ease: "linear",
+                        }}
+                        style={{ originX: 0 }}
+                        className="absolute inset-0 bg-accent z-0"
+                      />
+                    )}
+                    <span
+                      className={`relative z-10 block font-mono text-xs tracking-[0.08em] mb-6 sm:mb-10 ${
+                        isActive ? "text-accent-text/60" : "text-white/60"
+                      }`}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span
+                      className={`relative z-10 block font-mono font-bold uppercase text-sm sm:text-base leading-[1.15] tracking-[-0.02em] ${
+                        isActive ? "text-accent-text" : ""
+                      }`}
+                    >
+                      {b.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

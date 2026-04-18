@@ -24,7 +24,7 @@
   letter-spacing: -0.02em;
 }
 
-/* Pill-nav link — expanding circle hover + label swap (based on React Bits PillNav) */
+/* Pill-nav link — fill-from-bottom hover + label swap */
 .pill-nav-link {
   position: relative;
   display: inline-flex;
@@ -34,59 +34,114 @@
   padding: 0 1rem;
   border-radius: 9999px;
   overflow: hidden;
+  isolation: isolate;
   color: #fff;
-  transition: color 0.25s var(--ease, cubic-bezier(0.5, 0, 0, 1));
+  transition: color 0.25s cubic-bezier(0.5, 0, 0, 1);
 }
 .pill-nav-link::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 100%;
-  width: 180%;
-  aspect-ratio: 1;
+  inset: 0;
   background: var(--color-accent);
-  border-radius: 50%;
-  transform: translate(-50%, 0) scale(0);
-  transform-origin: 50% 0%;
+  transform: translateY(100%);
   transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 }
 .pill-nav-link:hover::before,
+.pill-nav-link:focus-visible::before,
 .pill-nav-link.is-open::before {
-  transform: translate(-50%, -15%) scale(1);
+  transform: translateY(0);
 }
-.pill-nav-link > .pill-label-stack {
-  position: relative;
+.pill-nav-link > .pill-label-sizer {
+  visibility: hidden;
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  z-index: 1;
 }
-.pill-nav-link .pill-label {
-  display: inline-block;
-  transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
-}
-.pill-nav-link .pill-label-hover {
+.pill-nav-link > .pill-label,
+.pill-nav-link > .pill-label-hover {
   position: absolute;
   inset: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.375rem;
-  color: var(--color-accent-text);
-  transform: translateY(110%);
   transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+.pill-nav-link > .pill-label-hover {
+  transform: translateY(100%);
+  color: var(--color-accent-text);
   pointer-events: none;
 }
-.pill-nav-link:hover .pill-label,
-.pill-nav-link.is-open .pill-label {
-  transform: translateY(-110%);
+.pill-nav-link:hover > .pill-label,
+.pill-nav-link:focus-visible > .pill-label,
+.pill-nav-link.is-open > .pill-label { transform: translateY(-100%); }
+.pill-nav-link:hover > .pill-label-hover,
+.pill-nav-link:focus-visible > .pill-label-hover,
+.pill-nav-link.is-open > .pill-label-hover { transform: translateY(0); }
+
+/* Pill button — fill-from-bottom hover (CTA size) */
+.pill-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.3s cubic-bezier(0.5, 0, 0, 1),
+              border-color 0.3s cubic-bezier(0.5, 0, 0, 1);
 }
-.pill-nav-link:hover .pill-label-hover,
-.pill-nav-link.is-open .pill-label-hover {
+.pill-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  transition: transform 0.55s cubic-bezier(0.5, 0, 0, 1);
+  z-index: -1;
+  pointer-events: none;
+}
+.pill-btn:hover::before,
+.pill-btn:focus-visible::before {
   transform: translateY(0);
 }
+.pill-btn > .pill-btn-sizer {
+  visibility: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+.pill-btn > .pill-label,
+.pill-btn > .pill-label-hover {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+  transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
+}
+.pill-btn > .pill-label-hover {
+  transform: translateY(100%);
+  pointer-events: none;
+}
+.pill-btn:hover > .pill-label,
+.pill-btn:focus-visible > .pill-label { transform: translateY(-100%); }
+.pill-btn:hover > .pill-label-hover,
+.pill-btn:focus-visible > .pill-label-hover { transform: translateY(0); }
+
+/* Primary — yellow base, dark circle rises, text flips to white */
+.pill-btn--primary::before { background: #1a1a1a; }
+.pill-btn--primary .pill-label-hover { color: #fff; }
+
+/* Outline — transparent + white border, yellow circle, text flips to dark */
+.pill-btn--outline::before { background: var(--color-accent); }
+.pill-btn--outline:hover,
+.pill-btn--outline:focus-visible { border-color: var(--color-accent); }
+.pill-btn--outline .pill-label-hover { color: var(--color-accent-text); }
+
+/* Ghost — transparent, yellow circle, text flips to dark */
+.pill-btn--ghost::before { background: var(--color-accent); }
+.pill-btn--ghost .pill-label-hover { color: var(--color-accent-text); }
 
 /* display-l utility
    Ported spec — startduck.com .u-display-l
