@@ -1,5 +1,16 @@
 import { renderPage } from '@/lib/render-page';
 
 export default function HomePage() {
-  return renderPage('index');
+  return (
+    <>
+      {/* Homepage-specific Webflow main bundle (plus 2 extra chunks it needs).
+          Layout.tsx preloads jQuery + common chunks; this preloads the rest so
+          the whole Webflow script chain is fetched in parallel with HTML parse
+          instead of serially after hydration. See wf-bundle-map.json. */}
+      <link rel="preload" as="script" href="/webflow.987c289e.df925483dbcdb1a9.js" />
+      <link rel="preload" as="script" href="/webflow.schunk.f919141e3448519b.js" />
+      <link rel="preload" as="script" href="/webflow.schunk.9dfb96661114d3db.js" />
+      {renderPage('index')}
+    </>
+  );
 }

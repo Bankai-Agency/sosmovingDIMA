@@ -21,6 +21,26 @@ export default function RootLayout({
   return (
     <html lang="en" className="w-mod-js" data-wf-site="645ab1d97922876b775bef4f">
       <head>
+        {/* Preload critical same-origin scripts so browser fetches them
+            in parallel with HTML parsing, instead of waiting for ScriptLoader
+            to kick in after React hydration. Cuts ~500-800ms off time-to-jQuery
+            on slow mobile networks. Must match exact hrefs in ScriptLoader.tsx. */}
+        <link rel="preload" as="script" href="/webflow.schunk.f2efb3c5440a81cf.js" />
+        <link rel="preload" as="script" href="/webflow.schunk.81d31091c363b462.js" />
+
+        {/* External scripts: preconnect opens TCP+TLS in advance, preload queues
+            the fetch. NOTE: no crossOrigin here — ScriptLoader creates <script>
+            tags without crossorigin attr, so credentials modes must match
+            (both "include" by default). If crossOrigin="anonymous" is added
+            here without matching the script tag, browser fetches jQuery twice. */}
+        <link rel="preconnect" href="https://code.jquery.com" />
+        <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.5.1.min.js" />
+
+        {/* dns-prefetch is cheaper than preconnect — use for origins loaded
+            later in the critical chain (GSAP, jQuery plugins, Chatbase). */}
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
         <link href="/webflow.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
