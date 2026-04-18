@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import ScriptLoader from "@/components/ScriptLoader";
 import { SharedHtmlBlock } from "@/components/shared/SharedHtmlBlock";
+
+// Inter Variable: self-hosted by Next at build time (no fonts.googleapis.com
+// request, no render-blocking external CSS). Variable font covers weights
+// 100-900 from a single WOFF2 (~50KB). Next auto-generates a size-adjust
+// fallback, so CLS stays near 0 during swap. Exposed as --font-inter and
+// force-applied in globals.css to override Lato in webflow.css.
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-mod-js" data-wf-site="645ab1d97922876b775bef4f">
+    <html
+      lang="en"
+      className={`${inter.variable} w-mod-js`}
+      data-wf-site="645ab1d97922876b775bef4f"
+    >
       <head>
         {/* Preload critical same-origin scripts so browser fetches them
             in parallel with HTML parsing, instead of waiting for ScriptLoader
@@ -50,16 +66,9 @@ export default function RootLayout({
 
         <link href="/webflow.css" rel="stylesheet" type="text/css" />
 
-        {/* Preload only the most-used font variant (Lato 400 regular). The
-            400-italic and 700 files grow in on-demand via @font-face in
-            globals.css — no need to preload all three. 23KB, crossOrigin
-            required for font preloads per HTML spec. */}
-        <link rel="preload" as="font" type="font/woff2" href="/fonts/lato-400.woff2" crossOrigin="anonymous" />
-
-        {/* Lato: self-hosted in public/fonts/ via @font-face in globals.css.
-            Previously loaded from fonts.googleapis.com (extra RTT) + 10 Lato
-            variants (of which 7 unused). Now 3 WOFF2 files, ~72KB, same-origin.
-            No more render-blocking external stylesheet, no preconnect needed. */}
+        {/* Redesign step 1: Lato replaced with Inter Variable via
+            next/font/google (see `inter` instance declared above). Next handles
+            preload + self-host automatically, no manual <link> tags needed. */}
       </head>
       <body>
         <SharedHtmlBlock name="exit-popup" />
