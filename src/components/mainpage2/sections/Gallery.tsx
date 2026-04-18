@@ -1,103 +1,72 @@
 "use client";
 
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Container } from "@/components/mainpage2/ui/Container";
-import { FadeUp } from "@/components/mainpage2/ui/Animate";
-import { YouTubePlayer } from "@/components/mainpage2/ui/YouTubePlayer";
+import { RevealText } from "@/components/mainpage2/ui/RevealText";
+import { InView } from "@/components/core/in-view";
 
-const galleryVideos = [
-  {
-    title: "SOS Moving TOP-10 Moving Company in Los Angeles",
-    videoId: "K8ipQ81G8lg",
-    thumbnail: "/mainpage2/images/gallery-2.webp",
-  },
-  {
-    title: "SOS Commercial with Vivi Castrillon",
-    videoId: "dQriI7gJR2Y",
-    thumbnail: "/mainpage2/images/gallery-1.webp",
-  },
-  {
-    title: "SOS Commercial",
-    videoId: "QG0FZXbvAUg",
-    thumbnail: "/mainpage2/images/gallery-3.webp",
-  },
-  {
-    title: "SOS Commercial with Tawny Jordan",
-    videoId: "ghzS1cCBruY",
-    thumbnail: "/mainpage2/images/video-4.webp",
-  },
+const galleryImages = [
+  "/mainpage2/images/gallery-1.webp",
+  "/mainpage2/images/Movers-and-truck.avif",
+  "/mainpage2/images/gallery-2.webp",
+  "/mainpage2/images/Helpers-and-Truck.webp",
+  "/mainpage2/images/gallery-3.webp",
+  "/mainpage2/images/SOS-Movers-Loading.webp",
+  "/mainpage2/images/video-4.webp",
+  "/mainpage2/images/Local-Moving-Hero-Img.avif",
+  "/mainpage2/images/Commercial-Moving.avif",
+  "/mainpage2/images/Packing-and-moving-service.avif",
 ];
 
 export function Gallery() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -500 : 500,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <section className="py-16 md:py-24 overflow-hidden">
-      {/* Header stays inside Container */}
+    <section id="gallery" className="py-20 md:py-32">
       <Container>
-        <FadeUp>
-          <div className="flex items-end justify-between mb-3">
-            <h2 className="text-3xl md:text-[3rem] font-bold text-white leading-tight">
-              Gallery
-            </h2>
-            <div className="flex gap-3">
-              <button
-                type="button"
-                onClick={() => scroll("left")}
-                className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-text-muted hover:text-white hover:border-accent hover:bg-accent/10 transition-all duration-300"
-                aria-label="Previous"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={() => scroll("right")}
-                className="w-12 h-12 rounded-full border border-border flex items-center justify-center text-text-muted hover:text-white hover:border-accent hover:bg-accent/10 transition-all duration-300"
-                aria-label="Next"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <polyline points="9 6 15 12 9 18" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <p className="text-text-muted text-sm sm:text-base max-w-xl mb-8 leading-relaxed">
-            SOS Moving and Storage photos and videos, including our employees,
-            fleet of powerful trucks, and commercials.
+        <div className="text-center mb-10 sm:mb-14">
+          <RevealText
+            as="h2"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em]"
+          >
+            Gallery
+          </RevealText>
+          <p className="text-text-muted text-sm sm:text-base mt-4 max-w-xl mx-auto">
+            SOS Moving and Storage photos — our employees, fleet of trucks, and jobs in progress.
           </p>
-        </FadeUp>
-      </Container>
-
-      {/* Slider goes full width — starts from Container padding, overflows right */}
-      <FadeUp delay={0.1}>
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pl-4 sm:pl-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] pr-8 pb-2 scroll-pl-4 sm:scroll-pl-6 lg:scroll-pl-[max(2rem,calc((100vw-80rem)/2+2rem))]"
-        >
-          {galleryVideos.map((video) => (
-            <div
-              key={video.videoId}
-              className="flex-shrink-0 w-[85vw] sm:w-[44rem] snap-start"
-            >
-              <YouTubePlayer
-                videoId={video.videoId}
-                title={video.title}
-                thumbnail={video.thumbnail}
-              />
-            </div>
-          ))}
         </div>
-      </FadeUp>
+
+        <InView
+          viewOptions={{ once: true, margin: "0px 0px -250px 0px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.09 },
+            },
+          }}
+        >
+          <div className="columns-2 gap-4 sm:columns-3">
+            {galleryImages.map((src, index) => (
+              <motion.div
+                key={src}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.8, filter: "blur(10px)" },
+                  visible: { opacity: 1, scale: 1, filter: "blur(0px)" },
+                }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="mb-4 break-inside-avoid"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={src}
+                  alt={`SOS Moving gallery ${index + 1}`}
+                  loading="lazy"
+                  className="w-full h-auto rounded-2xl object-cover"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </InView>
+      </Container>
     </section>
   );
 }

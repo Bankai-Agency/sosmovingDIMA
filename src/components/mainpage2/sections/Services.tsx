@@ -7,7 +7,8 @@ import { Container } from "@/components/mainpage2/ui/Container";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/mainpage2/ui/Animate";
 import { SectionLabel } from "@/components/mainpage2/ui/SectionLabel";
 import { RevealText } from "@/components/mainpage2/ui/RevealText";
-import { MagicCard, MagicSpotlight } from "@/components/mainpage2/ui/MagicCard";
+import { MagicSpotlight } from "@/components/mainpage2/ui/MagicCard";
+import { BorderGlow } from "@/components/mainpage2/ui/BorderGlow";
 import data from "@/data/mainpage2/homepage.json";
 
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -53,7 +54,7 @@ export function Services() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
             <SectionLabel>What we do</SectionLabel>
-            <RevealText as="h2" className="text-3xl md:text-[3rem] font-bold text-white leading-[1.1]">
+            <RevealText as="h2" className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em]">
               Our Services
             </RevealText>
           </div>
@@ -69,33 +70,44 @@ export function Services() {
 
         <MagicSpotlight containerRef={sectionRef} />
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" staggerDelay={0.08}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6" staggerDelay={0.08}>
           {services.map((service) => (
             <StaggerItem key={service.slug}>
-              <Link href={`/services/${service.slug}`} className="block">
-                <MagicCard className="group relative bg-[#111] rounded-[1.2rem] p-8 min-h-[220px] sm:min-h-[260px] border border-border/20 hover:border-accent/20 transition-all duration-500">
-                  {/* Background image — visible on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[1.2rem] overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt=""
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-bg/70" />
-                  </div>
+              <Link href={`/services/${service.slug}`} className="group block h-full">
+                <BorderGlow
+                  className="min-h-[360px] sm:min-h-[420px] md:min-h-[460px] h-full transition-transform duration-500"
+                  backgroundColor="#1a1a1a"
+                  glowColor="52 100 60"
+                  borderRadius={24}
+                  glowRadius={40}
+                  glowIntensity={1.2}
+                  coneSpread={25}
+                  colors={["#ffe533", "#ffec6a", "#ffffff"]}
+                >
+                  <div className="relative flex flex-col h-full min-h-[360px] sm:min-h-[420px] md:min-h-[460px]">
+                    {/* Image — always visible, covers top ~55% of card */}
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-t-[24px]">
+                      <Image
+                        src={service.image}
+                        alt=""
+                        fill
+                        className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                    </div>
 
-                  {/* Icon */}
-                  <div className="relative z-10 text-white/60 group-hover:text-accent transition-colors duration-300 mb-auto">
-                    {serviceIcons[service.slug] || serviceIcons["local-moving"]}
-                  </div>
+                    {/* Icon */}
+                    <div className="relative z-10 text-white/60 group-hover:text-accent transition-colors duration-300 mb-auto">
+                      {serviceIcons[service.slug] || serviceIcons["local-moving"]}
+                    </div>
 
-                  {/* Title at bottom */}
-                  <h3 className="relative z-10 text-xl sm:text-2xl font-bold text-white mt-8 group-hover:text-accent transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                </MagicCard>
+                    {/* Title at bottom */}
+                    <h3 className="relative z-10 text-xl sm:text-2xl font-bold text-white mt-8 group-hover:text-accent transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                  </div>
+                </BorderGlow>
               </Link>
             </StaggerItem>
           ))}

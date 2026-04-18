@@ -59,6 +59,7 @@
   "reviews": [
     {
       "name": "Jamon Pulliam",
+      "city": "Los Angeles, CA",
       "rating": 5,
       "text": "I called SOS last minute for a move and they came through! The guys were professional, fast, and super careful with my furniture. Highly recommend!",
       "source": "google",
@@ -66,6 +67,7 @@
     },
     {
       "name": "Kelsey Fawley",
+      "city": "Beverly Hills, CA",
       "rating": 5,
       "text": "Amazing experience! They wrapped everything perfectly and nothing was damaged. The crew was friendly and efficient. Best moving company in LA!",
       "source": "yelp",
@@ -73,6 +75,7 @@
     },
     {
       "name": "Nicole Lai",
+      "city": "Santa Monica, CA",
       "rating": 5,
       "text": "SOS Moving made our move stress-free. They arrived on time, were incredibly efficient, and handled all our belongings with care. Would definitely use again!",
       "source": "google",
@@ -80,6 +83,7 @@
     },
     {
       "name": "Vish Saheb",
+      "city": "Pasadena, CA",
       "rating": 5,
       "text": "Great service from start to finish. The team was professional, punctual, and careful with our belongings. Pricing was transparent — no hidden fees!",
       "source": "google",
@@ -87,6 +91,7 @@
     },
     {
       "name": "Malia F.",
+      "city": "Glendale, CA",
       "rating": 5,
       "text": "We used SOS for our office relocation and they were fantastic. Minimal downtime, everything was organized and nothing was lost or damaged.",
       "source": "yelp",
@@ -94,6 +99,7 @@
     },
     {
       "name": "Nikki P.",
+      "city": "Burbank, CA",
       "rating": 5,
       "text": "Second time using SOS and they never disappoint. Fair pricing, professional crew, and they genuinely care about your stuff. 10/10!",
       "source": "google",

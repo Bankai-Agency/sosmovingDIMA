@@ -1,173 +1,154 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Container } from "@/components/mainpage2/ui/Container";
-import { BankaiLink } from "@/components/mainpage2/ui/BankaiLink";
 import data from "@/data/mainpage2/homepage.json";
 
-const footerLinks = {
-  services: [
-    { label: "Local Moving", href: "/services/local-moving" },
-    { label: "Long Distance", href: "/services/long-distance-movers" },
-    { label: "Apartment Movers", href: "/services/apartment-movers" },
-    { label: "Commercial Movers", href: "/services/commercial-movers" },
-    { label: "Packing Services", href: "/services/packing-services" },
-    { label: "Storage", href: "/services/storage" },
-    { label: "White Glove", href: "/services/white-glove-movers" },
-  ],
-  company: [
-    { label: "About Us", href: "/about-us" },
-    { label: "Reviews", href: "/about-us/reviews" },
-    { label: "Gallery", href: "/about-us/gallery" },
-    { label: "FAQ", href: "/about-us/faq" },
-    { label: "Careers", href: "/careers" },
-    { label: "Blog", href: "/blog" },
-  ],
-  quickLinks: [
-    { label: "Free Estimate", href: "/free-estimate" },
-    { label: "Book Online", href: "/book-online" },
-    { label: "Contact Us", href: "/about-us/contact-us" },
-    { label: "Company Policy", href: "/about-us/company-policy" },
-    { label: "Sitemap", href: "/sitemap" },
-  ],
-};
+const navCol1 = [
+  { label: "Services", href: "/services" },
+  { label: "Areas", href: "#service-areas" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "About Us", href: "/about-us" },
+];
 
-function FooterIcon({ type }: { type: "phone" | "email" | "location" | "clock" }) {
-  const paths: Record<string, React.ReactNode> = {
-    phone: <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />,
-    email: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></>,
-    location: <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></>,
-    clock: <><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></>,
-  };
-
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 text-text-muted" aria-hidden="true">
-      {paths[type]}
-    </svg>
-  );
-}
+const navCol2 = [
+  { label: "Insights", href: "/blog" },
+  { label: "Contact", href: "/about-us/contact-us" },
+  { label: "Privacy Policy", href: "/about-us/company-policy" },
+  { label: "Book Online", href: "/book-online" },
+];
 
 export function Footer() {
   const { company } = data;
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="pt-16 pb-8">
-      <Container>
-        {/* Main grid — 5 columns on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1.5fr_1fr_1fr_1fr] gap-8 pb-10 border-b border-white/10">
-          {/* Logo + description */}
-          <div>
-            <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/mainpage2/images/Sos-logo-min.avif"
-                alt="SOS Moving & Storage logo"
-                width={120}
-                height={40}
-              />
+    <footer className="bg-accent text-[#151414] rounded-t-[35px] lg:rounded-t-[50px] overflow-x-hidden">
+      {/* Self-running seamless marquee — one row of "Get your free quote" */}
+      <div className="pt-[clamp(3.5rem,2.9783rem+2.6087vw,5rem)] pb-6 lg:pb-8 overflow-x-hidden">
+        <div className="flex animate-marquee-left whitespace-nowrap font-bold text-[#151414] leading-[0.95] tracking-[-0.04em] text-[14vw] sm:text-[11vw]">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <Link
+              key={i}
+              href="/free-estimate"
+              className="inline-block shrink-0 pr-[0.35em] hover:underline decoration-[0.06em] underline-offset-[0.08em]"
+            >
+              Get your free quote
             </Link>
-            <p className="text-[0.8rem] text-text-muted leading-relaxed">
-              Licensed and insured moving company providing local and long-distance moves
-              across California, Oregon, Washington and Colorado.
-            </p>
-          </div>
-
-          {/* Contact info */}
-          <div>
-            <h3 className="text-[0.9rem] font-semibold text-white mb-4">Contact</h3>
-            <address className="not-italic space-y-3">
-              <a href={`tel:${company.phoneRaw}`} className="flex items-center gap-3 text-[0.8rem] text-text-muted hover:text-white transition-colors">
-                <FooterIcon type="phone" />
-                {company.phone}
-              </a>
-              <a href={`mailto:${company.email}`} className="flex items-center gap-3 text-[0.8rem] text-text-muted hover:text-white transition-colors">
-                <FooterIcon type="email" />
-                {company.email}
-              </a>
-              <div className="flex items-start gap-3 text-[0.8rem] text-text-muted">
-                <FooterIcon type="location" />
-                <span>{company.address.street}, {company.address.city}, {company.address.state} {company.address.zip}</span>
-              </div>
-              <div className="flex items-center gap-3 text-[0.8rem] text-text-muted">
-                <FooterIcon type="clock" />
-                {company.hours}
-              </div>
-            </address>
-          </div>
-
-          {/* Quick links */}
-          <div>
-            <h3 className="text-[0.9rem] font-semibold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {footerLinks.quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-[0.8rem] text-text-muted hover:text-white transition-colors underline hover:no-underline">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-[0.9rem] font-semibold text-white mb-4">Services</h3>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-[0.8rem] text-text-muted hover:text-white transition-colors underline hover:no-underline">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-[0.9rem] font-semibold text-white mb-4">Company</h3>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-[0.8rem] text-text-muted hover:text-white transition-colors underline hover:no-underline">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
+      </div>
 
-        {/* Bottom bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-xs text-text-muted space-x-4">
-            <span>&copy; {new Date().getFullYear()} {company.name}</span>
-            <span>USDOT {company.license.usdot}</span>
-            <span>{company.license.calT}</span>
-            <span>{company.license.mc}</span>
-          </div>
-          <div className="flex gap-4">
-            {Object.entries(company.social).map(([platform, url]) => (
-              <a
-                key={platform}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted hover:text-white transition-colors capitalize text-xs"
-                aria-label={`SOS Moving on ${platform}`}
+      {/* Top */}
+      <div className="px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto w-full max-w-[90rem]">
+          {/* Row 1 — blurb + button  //  nav cols */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-[clamp(3.5rem,2.9783rem+2.6087vw,5rem)] md:gap-8">
+            <div className="md:col-span-6 xl:col-span-5">
+              <p className="max-w-[450px] font-medium text-[clamp(1.5rem,1.413rem+.4348vw,1.75rem)] md:text-[clamp(1.1563rem,1.1454rem+.0543vw,1.1875rem)] leading-[1.25] tracking-[-0.04em]">
+                Have a project in mind? We&rsquo;d love to hear what you&rsquo;re working on and show you how we can help. Whether you&rsquo;re moving next door or across the country, we&rsquo;re ready when you are.
+              </p>
+              <Link
+                href="/free-estimate"
+                className="mt-[clamp(1rem,.8261rem+.8696vw,1.5rem)] inline-flex items-center gap-3 rounded-full bg-white hover:bg-white/90 text-[#151414] pl-7 pr-5 h-[3.25rem] font-medium text-[0.9375rem] transition-colors"
               >
-                {platform}
-              </a>
-            ))}
+                Get a quote
+                <span className="grid place-items-center w-9 h-9 rounded-full bg-accent text-[#151414]">
+                  <svg width="12" height="12" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="4" y1="10" x2="16" y2="10" />
+                    <polyline points="10 4 16 10 10 16" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
+
+            <nav className="md:col-span-5 md:col-start-8 xl:col-span-4 xl:col-start-10 grid grid-cols-2 gap-x-8 gap-y-2.5">
+              <ul className="flex flex-col gap-y-1.5 text-base">
+                {navCol1.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="hover:underline">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="flex flex-col gap-y-1.5 text-base">
+                {navCol2.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="hover:underline">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
+      </div>
 
-        {/* Agency credit */}
-        <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-center">
-          <span className="text-xs text-text-muted whitespace-nowrap">
-            Design & Development by
-          </span>
-          <BankaiLink />
+      {/* Middle — huge heading + contact */}
+      <div className="px-4 sm:px-6 lg:px-10 mt-[clamp(3.5rem,2.9783rem+2.6087vw,5rem)]">
+        <div className="mx-auto w-full max-w-[90rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-14 gap-[clamp(2.5rem,2.1522rem+1.7391vw,3.5rem)] lg:gap-8 pt-8 max-lg:border-t max-lg:border-[#151414]/20">
+            <div className="lg:col-span-7">
+              <p className="font-medium text-[clamp(3.625rem,1.1033rem+12.6087vw,10.875rem)] leading-[0.95] tracking-[-0.06em] -ml-[0.07em]">
+                Let&rsquo;s
+                <br />
+                <u className="underline underline-offset-[0.12em] decoration-[0.08em]">Move</u>
+              </p>
+            </div>
+
+            <div className="lg:col-span-4 lg:col-start-10 text-base leading-[1.25] space-y-4">
+              <p>
+                <strong className="block font-medium text-[#151414]">Los Angeles</strong>
+                <span className="text-[#2c2e2a]/60">
+                  {company.address.street},<br />
+                  {company.address.city}, {company.address.state} {company.address.zip}
+                  <br />
+                  {company.hours}
+                </span>
+              </p>
+              <p>
+                <a href={`mailto:${company.email}`} className="font-medium hover:underline">
+                  <strong className="font-medium">{company.email}</strong>
+                </a>
+              </p>
+              <p>
+                <a href={`tel:${company.phoneRaw}`} className="font-medium hover:underline">
+                  <strong className="font-medium">{company.phone}</strong>
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-      </Container>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="px-4 sm:px-6 lg:px-10 mt-[clamp(2.5rem,2.1522rem+1.7391vw,3.5rem)] pb-9">
+        <div className="mx-auto w-full max-w-[90rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-14 gap-6 lg:gap-8 text-sm">
+            <div className="lg:col-span-7 flex flex-wrap gap-x-6 gap-y-1 max-lg:border-b max-lg:border-[#151414]/20 max-lg:pb-[clamp(1rem,.8261rem+.8696vw,1.5rem)]">
+              <span>
+                © {year} {company.name}
+              </span>
+              <span>USDOT {company.license.usdot}</span>
+              <span>{company.license.calT}</span>
+              <span>{company.license.mc}</span>
+            </div>
+            <div className="lg:col-span-4 lg:col-start-10 flex flex-wrap gap-x-6 gap-y-1">
+              {Object.entries(company.social).map(([platform, url]) => (
+                <a
+                  key={platform}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="capitalize hover:underline"
+                >
+                  {platform}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

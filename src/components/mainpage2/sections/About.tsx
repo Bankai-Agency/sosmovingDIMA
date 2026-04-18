@@ -36,7 +36,7 @@ export function About() {
         <SectionLabel>About us</SectionLabel>
         <RevealText
           as="h2"
-          className="text-3xl md:text-[3rem] font-bold text-white leading-[1.1] mb-12 max-w-3xl"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-3xl"
         >
           {about.title}
         </RevealText>

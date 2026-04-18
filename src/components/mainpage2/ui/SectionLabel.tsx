@@ -2,19 +2,28 @@
 
 import { motion } from "framer-motion";
 
-export function SectionLabel({ children, center = false }: { children: string; center?: boolean }) {
+/**
+ * Eyebrow label above section headings — mono, uppercase, muted grey.
+ * Matches LatestBlogs / VideoReviews style across mainpage2.
+ */
+export function SectionLabel({
+  children,
+  center = false,
+}: {
+  children: string;
+  center?: boolean;
+}) {
   return (
-    <motion.div
+    <motion.p
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`flex items-center gap-2 mb-4 ${center ? "justify-center" : ""}`}
+      className={`font-mono text-sm text-text-muted uppercase tracking-[0.1em] mb-3 ${
+        center ? "text-center" : ""
+      }`}
     >
-      <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-      <span className="text-accent text-xs font-semibold uppercase tracking-[0.25em]">
-        {children}
-      </span>
-    </motion.div>
+      {children}
+    </motion.p>
   );
 }
