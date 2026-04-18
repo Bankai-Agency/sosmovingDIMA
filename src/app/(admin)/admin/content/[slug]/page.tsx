@@ -42,6 +42,13 @@ export default async function EditPostPage({ params }: { params: Promise<Params>
             >
               ← К списку
             </Link>
+            <Link
+              href={`/admin/content/${slug}/preview`}
+              target="_blank"
+              className="caption rounded-md border border-dark/12 px-3 py-2 text-dark hover:bg-dark/6"
+            >
+              Превью ↗
+            </Link>
             {publiclyVisible && (
               <Link
                 href={`/blog/${slug}`}

@@ -1,9 +1,31 @@
+import { eq } from "drizzle-orm";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { TopBar } from "@/components/admin/TopBar";
+import { ProfileForm } from "@/components/admin/ProfileForm";
+import { PasswordForm } from "@/components/admin/PasswordForm";
+import { auth } from "@/lib/auth";
+import { db } from "@/lib/db";
+import { users } from "@/lib/db/schema";
 
 export const metadata = { title: "Настройки" };
+export const dynamic = "force-dynamic";
 
-export default function SettingsPage() {
+export default async function SettingsPage() {
+  const session = await auth();
+  const id = (session?.user as { id?: string }).id ?? "";
+
+  const me = id ? await db.query.users.findFirst({ where: eq(users.id, id) }) : null;
+
+  // Env-driven integration statuses — we read what's set without exposing values.
+  const integrations = {
+    githubApi: Boolean(process.env.GITHUB_TOKEN && process.env.GITHUB_REPO),
+    cron: Boolean(process.env.CRON_SECRET),
+    db: Boolean(process.env.DATABASE_URL),
+    analytics: Boolean(process.env.VERCEL_ANALYTICS_ID),
+    searchConsole: Boolean(process.env.SEARCH_CONSOLE_SITE),
+    sentry: Boolean(process.env.SENTRY_DSN),
+  };
+
   return (
     <AdminShell>
       <TopBar title="Настройки" />
@@ -11,40 +33,18 @@ export default function SettingsPage() {
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           {/* Main column */}
           <div className="flex flex-col gap-4 lg:col-span-2">
-            {/* Profile */}
             <section className="rounded-xl bg-surface p-6">
               <h3 className="h6 mb-4 text-dark">Профиль</h3>
-              <div className="flex flex-col gap-4">
-                <Field label="Логин" value="capitalism" readOnly />
-                <Field label="Имя" placeholder="Дмитрий" />
-                <Field label="Email" placeholder="—" hint="Для сброса пароля (опционально)" />
-              </div>
-              <div className="mt-6 flex justify-end">
-                <button
-                  type="button"
-                  className="h-10 rounded-md bg-dark px-4 text-[15px] font-semibold text-white transition-colors hover:bg-dark/90"
-                >
-                  Сохранить
-                </button>
-              </div>
+              <ProfileForm
+                username={me?.username ?? ""}
+                initialName={me?.name ?? ""}
+                initialEmail={me?.email ?? ""}
+              />
             </section>
 
-            {/* Password */}
             <section className="rounded-xl bg-surface p-6">
               <h3 className="h6 mb-4 text-dark">Смена пароля</h3>
-              <div className="flex flex-col gap-4">
-                <Field label="Текущий пароль" type="password" />
-                <Field label="Новый пароль" type="password" />
-                <Field label="Повторить новый" type="password" />
-              </div>
-              <div className="mt-6 flex justify-end">
-                <button
-                  type="button"
-                  className="h-10 rounded-md bg-dark px-4 text-[15px] font-semibold text-white transition-colors hover:bg-dark/90"
-                >
-                  Сменить пароль
-                </button>
-              </div>
+              <PasswordForm />
             </section>
           </div>
 
@@ -53,10 +53,40 @@ export default function SettingsPage() {
             <section className="rounded-xl bg-surface p-6">
               <h3 className="h6 mb-3 text-dark">Интеграции</h3>
               <ul className="flex flex-col gap-3">
-                <Integration name="Vercel Analytics" status="pending" hint="нужен подключённый project" />
-                <Integration name="Search Console" status="pending" hint="OAuth Google" />
-                <Integration name="Sentry" status="pending" hint="DSN в env" />
-                <Integration name="Cloudinary (картинки)" status="off" hint="решено: коммитим в git" />
+                <Integration
+                  name="Postgres (Neon)"
+                  status={integrations.db ? "on" : "off"}
+                  hint={integrations.db ? "Подключено" : "DATABASE_URL не задан"}
+                />
+                <Integration
+                  name="Git commits"
+                  status={integrations.githubApi ? "on" : "pending"}
+                  hint={
+                    integrations.githubApi
+                      ? "Пишем в GitHub, Vercel ребилдит"
+                      : "GITHUB_TOKEN не задан — в dev пишем в файловую систему"
+                  }
+                />
+                <Integration
+                  name="Cron (scheduled publish)"
+                  status={integrations.cron ? "on" : "pending"}
+                  hint={integrations.cron ? "CRON_SECRET задан" : "CRON_SECRET не задан (прод)"}
+                />
+                <Integration
+                  name="Vercel Analytics"
+                  status={integrations.analytics ? "on" : "pending"}
+                  hint={integrations.analytics ? "" : "VERCEL_ANALYTICS_ID не задан"}
+                />
+                <Integration
+                  name="Search Console"
+                  status={integrations.searchConsole ? "on" : "pending"}
+                  hint={integrations.searchConsole ? "" : "OAuth ещё не привязан"}
+                />
+                <Integration
+                  name="Sentry"
+                  status={integrations.sentry ? "on" : "pending"}
+                  hint={integrations.sentry ? "" : "SENTRY_DSN не задан"}
+                />
               </ul>
             </section>
 
@@ -64,49 +94,20 @@ export default function SettingsPage() {
               <h3 className="h6 mb-3 text-dark">Опасная зона</h3>
               <button
                 type="button"
-                className="h-10 w-full rounded-md border border-negative/32 bg-negative-soft px-4 text-[15px] font-semibold text-negative transition-colors hover:bg-negative hover:text-white"
+                className="h-10 w-full rounded-md border border-negative/32 bg-negative-soft px-4 text-[15px] font-semibold text-negative transition-colors hover:bg-negative hover:text-white disabled:cursor-not-allowed disabled:opacity-40"
                 disabled
+                title="Deploy hook нужно настроить в Vercel — пока заглушка"
               >
                 Запустить ручной ребилд
               </button>
               <p className="caption mt-2 text-dark/56">
-                Триггерит deploy hook в Vercel — на случай если крон не сработал.
+                Когда появится Deploy hook URL — кнопка дёрнет его через /api/rebuild.
               </p>
             </section>
           </div>
         </div>
       </div>
     </AdminShell>
-  );
-}
-
-function Field({
-  label,
-  value,
-  placeholder,
-  hint,
-  readOnly,
-  type = "text",
-}: {
-  label: string;
-  value?: string;
-  placeholder?: string;
-  hint?: string;
-  readOnly?: boolean;
-  type?: string;
-}) {
-  return (
-    <label className="flex flex-col gap-2">
-      <span className="caption text-dark/56">{label}</span>
-      <input
-        type={type}
-        defaultValue={value}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        className="h-11 rounded-md border border-dark/12 bg-surface px-4 text-[15px] outline-none placeholder:text-dark/32 focus:border-dark read-only:bg-dark/6 read-only:text-dark/56"
-      />
-      {hint && <span className="caption text-dark/32">{hint}</span>}
-    </label>
   );
 }
 
@@ -126,7 +127,7 @@ function Integration({
       <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${dot}`} />
       <div className="flex-1">
         <div className="p2 font-semibold text-dark">{name}</div>
-        <div className="caption text-dark/56">{hint}</div>
+        {hint && <div className="caption text-dark/56">{hint}</div>}
       </div>
     </li>
   );
