@@ -109,6 +109,45 @@ Order:
 - **Navigation.json** — still used by Footer/Navbar in parts; no changes made beyond what's in Navbar.tsx data.
 - **Dropdowns Moving/Locations/About Us** — image CTA cards use available images (`Long-Distance-Movers-Los-Angeles.avif`, `Movers-Los-Angeles.avif`, `Helpers-and-Truck.webp`). Replace if better art appears.
 
+## 2026-04-19 — Polish pass (design-system cleanup)
+
+Follow-up session that tightened the existing /mainpage2 redesign against feedback. Nothing structural; every change is a local edit to an existing section or a new small UI primitive.
+
+### H2 unified across all sections
+All `<h2>` eyebrows now use the same Tailwind scale: `text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em]`. Previous divergence (About, BestMovers, Steps had custom scales) was flattened. Exceptions: QuoteForm H2 when embedded in Footer card, BottomCta's oversized CTA heading.
+
+### Section-level changes
+- **Hero**: Yelp/Google rating callouts moved from mid-right to bottom-right (pinned). Score typography dropped from 2.5rem → 1.75rem so the rating pair feels balanced; both cards are now `<a target="_blank">` to `company.social.yelp` and `company.social.google` with hover accent + `↗` icon. Price callout "$119/hr" removed. Bottom-left stats row enlarged: 10,000+ / 4.9 / 20+ at ~4.5rem.
+- **About**: SectionLabel "About" moved above H2 in the right column (was next to / right of H2). Stats card on the left keeps flex-1 photo pushing the avatars+numbers card to bottom.
+- **Services (BorderGlow cards)**: rebuilt content layout — title + description with pad 6-7, icon moved onto image top-right as a 48-56px badge (backdrop-blur, bg-black/50 → bg-accent on hover). Default border `transparent`, hover → `rgba(255,255,255,0.15)`. Added `description` rendering from `homepage.json`. "View all services" text-link replaced with the standard `<Button>`.
+- **BestMovers (Local experts)**: full rewrite in design-system style. 2-col grid, left = SectionLabel + standard H2 + description + 4 numbered highlights as Steps-style hairline rows with **icon-on-left** (56-64px badge, 22px SVG), right = sticky 4:5 photo with all overlays removed (no rating pill, no $119 sticker, no credentials). CTA buttons removed entirely.
+- **Steps (new section)**: 2-col block inspired by Figma node 44:2389. Left column (sticky top-24): H2 + aspect-square photo swapping with active step + `Let's talk` Button. Right column: accordion of 7 steps with L-shaped top+left borders (`border-t border-l border-white/10`) and 8px gap between rows. Photo + active-caption animate via `AnimatePresence`. Placed between BestMovers and WhySos in page.tsx.
+- **WhySos**: image goes full-bleed viewport-width+height (`w-screen h-screen left-1/2 -translate-x-1/2`). H2 + SectionLabel + active-text overlay live ON the image (top padding), tab-pills overlay ON the image (bottom padding, in a centred max-w-7xl wrapper). Background gradients changed to `from-black/75 via-black/25 to-transparent` on both top and bottom halves so overlaid text reads in any viewport. Rotation: `useEffect` with `setTimeout` keyed on `[active]` — auto-advances every 5s, resets on click. Active tab shows a horizontal `scaleX: 0 → 1` progress fill in yellow matching the rotation duration.
+- **ServiceAreas**: city neighbourhood pills got stroke removed (`border border-white/10` → no border), font bumped from `text-sm` to `text-base` (+2px), height `h-9 → h-10`, right padding `pr-4 → pr-5`. Map-side "Get your free quote" CTA button removed.
+- **Reviews, VideoReviews, LatestBlogs**: horizontal scrollers already had edge-fade mask via `mask-image: linear-gradient(...)` from previous session — kept as-is. Blog cards got default bg bumped `bg-white/[0.03] → bg-white/[0.06]` with hover `bg-white/[0.1]`; removed "NEW" badge and category tag + any stroke.
+- **FAQ**: H2 restyled to the unified blog-heading scale. Accordion question `h3` now uses blog card title spec (`text-2xl lg:text-[1.75rem] font-semibold leading-[1.15]`), answer text thinned to `font-normal text-text-muted` with looser `leading-[1.5]`. Right sidebar: 4 circle icons replaced with 2 pill Buttons — "Call us" (primary) + "Write us" (outline). Section padding tightened `py-20 md:py-28 → py-16 md:py-20`, accordion row padding `py-8 → py-6`.
+- **QuoteForm**: rewritten to 2-col layout matching About/BestMovers (left = SectionLabel + H2 + blurb + phone/email icons, right = form card). Form body extracted to `ui/QuoteFormFields.tsx` and reused by the modal. Entire QuoteForm section is now rendered **inside Footer** (before the marquee), not as a standalone main-page section.
+- **BrandReveal**: disabled. File kept at `sections/BrandReveal.tsx` with a header comment explaining why + date; import commented out in `page.tsx`. Re-enabling is a single line change.
+
+### New UI primitives
+- `ui/VideoReviewPlayer.tsx` — mp4 facade with custom play button (44-48px pill), clicking anywhere on the card plays. `data-video-card="idle|playing"` attribute drives the shared hover cursor.
+- `ui/WatchCursor.tsx` — single, portaled, fixed-positioned yellow "▶ WATCH" cursor that tracks any element matching its `cardSelector` via delegated `mousemove` on a container ref. 180ms delayed-hide prevents flicker when moving between adjacent cards. Replaced per-card cursors that were flying in from (0,0) on each new card.
+- `ui/QuoteFormFields.tsx` — the raw form body (inputs + radios + textarea + submit + privacy blurb). Used by both `sections/QuoteForm.tsx` and the new `ui/QuoteModal.tsx`.
+- `ui/QuoteModal.tsx` — portal modal with the same form. Listens for a global `sos:open-quote-modal` window event, exports `openQuoteModal()` helper. Locks body scroll while open, `Escape` to close, backdrop click to close. Mounted once near the bottom of `page.tsx`.
+- `ui/Button.tsx` — upgraded to a client component. Any `Button` with `href` in `QUOTE_HREFS = {"/free-estimate", "/book-online"}` now calls `openQuoteModal()` on click instead of navigating. All existing callers keep working; the modal picks them up transparently.
+
+### Body/html paint experiment — reverted
+Briefly tried a "sharp black→white" zone (FAQ + QuoteForm + BottomCta on white bg driven by a scroll-linked fixed panel: `ScrollPaint.tsx`, `WhiteZone.tsx`). User opted out ("белый фон убери вообще") — both primitives deleted, body bg restored to `var(--color-bg)`, FAQ H2 got `text-white` back.
+
+### Final order on /mainpage2
+```
+<Hero /> <MarqueeBand /> <About /> <Services /> <BestMovers /> <Steps /> <WhySos />
+<Reviews /> <VideoReviews /> <ServiceAreas /> <Gallery /> <LatestBlogs /> <Faq />
+<BottomCta />
+<Footer>  ← now hosts <QuoteForm />
+<QuoteModal />  ← mounted once outside <main>
+```
+
 ## Stack
 - Next.js 16.2.4 (Turbopack dev)
 - React 19

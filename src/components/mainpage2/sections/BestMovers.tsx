@@ -1,123 +1,121 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { Container } from "@/components/mainpage2/ui/Container";
 import { SectionLabel } from "@/components/mainpage2/ui/SectionLabel";
 import { RevealText } from "@/components/mainpage2/ui/RevealText";
 import { Button } from "@/components/mainpage2/ui/Button";
-import { FadeUp } from "@/components/mainpage2/ui/Animate";
+import { FadeUp, StaggerContainer, StaggerItem } from "@/components/mainpage2/ui/Animate";
 import data from "@/data/mainpage2/homepage.json";
 
 const highlights = [
-  "Transparent pricing — no hidden fees, ever",
-  "Free blankets, shrink wrap & wardrobe boxes",
-  "Furniture disassembly & reassembly included",
-  "TV unmounting at no extra charge",
-  "Same-day and next-day availability",
-  "Dedicated move coordinator for your project",
+  {
+    title: "Transparent pricing",
+    text: "Flat hourly rate, no surprise fees. What we quote is what you pay.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <line x1="12" y1="1" x2="12" y2="23" />
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Everything included",
+    text: "Blankets, shrink-wrap, wardrobe boxes, tape, TV un-mounting — all on us.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 2 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+        <line x1="12" y1="22.08" x2="12" y2="12" />
+      </svg>
+    ),
+  },
+  {
+    title: "Dedicated coordinator",
+    text: "One person owns your move from the first call to the last box delivered.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
+    ),
+  },
+  {
+    title: "Same-day & next-day",
+    text: "Emergency or last-minute moves? We keep slots open for short notice.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
+  },
 ];
 
 export function BestMovers() {
   const { company } = data;
 
   return (
-    <section className="py-20 md:py-32 overflow-hidden">
+    <section id="local-experts" className="py-20 md:py-28">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left — content */}
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14 items-start">
+          {/* LEFT — heading, description, CTA, numbered highlights */}
+          <div className="flex flex-col">
             <SectionLabel>Local experts</SectionLabel>
             <RevealText
               as="h2"
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-6 md:mb-8"
             >
-              The Best Moving Company Near You
+              The best movers near you
             </RevealText>
 
             <FadeUp delay={0.2}>
-              <p className="text-text text-lg leading-relaxed mb-8">
-                Whether you&apos;re moving across the street or across the state, SOS Moving delivers
-                the same level of care and professionalism. Starting at just $119/hour for 2 movers
-                and a truck — everything included.
+              <p className="text-text-muted text-base md:text-lg leading-[1.55] max-w-[48ch] mb-8 md:mb-10">
+                Whether you&rsquo;re moving across the street or across the state,
+                SOS Moving shows up with the same crew, the same kit and the same
+                flat rate. Starting at <span className="text-white">$119/hr</span> for
+                two movers and a truck — everything included.
               </p>
             </FadeUp>
 
-            <FadeUp delay={0.3}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
-                {highlights.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.4 + i * 0.06 }}
-                    className="flex items-start gap-3"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="flex-shrink-0 mt-0.5 text-accent" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <span className="font-mono font-medium uppercase tracking-[-0.02em] leading-[1.2] text-text text-xs sm:text-sm">{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </FadeUp>
-
-            <FadeUp delay={0.6}>
-              <div className="flex flex-wrap items-center gap-4">
-                <Button href="/free-estimate">Get My Free Quote</Button>
-                <a href={`tel:${company.phoneRaw}`} className="text-text-muted hover:text-accent transition-colors text-sm font-medium">
-                  or call {company.phone}
-                </a>
-              </div>
-            </FadeUp>
+            {/* Numbered highlights — Steps-style hairline dividers */}
+            <StaggerContainer className="flex flex-col border-t border-white/10" staggerDelay={0.06}>
+              {highlights.map((item, i) => (
+                <StaggerItem key={i}>
+                  <div className="flex items-start gap-5 md:gap-6 py-5 md:py-6 border-b border-white/10">
+                    <div className="shrink-0 grid place-items-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/[0.06] text-accent">
+                      {item.icon}
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1">
+                      <div className="flex items-baseline gap-3">
+                        <span className="font-mono text-xs tracking-[0.08em] tabular-nums text-white/40">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <h3 className="text-lg md:text-xl font-semibold text-white leading-[1.2] tracking-[-0.02em]">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="text-sm md:text-[0.9375rem] text-text-muted leading-[1.5] max-w-[48ch]">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
 
-          {/* Right — image stack */}
-          <div className="relative">
-              {/* Main image */}
-              <div className="relative h-[300px] sm:h-[400px] md:h-[600px] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden">
-                <Image
-                  src="/mainpage2/images/SOS-Movers-Loading.webp"
-                  alt="SOS Moving team loading a truck"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-bg/50 to-transparent" />
-              </div>
-
-              {/* Floating stats card */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="absolute -bottom-4 left-3 sm:-bottom-6 sm:-left-6 md:-left-12 bg-[#1a1a1a] border border-border/50 rounded-xl sm:rounded-2xl p-3 sm:p-5 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-accent mb-1">$119</div>
-                <div className="text-sm text-text-muted">per hour starting rate</div>
-                <div className="text-xs text-text-muted mt-1">2 movers + truck</div>
-              </motion.div>
-
-              {/* Floating rating card */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="absolute top-3 right-3 sm:-top-4 sm:-right-4 md:-right-8 bg-[#1a1a1a] border border-border/50 rounded-xl sm:rounded-2xl p-3 sm:p-5 backdrop-blur-sm"
-              >
-                <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" aria-hidden="true">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                </div>
-                <div className="text-2xl font-bold text-white">{company.rating.overall}/5</div>
-                <div className="text-xs text-text-muted">2,500+ reviews</div>
-              </motion.div>
+          {/* RIGHT — sticky photo, clean (no overlays) */}
+          <div className="lg:sticky lg:top-24">
+            <div className="relative aspect-[4/5] w-full rounded-3xl overflow-hidden bg-surface">
+              <Image
+                src="/mainpage2/images/SOS-Movers-Loading.webp"
+                alt="SOS Moving crew loading a truck in Los Angeles"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </Container>

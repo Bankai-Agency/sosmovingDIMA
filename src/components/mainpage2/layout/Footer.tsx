@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Button } from "@/components/mainpage2/ui/Button";
+import { QuoteForm } from "@/components/mainpage2/sections/QuoteForm";
 import data from "@/data/mainpage2/homepage.json";
 
 const navCol1 = [
@@ -22,6 +24,9 @@ export function Footer() {
 
   return (
     <footer className="bg-accent text-[#151414] rounded-t-[35px] lg:rounded-t-[50px] overflow-x-hidden">
+      {/* Quote form — lives inside the footer, dark card on yellow */}
+      <QuoteForm />
+
       {/* Self-running seamless marquee — one row of "Get your free quote" */}
       <div className="pt-[clamp(3.5rem,2.9783rem+2.6087vw,5rem)] pb-6 lg:pb-8 overflow-x-hidden">
         <div className="flex animate-marquee-left whitespace-nowrap font-bold text-[#151414] leading-[0.95] tracking-[-0.04em] text-[14vw] sm:text-[11vw]">
@@ -46,18 +51,14 @@ export function Footer() {
               <p className="max-w-[450px] font-medium text-[clamp(1.5rem,1.413rem+.4348vw,1.75rem)] md:text-[clamp(1.1563rem,1.1454rem+.0543vw,1.1875rem)] leading-[1.25] tracking-[-0.04em]">
                 Have a project in mind? We&rsquo;d love to hear what you&rsquo;re working on and show you how we can help. Whether you&rsquo;re moving next door or across the country, we&rsquo;re ready when you are.
               </p>
-              <Link
-                href="/free-estimate"
-                className="mt-[clamp(1rem,.8261rem+.8696vw,1.5rem)] inline-flex items-center gap-3 rounded-full bg-white hover:bg-white/90 text-[#151414] pl-7 pr-5 h-[3.25rem] font-medium text-[0.9375rem] transition-colors"
-              >
-                Get a quote
-                <span className="grid place-items-center w-9 h-9 rounded-full bg-accent text-[#151414]">
-                  <svg width="12" height="12" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <line x1="4" y1="10" x2="16" y2="10" />
-                    <polyline points="10 4 16 10 10 16" />
-                  </svg>
-                </span>
-              </Link>
+              <div className="mt-[clamp(1rem,.8261rem+.8696vw,1.5rem)]">
+                <Button
+                  href="/free-estimate"
+                  className="!bg-white !text-[#151414]"
+                >
+                  Get a quote
+                </Button>
+              </div>
             </div>
 
             <nav className="md:col-span-5 md:col-start-8 xl:col-span-4 xl:col-start-10 grid grid-cols-2 gap-x-8 gap-y-2.5">

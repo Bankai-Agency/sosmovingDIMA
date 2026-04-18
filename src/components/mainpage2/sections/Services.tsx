@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/mainpage2/ui/Container";
+import { Button } from "@/components/mainpage2/ui/Button";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/mainpage2/ui/Animate";
 import { SectionLabel } from "@/components/mainpage2/ui/SectionLabel";
 import { RevealText } from "@/components/mainpage2/ui/RevealText";
@@ -59,12 +60,7 @@ export function Services() {
             </RevealText>
           </div>
           <FadeUp delay={0.3}>
-            <Link href="/services" className="text-text-muted hover:text-accent transition-colors text-sm font-medium flex items-center gap-2 group">
-              View all services
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-1 transition-transform" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
+            <Button href="/services">View all services</Button>
           </FadeUp>
         </div>
 
@@ -85,7 +81,7 @@ export function Services() {
                   colors={["#ffe533", "#ffec6a", "#ffffff"]}
                 >
                   <div className="relative flex flex-col h-full min-h-[360px] sm:min-h-[420px] md:min-h-[460px]">
-                    {/* Image — always visible, covers top ~55% of card */}
+                    {/* Image — always visible, covers top portion of card */}
                     <div className="relative aspect-[4/3] overflow-hidden rounded-t-[24px]">
                       <Image
                         src={service.image}
@@ -95,17 +91,23 @@ export function Services() {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                      {/* Icon overlay — pinned to top-right of image */}
+                      <div className="absolute top-4 right-4 grid place-items-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/50 backdrop-blur-md text-white group-hover:bg-accent group-hover:text-accent-text transition-colors duration-300">
+                        <div className="scale-[0.55] md:scale-[0.7]">
+                          {serviceIcons[service.slug] || serviceIcons["local-moving"]}
+                        </div>
+                      </div>
                     </div>
 
-                    {/* Icon */}
-                    <div className="relative z-10 text-white/60 group-hover:text-accent transition-colors duration-300 mb-auto">
-                      {serviceIcons[service.slug] || serviceIcons["local-moving"]}
+                    {/* Content below image — padded */}
+                    <div className="flex-1 flex flex-col gap-3 p-6 md:p-7">
+                      <h3 className="text-xl sm:text-2xl font-bold text-white leading-[1.15] tracking-[-0.02em] group-hover:text-accent transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm md:text-[0.9375rem] text-text-muted leading-[1.5] line-clamp-3">
+                        {service.description}
+                      </p>
                     </div>
-
-                    {/* Title at bottom */}
-                    <h3 className="relative z-10 text-xl sm:text-2xl font-bold text-white mt-8 group-hover:text-accent transition-colors duration-300">
-                      {service.title}
-                    </h3>
                   </div>
                 </BorderGlow>
               </Link>

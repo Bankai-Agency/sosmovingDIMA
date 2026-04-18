@@ -51,16 +51,6 @@ export function ServiceAreas() {
               }}
               className="max-w-[420px] mx-auto"
             />
-            <Link
-              href="/free-estimate"
-              className="mt-8 inline-flex items-center justify-center gap-3 w-full rounded-full bg-accent hover:bg-accent-hover text-accent-text px-6 py-4 font-medium text-base tracking-[-0.02em] transition-colors"
-            >
-              Get your free quote
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
           </div>
 
           {/* RIGHT — accordion list of regions → neighborhoods */}
@@ -130,12 +120,15 @@ export function ServiceAreas() {
                         className="overflow-hidden"
                       >
                         <div className="px-6 md:px-8 pb-6 flex flex-wrap gap-2">
-                          {area.cities.map((city) => (
+                          {area.cities.map((city, idx) => (
                             <Link
                               key={city}
                               href={`/${slugify(city)}-movers`}
-                              className="px-3 py-1.5 bg-black/30 border border-white/5 rounded-lg text-sm text-text hover:text-accent hover:border-accent/40 transition-colors"
+                              className="group inline-flex items-center gap-2 h-10 pl-1.5 pr-5 rounded-full bg-white/[0.06] text-base font-medium text-white hover:text-accent-text hover:bg-accent transition-colors"
                             >
+                              <span className="grid place-items-center h-6 w-6 rounded-full bg-black/40 text-[0.7rem] font-mono text-white/70 group-hover:bg-black/20 group-hover:text-accent-text transition-colors">
+                                {idx + 1}
+                              </span>
                               {city}
                             </Link>
                           ))}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/mainpage2/ui/Container";
+import { Button } from "@/components/mainpage2/ui/Button";
 import data from "@/data/mainpage2/homepage.json";
 
 type DropdownItem = { label: string; href: string };
@@ -202,7 +203,11 @@ export function Navbar() {
                   </svg>
                 );
                 const labelContent = (
-                  <span className="pill-label-stack">
+                  <>
+                    <span className="pill-label-sizer" aria-hidden="true">
+                      {link.label}
+                      {hasDropdown && chevron}
+                    </span>
                     <span className="pill-label">
                       {link.label}
                       {hasDropdown && chevron}
@@ -211,7 +216,7 @@ export function Navbar() {
                       {link.label}
                       {hasDropdown && chevron}
                     </span>
-                  </span>
+                  </>
                 );
                 if (hasDropdown) {
                   return (
@@ -267,13 +272,10 @@ export function Navbar() {
             </button>
           </div>
 
-          {/* CTA plate — yellow accent plate with dark text */}
-          <Link
-            href="/free-estimate"
-            className="hidden sm:inline-flex items-center h-[76px] rounded-[10px] px-2 whitespace-nowrap bg-accent hover:bg-accent-hover transition-colors"
-          >
-            <span className={`${NAV_LINK_ON_YELLOW} ${NAV_FONT}`}>Get a quote</span>
-          </Link>
+          {/* CTA — pill-style Button matching the rest of the page */}
+          <div className="hidden sm:flex items-center">
+            <Button href="/free-estimate">Get a quote</Button>
+          </div>
 
           {/* Mega-dropdown panel — MindMarket 1:1 */}
           <AnimatePresence>

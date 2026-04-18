@@ -1,5 +1,15 @@
 "use client";
 
+/**
+ * BrandReveal — scroll-driven "SOS Moving" letter-by-letter reveal that
+ * plays right after the Hero section on /mainpage2.
+ *
+ * DISABLED on 2026-04-19 at Dmitriy's request — file is kept in the repo
+ * so it can be re-enabled by re-importing and rendering <BrandReveal />
+ * from src/app/(new-design)/mainpage2/page.tsx. Not referenced anywhere
+ * while disabled.
+ */
+
 import {
   useRef,
   useState,

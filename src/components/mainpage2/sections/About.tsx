@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Container } from "@/components/mainpage2/ui/Container";
 import { Button } from "@/components/mainpage2/ui/Button";
 import { SectionLabel } from "@/components/mainpage2/ui/SectionLabel";
@@ -9,100 +8,113 @@ import { RevealText } from "@/components/mainpage2/ui/RevealText";
 import { FadeUp } from "@/components/mainpage2/ui/Animate";
 import data from "@/data/mainpage2/homepage.json";
 
-function Stat({ value, label, delay }: { value: string; label: string; delay: number }) {
-  return (
-    <FadeUp delay={delay}>
-      <div className="bg-[#1a1a1a] border border-border/30 rounded-2xl p-6 text-center hover:border-accent/20 transition-colors duration-500">
-        <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">{value}</div>
-        <div className="text-xs sm:text-sm text-text-muted">{label}</div>
-      </div>
-    </FadeUp>
-  );
-}
-
-const milestones = [
-  { year: "2022", text: "Founded in LA with a 2-man crew" },
-  { year: "2023", text: "Expanded to Portland, 1,000+ reviews" },
-  { year: "2024", text: "Seattle & Denver, 20+ team members" },
-  { year: "2025", text: "10,000+ moves, featured in AP News" },
+const avatars = [
+  "/mainpage2/images/avatar1_1avatar1.avif",
+  "/mainpage2/images/avatar2_1avatar2.avif",
+  "/mainpage2/images/avatar3_1avatar3.avif",
 ];
 
 export function About() {
-  const { about } = data;
+  const { about, company } = data;
 
   return (
     <section id="about" className="py-20 md:py-32">
       <Container>
-        <SectionLabel>About us</SectionLabel>
-        <RevealText
-          as="h2"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-12 max-w-3xl"
-        >
-          {about.title}
-        </RevealText>
-
-        {/* Bento grid */}
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-
-          {/* Stats — row on mobile, column on desktop */}
-          <div className="md:col-span-2 grid grid-cols-3 md:grid-cols-1 gap-4">
-            <Stat value="10,000+" label="Successful Moves" delay={0} />
-            <Stat value="2,500+" label="Five-Star Reviews" delay={0.1} />
-            <Stat value="20+" label="Cities Served" delay={0.2} />
-          </div>
-
-          {/* Main image */}
-          <FadeUp delay={0.15} className="md:col-span-4 md:row-span-2">
-            <div className="relative h-full min-h-[280px] sm:min-h-[350px] md:min-h-[500px] rounded-2xl overflow-hidden border border-border/30">
-              <Image
-                src="/mainpage2/images/team.webp"
-                alt="SOS Moving full team photo"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 60vw"
-                priority
-              />
-              {/* Stronger overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/60 to-bg/20" />
-              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6">
-                <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed">{about.text}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-12 lg:gap-16 items-stretch">
+          {/* LEFT — photo on top, stats pinned to bottom */}
+          <div className="flex flex-col min-h-full">
+            {/* Photo — fills the vertical slack so stats sit at the bottom */}
+            <FadeUp delay={0.1} className="flex-1 min-h-[240px]">
+              <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/10">
+                <Image
+                  src="/mainpage2/images/Team_New.webp"
+                  alt="SOS Moving team"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="object-cover"
+                />
               </div>
-            </div>
-          </FadeUp>
+            </FadeUp>
 
-          {/* Milestones timeline — bottom left */}
-          <div className="md:col-span-2">
-            <FadeUp delay={0.3}>
-              <div className="bg-[#1a1a1a] border border-border/30 rounded-2xl p-6 h-full hover:border-accent/20 transition-colors duration-500">
-                <h3 className="text-sm font-semibold text-accent uppercase tracking-widest mb-5">Milestones</h3>
-                <div className="relative pl-6 border-l border-border/50">
-                  {milestones.map((m, i) => (
-                    <motion.div
-                      key={m.year}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.4 + i * 0.08 }}
-                      className="relative mb-4 last:mb-0"
-                    >
-                      <div className="absolute -left-[1.65rem] top-1.5 w-2 h-2 rounded-full bg-accent" />
-                      <span className="text-accent text-xs font-mono font-semibold">{m.year}</span>
-                      <p className="text-text text-sm mt-0.5">{m.text}</p>
-                    </motion.div>
-                  ))}
+            <FadeUp delay={0.2}>
+              <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
+                {/* Top card — wide, with avatars */}
+                <div className="p-6 md:p-8 border-b border-white/10">
+                  <div className="flex -space-x-2 mb-5">
+                    {avatars.map((src, i) => (
+                      <div
+                        key={src}
+                        className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-bg"
+                        style={{ zIndex: avatars.length - i }}
+                      >
+                        <Image
+                          src={src}
+                          alt=""
+                          fill
+                          sizes="40px"
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white leading-none tracking-[-0.03em]">
+                    {company.stats.moves}
+                  </div>
+                  <div className="mt-2 text-sm font-mono uppercase tracking-[0.08em] text-text-muted">
+                    successful moves
+                  </div>
+                </div>
+
+                {/* Bottom row — 2 cards side by side, split by vertical divider */}
+                <div className="grid grid-cols-2">
+                  <div className="p-6 md:p-8 border-r border-white/10">
+                    <div className="text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white leading-none tracking-[-0.03em]">
+                      {company.stats.cities}
+                    </div>
+                    <div className="mt-2 text-sm font-mono uppercase tracking-[0.08em] text-text-muted">
+                      cities served
+                    </div>
+                  </div>
+                  <div className="p-6 md:p-8">
+                    <div className="text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white leading-none tracking-[-0.03em]">
+                      {company.rating.overall}
+                      <span className="text-accent">★</span>
+                    </div>
+                    <div className="mt-2 text-sm font-mono uppercase tracking-[0.08em] text-text-muted">
+                      2,500+ reviews
+                    </div>
+                  </div>
                 </div>
               </div>
             </FadeUp>
           </div>
-        </div>
 
-        {/* CTA row */}
-        <FadeUp delay={0.5}>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/about-us" variant="outline">Learn More</Button>
-            <Button href="/free-estimate">Get My Free Quote</Button>
+          {/* RIGHT — headline + body + CTA (CTA pinned to bottom) */}
+          <div className="flex flex-col">
+            <SectionLabel>About</SectionLabel>
+            <RevealText
+              as="h2"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em]"
+            >
+              {about.title}
+            </RevealText>
+
+            <FadeUp delay={0.25}>
+              <div className="mt-8 max-w-xl text-text-muted text-base leading-relaxed">
+                <p>{about.text}</p>
+              </div>
+            </FadeUp>
+
+            <FadeUp delay={0.4} className="mt-auto pt-10">
+              <div className="flex flex-wrap gap-4">
+                <Button href="/free-estimate">Get My Free Quote</Button>
+                <Button href="/about-us" variant="outline">
+                  Learn More
+                </Button>
+              </div>
+            </FadeUp>
           </div>
-        </FadeUp>
+        </div>
       </Container>
     </section>
   );

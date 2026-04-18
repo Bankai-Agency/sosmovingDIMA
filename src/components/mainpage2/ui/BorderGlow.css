@@ -12,7 +12,8 @@
   isolation: isolate;
   transform: translate3d(0, 0, 0.01px);
   display: grid;
-  border: 1px solid rgb(255 255 255 / 15%);
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease-out;
   background: var(--card-bg, #120F17);
   overflow: visible;
   box-shadow:
@@ -40,6 +41,10 @@
 .border-glow-card:not(:hover):not(.sweep-active) > .edge-light {
   opacity: 0;
   transition: opacity 0.75s ease-in-out;
+}
+
+.border-glow-card:hover {
+  border-color: rgb(255 255 255 / 15%);
 }
 
 /* colored mesh-gradient border */
