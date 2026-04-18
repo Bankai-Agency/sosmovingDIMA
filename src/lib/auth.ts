@@ -68,7 +68,12 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
       const onAdminArea = pathname.startsWith("/admin");
       const onLogin = pathname === "/admin/login";
       const onRegister = pathname.startsWith("/admin/register");
+      const onChangePassword = pathname.startsWith("/admin/change-password");
+      const onLogout = pathname === "/admin/logout";
       const isLoggedIn = Boolean(session?.user);
+      const mustChange = Boolean(
+        (session?.user as { mustChangePassword?: boolean } | undefined)?.mustChangePassword,
+      );
 
       if (!onAdminArea) return true; // matcher limits us to /admin/* anyway
 
@@ -79,6 +84,14 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
         // Auth.js will redirect to /admin/login automatically.
         return false;
       }
+
+      // If the user still has the seed password (or an admin reset the flag),
+      // force them onto the change-password screen until they rotate it.
+      // Logout is always allowed so people never get stuck.
+      if (isLoggedIn && mustChange && !onChangePassword && !onLogout) {
+        return Response.redirect(new URL("/admin/change-password", request.nextUrl));
+      }
+
       return true;
     },
 
