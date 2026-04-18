@@ -41,6 +41,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
+        {/* Vidzflow video (hero background on / and /about-us/video-reviews).
+            Iframe is server-swapped to a facade in page-sections.ts and lazy-
+            mounted by custom-scripts.js after FCP. Preconnect cuts ~220ms off
+            the handshake when the iframe finally loads. */}
+        <link rel="dns-prefetch" href="https://app.vidzflow.com" />
+        <link rel="dns-prefetch" href="https://r2.vidzflow.com" />
+
         <link href="/webflow.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />

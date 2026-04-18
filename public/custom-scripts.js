@@ -258,3 +258,39 @@ if (document.getElementById("exit-popup")) {
     }, "<");
   }
 })();
+
+// ── Vidzflow facade hydration ──
+// Server-side (src/lib/page-sections.ts) replaces <iframe src="vidzflow..."> with
+// <div class="vidzflow-facade" data-src="..."> so the ~9MB video doesn't block
+// LCP. Once the page is fully loaded + idle, we swap the facade back to a real
+// iframe — user sees the video within ~1-2s after page load, not during it.
+(function () {
+  function hydrateVidzflowFacades() {
+    var facades = document.querySelectorAll('.vidzflow-facade[data-src]');
+    if (!facades.length) return;
+    facades.forEach(function (el) {
+      var iframe = document.createElement('iframe');
+      iframe.src = el.dataset.src;
+      iframe.setAttribute('width', '100%');
+      iframe.setAttribute('height', '100%');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('scrolling', 'no');
+      iframe.setAttribute('allow', 'fullscreen');
+      if (el.dataset.title) iframe.title = el.dataset.title;
+      iframe.style.cssText = 'overflow:hidden;width:100%;height:100%;border:0;';
+      el.replaceWith(iframe);
+    });
+  }
+  function schedule() {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(hydrateVidzflowFacades, { timeout: 2000 });
+    } else {
+      setTimeout(hydrateVidzflowFacades, 1200);
+    }
+  }
+  if (document.readyState === 'complete') {
+    schedule();
+  } else {
+    window.addEventListener('load', schedule);
+  }
+})();

@@ -25,6 +25,23 @@ export function parsePageSections(slug: string): ParsedSection[] {
   // Wrap in a fake body so cheerio treats the fragment as siblings of body
   const $ = cheerio.load(`<body>${html}</body>`, { decodeEntities: false });
 
+  // Defer vidzflow hero iframes: replace with a <div class="vidzflow-facade">
+  // that custom-scripts.js hydrates into a real <iframe> on window.load via
+  // requestIdleCallback. The ~9MB 1080p video is the LCP blocker on mobile
+  // (PSI showed LCP 10.2s, FCP 6.0s). After this change the iframe isn't in
+  // the initial HTML at all — browser can't start the 9MB fetch until JS
+  // decides to mount it, post-FCP. Visual parity preserved: facade is black
+  // (hero is dark-themed), swapped for real iframe within ~1-2s.
+  const escAttr = (s: string) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  $('iframe[src*="vidzflow.com"]').each((_i, el) => {
+    const $el = $(el);
+    const src = $el.attr('src') ?? '';
+    const title = $el.attr('title') ?? '';
+    $el.replaceWith(
+      `<div class="vidzflow-facade" data-src="${escAttr(src)}" data-title="${escAttr(title)}" aria-label="${escAttr(title)}" style="width:100%;height:100%;background:#000;overflow:hidden"></div>`
+    );
+  });
+
   const sections: ParsedSection[] = [];
   $('body').children().each((_i, el) => {
     const $el = $(el);
