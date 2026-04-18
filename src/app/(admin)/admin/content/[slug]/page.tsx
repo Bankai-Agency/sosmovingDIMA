@@ -4,8 +4,9 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { TopBar } from "@/components/admin/TopBar";
 import { StatusBadge } from "@/components/admin/StatusBadge";
 import { EditorForm } from "@/components/admin/EditorForm";
+import { DeletePostButton } from "@/components/admin/DeletePostButton";
 import { readPost, isPublic } from "@/lib/admin/content-store";
-import { publishNow, unpublish, removePost } from "../actions";
+import { publishNow, unpublish } from "../actions";
 
 type Params = { slug: string };
 
@@ -72,20 +73,7 @@ export default async function EditPostPage({ params }: { params: Promise<Params>
                 </button>
               </form>
             )}
-            <form
-              action={removePost}
-              onSubmit={(e) => {
-                if (!confirm("Удалить статью? Это действие необратимо.")) e.preventDefault();
-              }}
-            >
-              <input type="hidden" name="slug" value={slug} />
-              <button
-                type="submit"
-                className="h-10 rounded-md border border-negative/32 bg-negative-soft px-4 text-[15px] font-semibold text-negative transition-colors hover:bg-negative hover:text-white"
-              >
-                Удалить
-              </button>
-            </form>
+            <DeletePostButton slug={slug} />
           </div>
         }
       />

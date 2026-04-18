@@ -1,9 +1,24 @@
 "use client";
 
 import { useActionState } from "react";
-import { Editor } from "./Editor";
+import dynamic from "next/dynamic";
 import { savePost } from "@/app/(admin)/admin/content/actions";
 import type { PostFrontmatter } from "@/lib/admin/content-store";
+
+/**
+ * BlockNote (TipTap/ProseMirror) reads `window` / `navigator` at module top,
+ * which explodes during SSR. Load it browser-only. The hidden input it
+ * writes to is populated after hydration — the form still submits fine
+ * because React waits for client JS before action runs.
+ */
+const Editor = dynamic(() => import("./Editor").then((m) => m.Editor), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[400px] items-center justify-center rounded-xl bg-surface">
+      <span className="caption text-dark/56">Загружаем редактор…</span>
+    </div>
+  ),
+});
 
 type Props = {
   slug: string;
