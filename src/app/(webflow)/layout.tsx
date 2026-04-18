@@ -24,7 +24,12 @@ export default function RootLayout({
         <link href="/webflow.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic" rel="stylesheet" />
+        {/* Lato: reduced from 10 variants to 3 (400, 400italic, 700).
+            Previously webflow.css called font-weight 500/600/800 which weren't
+            loaded anyway — browser was already falling back to 400/700.
+            Only site-wide impact: font-weight:300 in .w-lightbox-backdrop (Webflow
+            lightbox overlay) now renders as 400. Saves ~250KB on initial load. */}
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700&display=swap" rel="stylesheet" />
       </head>
       <body>
         <SharedHtmlBlock name="exit-popup" />
