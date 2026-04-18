@@ -1,85 +1,97 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Container } from "@/components/mainpage2/ui/Container";
+import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/mainpage2/ui/Button";
-import { TechFrame } from "@/components/mainpage2/ui/TechFrame";
-import { DotGrid } from "@/components/mainpage2/ui/DotGrid";
-import data from "@/data/mainpage2/homepage.json";
+import { ContainerTextFlip } from "@/components/ui/container-text-flip";
+import ImageTrail from "@/components/core/image-trail";
+
+const trailImages = [
+  "/mainpage2/images/gallery-1.webp",
+  "/mainpage2/images/gallery-2.webp",
+  "/mainpage2/images/gallery-3.webp",
+  "/mainpage2/images/Movers-and-truck.avif",
+  "/mainpage2/images/Helpers-and-Truck.webp",
+  "/mainpage2/images/SOS-Movers-Loading.webp",
+  "/mainpage2/images/video-4.webp",
+  "/mainpage2/images/Local-Moving-Hero-Img.avif",
+];
 
 export function BottomCta() {
-  const { company } = data;
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  // Image moves slower than page for parallax feel
+  const y = useTransform(scrollYProgress, [0, 1], ["-12%", "12%"]);
 
   return (
-    <section id="bottom-cta" className="relative py-20 sm:py-32 md:py-40 overflow-hidden">
-      {/* Background text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden="true">
-        <span className="text-[5rem] sm:text-[8rem] md:text-[16rem] lg:text-[22rem] font-bold text-white/[0.02] leading-none tracking-tighter whitespace-nowrap">
-          MOVE
-        </span>
-      </div>
+    <section
+      id="bottom-cta"
+      className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 lg:px-10"
+    >
+      <div
+        ref={ref}
+        className="relative mx-auto w-full max-w-[90rem] overflow-hidden rounded-2xl sm:rounded-3xl h-[92svh] min-h-[640px] max-h-[1100px]"
+      >
+        {/* Parallax image */}
+        <motion.div
+          style={{ y, willChange: "transform" }}
+          className="absolute inset-x-0 top-[-15%] bottom-[-15%]"
+        >
+          <Image
+            src="/mainpage2/images/Helpers-and-Truck.webp"
+            alt="SOS Moving team loading a truck"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/60" />
 
-      <DotGrid className="z-0" />
-      <TechFrame className="hidden md:block z-[1]" dotColor="rgba(255,229,51,0.5)" duration={14} />
+        {/* Mouse-trail images — behind content, only interactive inside card */}
+        <div className="absolute inset-0 z-[1] pointer-events-auto">
+          <ImageTrail items={trailImages} />
+        </div>
 
-      <Container className="relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-accent text-sm font-semibold uppercase tracking-widest mb-6"
+        {/* Centered content */}
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 sm:px-10">
+          <h2
+            className="text-white font-bold leading-[0.9] tracking-[-0.04em] text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-[8rem] mb-6 sm:mb-8 md:mb-10 inline-flex items-baseline justify-center gap-x-4 sm:gap-x-6 whitespace-nowrap"
+            aria-label="Let's move — ready when you are"
           >
-            Get started today
-          </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-2xl sm:text-3xl md:text-[3.5rem] lg:text-[4.5rem] font-bold text-white leading-[1.05] mb-6 sm:mb-8"
-          >
-            Ready to make your
-            <br />
-            <span className="text-accent">move stress-free?</span>
-          </motion.h2>
+            <span>Let&rsquo;s</span>
+            <ContainerTextFlip
+              words={["move", "roll", "go", "pack"]}
+              interval={3000}
+              animationDuration={600}
+            />
+          </h2>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-text text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-white/90 text-base sm:text-lg max-w-xl mx-auto leading-[1.4] tracking-[-0.01em] mb-6 sm:mb-8"
           >
-            From $119/hour with free protective materials included. Get your personalized quote in under 5 minutes.
+            From $119/hour with free protective materials. Get your personalized
+            quote in under 5 minutes.
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button href="/free-estimate" size="lg">
-              Get My Free Quote
-            </Button>
-            <a
-              href={`tel:${company.phoneRaw}`}
-              className="group flex items-center gap-3 text-white hover:text-accent transition-colors"
-            >
-              <span className="w-12 h-12 rounded-full border border-border group-hover:border-accent flex items-center justify-center transition-all duration-300 group-hover:bg-accent/10">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                </svg>
-              </span>
-              <span className="text-lg font-semibold">{company.phone}</span>
-            </a>
+            <Button href="/free-estimate">Get your free quote</Button>
           </motion.div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

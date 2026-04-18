@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import ScriptLoader from "@/components/ScriptLoader";
 import { SharedHtmlBlock } from "@/components/shared/SharedHtmlBlock";
+
+// Inter Variable: self-hosted by Next at build time (no fonts.googleapis.com
+// request, no render-blocking external CSS). Variable font covers weights
+// 100-900 from a single WOFF2 (~50KB). Next auto-generates a size-adjust
+// fallback, so CLS stays near 0 during swap. Exposed as --font-inter and
+// force-applied in globals.css to override Lato in webflow.css.
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-mod-js" data-wf-site="645ab1d97922876b775bef4f">
+    <html
+      lang="en"
+      className={`${inter.variable} w-mod-js`}
+      data-wf-site="645ab1d97922876b775bef4f"
+    >
       <head>
         {/* Preload critical same-origin scripts so browser fetches them
             in parallel with HTML parsing, instead of waiting for ScriptLoader
@@ -49,14 +65,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://r2.vidzflow.com" />
 
         <link href="/webflow.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
-        {/* Lato: reduced from 10 variants to 3 (400, 400italic, 700).
-            Previously webflow.css called font-weight 500/600/800 which weren't
-            loaded anyway — browser was already falling back to 400/700.
-            Only site-wide impact: font-weight:300 in .w-lightbox-backdrop (Webflow
-            lightbox overlay) now renders as 400. Saves ~250KB on initial load. */}
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700&display=swap" rel="stylesheet" />
+
+        {/* Redesign step 1: Lato replaced with Inter Variable via
+            next/font/google (see `inter` instance declared above). Next handles
+            preload + self-host automatically, no manual <link> tags needed. */}
       </head>
       <body>
         <SharedHtmlBlock name="exit-popup" />

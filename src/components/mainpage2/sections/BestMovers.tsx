@@ -30,7 +30,7 @@ export function BestMovers() {
             <SectionLabel>Local experts</SectionLabel>
             <RevealText
               as="h2"
-              className="text-3xl md:text-[3rem] font-bold text-white leading-[1.1] mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-8"
             >
               The Best Moving Company Near You
             </RevealText>
@@ -57,7 +57,7 @@ export function BestMovers() {
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="flex-shrink-0 mt-0.5 text-accent" aria-hidden="true">
                       <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span className="text-text text-sm leading-relaxed">{item}</span>
+                    <span className="font-mono font-medium uppercase tracking-[-0.02em] leading-[1.2] text-text text-xs sm:text-sm">{item}</span>
                   </motion.div>
                 ))}
               </div>

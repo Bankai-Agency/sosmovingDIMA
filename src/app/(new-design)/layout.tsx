@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
+import { Geist, Roboto_Mono } from "next/font/google";
 import { SmoothScroll } from "@/components/mainpage2/SmoothScroll";
 import "./globals.css";
+
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+  display: "swap",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Los Angeles Moving Company from $119/hr | 4.9 Star — SOS Moving & Storage",
@@ -22,7 +35,7 @@ export default function NewDesignRootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${geistSans.variable} ${robotoMono.variable}`}>
       <body className="min-h-full flex flex-col">
         <SmoothScroll />
         <a href="#main-content" className="skip-link">

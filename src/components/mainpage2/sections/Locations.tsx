@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/mainpage2/ui/Container";
 import { FadeUp, SlideIn } from "@/components/mainpage2/ui/Animate";
+import { RevealText } from "@/components/mainpage2/ui/RevealText";
 import data from "@/data/mainpage2/homepage.json";
 
 export function Locations() {
@@ -20,9 +21,12 @@ export function Locations() {
       <Container>
         <div className="flex flex-col lg:flex-row gap-10">
           <SlideIn direction="left" className="lg:w-[35%] flex flex-col justify-center">
-            <h2 className="text-2xl md:text-[2.4rem] font-bold text-white leading-tight mb-4">
+            <RevealText
+              as="h2"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-4"
+            >
               Our Locations
-            </h2>
+            </RevealText>
             <p className="text-text-muted leading-relaxed mb-8">
               From Los Angeles to Portland and Seattle — we move you wherever you need to go.
             </p>
