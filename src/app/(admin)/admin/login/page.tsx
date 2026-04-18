@@ -1,4 +1,5 @@
 import { Logo } from "@/components/admin/Logo";
+import { LoginForm } from "@/components/admin/LoginForm";
 
 export const metadata = { title: "Войти" };
 
@@ -14,43 +15,7 @@ export default function LoginPage() {
 
           <h1 className="h2 mb-10 text-dark">Вход</h1>
 
-          {/*
-            Form is static for this step — POST handler will land in the next
-            commit (Auth.js credentials + /api/auth routes). Kept as plain
-            HTML inputs now so the visual shell can be reviewed first.
-          */}
-          <form className="flex flex-col gap-4" action="/api/auth/callback/credentials" method="post">
-            <label className="flex flex-col gap-2">
-              <span className="caption text-dark/56">Логин</span>
-              <input
-                name="username"
-                type="text"
-                autoComplete="username"
-                required
-                className="h-12 rounded-md border border-dark/12 bg-surface px-4 text-[15px] leading-5 outline-none placeholder:text-dark/32 focus:border-dark"
-                placeholder="your-login"
-              />
-            </label>
-
-            <label className="flex flex-col gap-2">
-              <span className="caption text-dark/56">Пароль</span>
-              <input
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                className="h-12 rounded-md border border-dark/12 bg-surface px-4 text-[15px] leading-5 outline-none placeholder:text-dark/32 focus:border-dark"
-                placeholder="••••••••"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="mt-4 h-12 rounded-md bg-dark px-4 text-[15px] font-semibold text-white transition-colors hover:bg-dark/90"
-            >
-              Продолжить
-            </button>
-          </form>
+          <LoginForm />
         </div>
       </section>
 
