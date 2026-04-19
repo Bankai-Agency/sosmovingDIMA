@@ -10,11 +10,23 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Keep admin-only heavy deps out of every other serverless function bundle.
-  // Without this, public routes (mainpage2, city, service, blog) were tracing
-  // in @blocknote / drizzle / next-auth / @octokit and hitting Vercel Hobby's
-  // 250 MB per-function unzipped limit, blocking all production deploys.
+  // Keep admin-only heavy deps + static-asset folders out of serverless function
+  // bundles. /api/upload was tracing `public/images/blog/` (262 MB of static
+  // blog images) because image-store.ts calls join(process.cwd(), "public/...")
+  // with existsSync — Next treats the referenced folder as a runtime dependency
+  // and bundles the whole thing, blowing past the 250 MB Hobby function limit.
+  // Public routes also previously dragged in @blocknote / drizzle / @octokit /
+  // next-auth via transitive traces.
   outputFileTracingExcludes: {
+    "/api/upload": [
+      "public/**",
+      ".next/**",
+      "src/data/blog/**",
+    ],
+    "/api/cron/publish-scheduled": [
+      "public/**",
+      ".next/**",
+    ],
     "/mainpage2": [
       "node_modules/@blocknote/**",
       "node_modules/@emotion/**",
