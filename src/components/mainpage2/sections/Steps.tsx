@@ -120,7 +120,11 @@ export function Steps() {
               return (
                 <div
                   key={i}
-                  className="border-t border-l border-white/10"
+                  className={`rounded-2xl overflow-hidden transition-colors ${
+                    isOpen
+                      ? "bg-white/[0.08]"
+                      : "bg-white/[0.04] hover:bg-white/[0.06]"
+                  }`}
                 >
                   <button
                     type="button"

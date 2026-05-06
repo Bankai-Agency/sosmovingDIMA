@@ -160,3 +160,133 @@ Briefly tried a "sharp black→white" zone (FAQ + QuoteForm + BottomCta on white
 ## Dev
 - Dev server runs externally on port 3000 (user owns it). `preview_start` refuses to manage it — verifications happened via `curl http://localhost:3000/mainpage2`.
 - `.next/dev/logs/next-development.log` has server+browser compile/error events; recent entries show clean compiles.
+
+---
+
+## 2026-04-30 — Production unblock + multi-pass polish
+
+Long iterative pass touching nearly every section. Two infra fixes unblocked production deploys; the rest is design / interaction polish.
+
+### Production deploy unblocked (Vercel Hobby)
+
+Two consecutive build-time blockers, fixed in commits `05a9fd4` and `59aab50`:
+
+1. **Cron schedule rejected on Hobby plan** — `vercel.json` had `*/5 * * * *` for `/api/cron/publish-scheduled`. Hobby permits 1 cron run / day max; build aborted with `Hobby accounts are limited to daily cron jobs`. Changed to `0 0 * * *` (midnight UTC). Trade-off: scheduled blog publishes drift up to 24h vs the 5-min original — acceptable until/unless Pro is bought.
+2. **`function_size_exceeded` (250 MB)** on `/api/upload`. `src/lib/admin/image-store.ts` calls `join(process.cwd(), "public/images/blog") + existsSync` — Next's file tracer treats the referenced folder as a runtime dependency and rolled the entire 262 MB `public/images/blog/` into the function bundle. Fix: `outputFileTracingExcludes` in `next.config.ts`:
+   ```ts
+   outputFileTracingExcludes: {
+     "/api/upload":            ["public/**", ".next/**", "src/data/blog/**"],
+     "/api/cron/publish-scheduled": ["public/**", ".next/**"],
+     "/mainpage2":             [...heavy admin-only deps...],
+   }
+   ```
+   Verified locally with `vercel build`: warning gone, function under 250 MB.
+
+Also added `.vercel` to `.gitignore`. Vercel CLI used to confirm: 10h-old prod deploy was the last successful one before this; webhook had been failing silently on every push since the admin-cms merge introduced @blocknote / @neondatabase / drizzle / next-auth / @octokit.
+
+### Hero
+- Right-side rating callouts redesigned — twice. Final form: glass pills (`h-14`, `bg-white/10` + `backdrop-blur-md` + `border-white/15`) with logo badge on left, score + 5 stars + mono review-count label, ↗ arrow on right. Class `glass-phone-btn` reused so they get the shimmer sweep + scale on hover (see Navbar section). Per-platform brand colors:
+  - **Yelp** — logo `#FF1A1A` red on rest, on hover badge becomes `#FF1A1A` and logo flips to white via `currentColor` (YelpMark uses `fill="currentColor"`).
+  - **Google** — multicolor logo on rest, on hover badge becomes Google Blue `#4285F4` and the multicolor SVG is forced white via CSS filter `brightness-0 invert` wrapping `<Mark />`.
+  - Yellow glow ring around the badge that the previous iteration added was **removed** at user request — only `transform: scale(1.08)` spring remains.
+- Stats row scaled down: `text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem]` → `text-xl sm:text-3xl md:text-4xl lg:text-[3rem]` with `gap-x-4 sm:gap-x-8` and `h-8 sm:h-12` dividers (was 4.5rem / 64-72 / 12-16).
+- **Mobile fixes** (Figma feedback "h1 looks smaller than h2 on mobile"):
+  - `.hero-switzer h1` clamp min `2.25rem` → `3.25rem`, viewport unit `6.5vw` → `8vw`. At 375px now reads ~52 px (vs 36 px before, vs same 36 px other H2s).
+  - Inner content group: `justify-center` → `justify-end md:justify-center` — content sits flush at bottom on mobile while staying centered on desktop.
+  - Stats row laid out with `gap-x-4 sm:gap-x-8`, smaller numbers + visible `h-10 sm:h-16 w-px` dividers — fits in single line at 360-420px viewports.
+
+### Navbar — phone CTA + dropdown polish
+- Replaced 40×40 phone-icon disc with a **glass pill** showing `(909) 443-0004` next to a yellow accent badge. `bg-white/10 + backdrop-blur-md + border-white/20`, h-14 (matches "Read more" blog spec, matches Get-a-quote pill). Forces `Button` into h-14 too via `!h-14 md:!h-14 lg:!h-14 !px-8 ...` className override — both buttons in nav now look identical in size to LatestBlogs cards' "Read more".
+- New CSS class `.glass-phone-btn` in globals.css. Three layered hover effects:
+  - Diagonal yellow→white **shimmer sweep** via `::after` pseudo, `translateX(-130% → 130%)` over 0.9s
+  - Yellow badge `transform: scale(1.08)` with bouncy `cubic-bezier(0.34, 1.56, 0.64, 1)`
+  - Phone icon **rings** — 3-shake animation `phone-ring` keyframe (-14° / +14° / 0°) over 0.7s
+  - Class is reused on the Hero rating pills (their badge transitions to brand color instead of staying yellow).
+- `Get a quote` Button moved **inside** the main bar plate so the compact (post-hero) plate contains both phone + quote in one rounded pill. Bar `gap-6` → `gap-3` (tighter spacing between buttons).
+- Dropdown panel left/right column gap `gap-3` → `gap-6` so the link list breathes from the image card.
+- Dropdown link hover: yellow underline (poor contrast on white panel) → **letter-wave** (each char shifts up 2 px with 18 ms stagger) + arrow ↗ slides in from `-translate-x-2 + opacity-0`. The yellow leading dot was added then removed at user request.
+- Social-icons row in nav was prototyped (Instagram/TikTok/YouTube on xl+) and rolled back ("ладно не добавляй").
+
+### WhySos — full-bleed + tab UX rework
+- Section padding `py-20 md:py-28` → none. Image is `w-screen h-screen` (full viewport on every device).
+- Top + bottom gradient overlays darkened to `from-black/95 via-black/60 to-transparent` (was `/75 /25`). Heading and tabs read regardless of photo subject.
+- Description text **swaps with active tab** under the H2 (`AnimatePresence mode="wait"` keyed on `active`, fade + 10 px slide). Lost during the earlier "keep one heading" pass; restored.
+- Tab pills:
+  - Stroke removed entirely (`borderWidth: 0`).
+  - Inactive `bg-black/30` → `bg-white/[0.08]` so they look glass-ish, not patches of darkness.
+  - Active `bg-white/20` (no full-bg yellow fill anymore).
+  - Label is **always white** — fixes "couldn't read which tab is active until yellow filled it".
+  - Progress indicator: previously a yellow rectangle filling the whole tab bg → now a **3 px accent bar pinned to bottom** of the active tab, animates `scaleX 0 → 1` over 5 s. Cleaner, tab content stays visible from t=0.
+- Auto-rotate logic switched from `setInterval` + `paused` boolean to a single `setTimeout` keyed on `[active]` so any click both selects the tab and resets the 5 s clock; mouse-pause behavior dropped.
+
+### Services
+- Last two service cards' images swapped: `packing-img.webp` / `storage-img.webp` (mockup star/lightning) → `Packers-and-movers.avif` / `storage-bg.webp` (real photos). Updated in `src/data/mainpage2/homepage.json`.
+
+### BestMovers / "Local Experts"
+- Iterative redesign:
+  1. Numbers `01–04` removed before each highlight title.
+  2. Numbered hairline rows → **rounded plates** (`rounded-2xl bg-white/[0.04] hover:bg-white/[0.07]`), `gap-3` between cards, no border.
+  3. Icon badge moved from right → **left** of each row, badge sized up `w-14 → w-16` (md), inner SVG `18 → 22 px`. Color stays accent yellow.
+- Right column photo: all overlays already removed from earlier session. Buttons (Get-a-quote + phone) removed entirely from the heading column too.
+
+### Steps
+- Border style for accordion rows changed: `border-t border-l border-white/10` (L-shaped) → **fully rounded plates** (`rounded-2xl bg-white/[0.04]` rest, `bg-white/[0.08]` open, no border). Matches BestMovers card style.
+
+### Reviews
+- "View all reviews" mega-button (`px-10 sm:px-16 py-6 sm:py-7 text-xl sm:text-2xl bg-accent`) replaced with the standard `<Button>` so it matches every other CTA on the page.
+- **Mobile layout** (Figma 461:15767): single vertical column → horizontal native scroll → **two horizontal auto-marquees** with opposing directions:
+  - Row 1 — `animate-marquee-left`, tripled array (`-33.333% keyframe = exactly 1 set`), 15 s.
+  - Row 2 — `animate-marquee-right`, reversed tripled array, 15 s. Mirrors desktop's two opposing vertical columns.
+  - Cards `w-[82vw]` so each takes nearly the whole viewport. Edge-fade mask left+right.
+- Desktop layout (`hidden sm:grid grid-cols-2`) untouched.
+
+### VideoReviews — drag scroll + correct play/pause
+- Scroller now supports **drag-to-pan with inertia** (mouse/pen only, native touch is preserved):
+  - Threshold 5 px before pointer capture is taken — preserves the simple click-to-play path.
+  - Velocity sampled from a rolling 80 ms window of pointer positions; on release `requestAnimationFrame` decays at `velocity *= 0.93` until `< 0.4 px/frame` (iOS-style momentum).
+  - Inertia is cancelled on next pointer-down so a fast successive drag feels responsive.
+  - `snap-x snap-mandatory` removed (was producing the abrupt snap user complained about); free pan with momentum is the new behavior.
+  - When a real drag fires (`s.moved === true`), the trailing `click` event is swallowed via a one-shot capture-phase listener so we don't auto-play the card the user happened to release over.
+- `VideoReviewPlayer.tsx`:
+  - Idle state: `onClick={play}` on card, `<video pointer-events-none>` so click reaches the card.
+  - Playing state: `onClick={undefined}`, `<video pointer-events: auto controls>` — clicks now reach native HTML5 controls (pause/seek/volume work). Bug introduced and fixed in this pass.
+
+### LatestBlogs — slider controls
+- Server component split into `LatestBlogs.tsx` (server, `getBlogPosts({ limit:6 })`) + `LatestBlogsClient.tsx` (client, owns scroll ref + prev/next).
+- Prev/next buttons are 48 px circles `border-border` styled identically to VideoReviews controls. Live **inline in the header row** beside `View all articles` — final order: `[View all articles] [prev] [next]`.
+- `step: 520 px` per click (matches `lg:w-[520px]` card width). The intermediate `HorizontalScroller.tsx` primitive is no longer used by LatestBlogs (kept around in case other sections want it).
+
+### FAQ
+- Whole section scaled down so it doesn't dwarf its neighbours:
+  | | Was | Now |
+  |---|---|---|
+  | section padding | `py-20 md:py-28` | `py-14 md:py-16` |
+  | H2 | `lg:text-[5rem]` (80 px) | `lg:text-6xl` (60 px) |
+  | accordion `h3` | `lg:text-[1.75rem]` (28 px) | `lg:text-[1.375rem]` (22 px) |
+  | answer `p` | `text-base md:text-lg` | `text-sm md:text-base` |
+  | sidebar `h3` | `md:text-[2.5rem]` (40 px) | `md:text-3xl` (30 px) |
+  | sidebar subtitle | `md:text-2xl` | `md:text-lg` |
+  | row padding | `px-6 md:px-10 py-6` | `px-5 md:px-8 py-4 md:py-5` |
+  | expand-icon disc | `h-10 md:h-12 w-12` | `h-9 md:h-10 w-10` |
+  | sidebar pad / width | `p-8 md:p-12` / `460px` | `p-6 md:p-8` / `380px` |
+- A brief center-only experiment (`max-w-3xl mx-auto` + `text-center`, sidebar removed) was applied then reverted at user request.
+
+### Pill button — visible edge against dark page bg
+- `.pill-btn--primary` on hover transitions yellow → `#1a1a1a`. Page bg is also dark, so the dark fill blended into the page (only the curved sides were visible). Fixed: added `box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18)` on `:hover` / `:focus-visible` with `transition: box-shadow 0.55s cubic-bezier(0.5,0,0,1)` so the entire pill outline is now visible after hover lands. No layout shift (uses inset shadow, not border).
+
+### General buttons
+- `Button.tsx` base class:
+  - Mobile: `w-full sm:w-auto` — every CTA spans full container width on phones.
+  - Desktop: `h-12 md:h-14 lg:h-[60px]`, `px-6 md:px-8 lg:px-9`, `text-[0.9375rem] md:text-base lg:text-[1.0625rem]`, `gap-3 md:gap-4`. Roughly +25 % visual weight at lg vs the pre-pass spec.
+
+### Stack-quirk note: turbopack CSS HMR
+- This session triggered the well-known turbopack stale-CSS cache 4 separate times (changes in `globals.css` not picked up by HMR even after page reload). Each time the workaround was: stop dev server → `rm -rf .next` → `preview_start` again. Worth keeping in mind: if a CSS edit "doesn't apply" after a few seconds, restart instead of debugging the rule.
+
+### Final order on /mainpage2 (unchanged from previous session)
+```
+<Hero /> <MarqueeBand /> <About /> <Services /> <BestMovers /> <Steps /> <WhySos />
+<Reviews /> <VideoReviews /> <ServiceAreas /> <Gallery /> <LatestBlogs /> <Faq />
+<BottomCta />
+<Footer>  ← hosts <QuoteForm />
+<QuoteModal />  ← mounted once outside <main>
+```

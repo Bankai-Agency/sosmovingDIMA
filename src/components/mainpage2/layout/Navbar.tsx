@@ -166,7 +166,7 @@ export function Navbar() {
         >
           {/* MAIN BAR — transparent over hero, grey plate after scroll */}
           <div
-            className={`relative flex-grow flex items-center justify-between h-[76px] rounded-[10px] pl-4 pr-2.5 gap-6 transition-colors duration-500`}
+            className={`relative flex-grow flex items-center justify-between h-[76px] rounded-[10px] pl-4 pr-2.5 gap-3 transition-colors duration-500`}
             style={{ backgroundColor: compact ? BAR_BG : "transparent" }}
           >
             {/* inner wraps logo + nav as MM .c-menu-desktop_inner */}
@@ -249,12 +249,25 @@ export function Navbar() {
             <a
               href={`tel:${data.company.phoneRaw}`}
               aria-label={`Call ${data.company.phone}`}
-              className="relative hidden sm:grid place-items-center w-10 h-10 rounded-full bg-accent text-accent-text hover:bg-accent-hover transition-colors"
+              className="glass-phone-btn hidden sm:inline-flex items-center gap-4 h-14 pl-2 pr-6 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-white/30 text-white transition-colors font-semibold text-base tracking-[-0.02em] whitespace-nowrap"
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.9.35 1.84.59 2.8.72A2 2 0 0 1 22 16.92z" />
-              </svg>
+              <span className="glass-phone-badge grid place-items-center w-10 h-10 rounded-full bg-accent text-accent-text">
+                <svg className="glass-phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.9.35 1.84.59 2.8.72A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </span>
+              {data.company.phone}
             </a>
+
+            {/* Get-a-quote CTA — lives INSIDE the bar so the compact plate contains it */}
+            <div className="hidden sm:flex items-center">
+              <Button
+                href="/free-estimate"
+                className="!h-14 md:!h-14 lg:!h-14 !px-8 md:!px-8 lg:!px-8 !text-base md:!text-base lg:!text-base !gap-4 md:!gap-4"
+              >
+                Get a quote
+              </Button>
+            </div>
 
             {/* Mobile menu button */}
             <button
@@ -270,11 +283,6 @@ export function Navbar() {
                 <span className={`absolute left-0 w-full h-[1.5px] bg-white transition-all duration-300 origin-center ${mobileOpen ? "bottom-1/2 translate-y-1/2 -rotate-45" : "bottom-0"}`} />
               </div>
             </button>
-          </div>
-
-          {/* CTA — pill-style Button matching the rest of the page */}
-          <div className="hidden sm:flex items-center">
-            <Button href="/free-estimate">Get a quote</Button>
           </div>
 
           {/* Mega-dropdown panel — MindMarket 1:1 */}
@@ -293,7 +301,7 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 16 }}
                     transition={{ duration: 0.4, ease: EASE }}
-                    className="absolute left-4 sm:left-6 lg:left-8 top-[calc(76px+0.5rem)] w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-[calc(100%-4rem)] max-w-[720px] pointer-events-auto grid grid-cols-[240px_1fr] gap-3 p-3 rounded-[10px] bg-white text-[#2c2e2a] shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
+                    className="absolute left-4 sm:left-6 lg:left-8 top-[calc(76px+0.5rem)] w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-[calc(100%-4rem)] max-w-[740px] pointer-events-auto grid grid-cols-[240px_1fr] gap-6 p-3 rounded-[10px] bg-white text-[#2c2e2a] shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
                   >
                     {/* Col 1 — image CTA */}
                     {image && (
@@ -341,9 +349,36 @@ export function Navbar() {
                             <Link
                               href={l.href}
                               onClick={() => setOpenDropdown(null)}
-                              className="inline-block py-1.5 text-base font-medium leading-[1.3] tracking-[-0.02em] text-[#2c2e2a] hover:underline"
+                              className="group inline-flex items-center gap-2 py-1.5 text-base font-medium leading-[1.3] tracking-[-0.02em] text-[#2c2e2a]"
                             >
-                              {l.label}
+                              {/* Letter-wave — each char lifts with a tiny stagger */}
+                              <span className="inline-flex">
+                                {l.label.split("").map((ch, i) => (
+                                  <span
+                                    key={i}
+                                    style={{ transitionDelay: `${i * 18}ms` }}
+                                    className="inline-block transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-0.5"
+                                  >
+                                    {ch === " " ? "\u00a0" : ch}
+                                  </span>
+                                ))}
+                              </span>
+                              {/* Arrow — fades in + slides from left */}
+                              <svg
+                                aria-hidden="true"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="-translate-x-2 opacity-0 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0 group-hover:opacity-100"
+                              >
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                              </svg>
                             </Link>
                           </motion.li>
                         ))}

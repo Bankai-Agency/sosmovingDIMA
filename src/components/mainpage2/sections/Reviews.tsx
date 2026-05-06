@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/mainpage2/ui/Container";
 import { RevealText } from "@/components/mainpage2/ui/RevealText";
+import { Button } from "@/components/mainpage2/ui/Button";
 import data from "@/data/mainpage2/homepage.json";
 
 function StarRating({ count }: { count: number }) {
@@ -102,23 +103,53 @@ export function Reviews() {
               More than 5,000 satisfied customers
             </RevealText>
 
-            <Link
-              href="/reviews"
-              className="inline-flex items-center gap-4 self-start rounded-full bg-accent text-accent-text hover:bg-accent-hover px-10 sm:px-16 py-6 sm:py-7 font-medium text-xl sm:text-2xl tracking-[-0.02em] transition-colors"
-            >
-              <span>View</span>
-              <span aria-hidden="true">•</span>
-              <span>All Reviews</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
+            <div className="self-start">
+              <Button href="/reviews">View all reviews</Button>
+            </div>
           </div>
 
-          {/* RIGHT — two vertical marquee columns with opposing directions */}
+          {/* RIGHT — horizontal scroll on mobile, two opposing vertical
+              marquee columns on sm+ */}
+
+          {/* Mobile: TWO horizontal auto-marquees with opposing directions
+              (mirrors desktop's two vertical columns). Pauses on hover. */}
           <div
-            className="grid grid-cols-2 gap-3 h-[600px] sm:h-[680px] relative overflow-hidden"
+            className="sm:hidden -mx-4 overflow-hidden flex flex-col gap-3"
+            style={{
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
+            }}
+          >
+            {/* Row 1 — scrolls LEFT (tripled array, 25s, matches desktop cadence) */}
+            <div
+              className="flex gap-3 px-4 animate-marquee-left whitespace-nowrap"
+              style={{ animationDuration: "15s" }}
+            >
+              {[...reviews, ...reviews, ...reviews].map((r, i) => (
+                <div key={`ma-${i}`} className="flex-shrink-0 w-[82vw] whitespace-normal">
+                  <ReviewCard review={r} href={urlFor(r.source)} />
+                </div>
+              ))}
+            </div>
+
+            {/* Row 2 — scrolls RIGHT (reversed order so the layout doesn't mirror) */}
+            <div
+              className="flex gap-3 px-4 animate-marquee-right whitespace-nowrap"
+              style={{ animationDuration: "15s" }}
+            >
+              {[...reviews.slice().reverse(), ...reviews.slice().reverse(), ...reviews.slice().reverse()].map((r, i) => (
+                <div key={`mb-${i}`} className="flex-shrink-0 w-[82vw] whitespace-normal">
+                  <ReviewCard review={r} href={urlFor(r.source)} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop: two vertical marquee columns */}
+          <div
+            className="hidden sm:grid grid-cols-2 gap-3 h-[680px] relative overflow-hidden"
             style={{
               maskImage:
                 "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)",
@@ -126,7 +157,6 @@ export function Reviews() {
                 "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)",
             }}
           >
-            {/* Column 1 — scrolls DOWN */}
             <div className="flex flex-col">
               <div className="animate-marquee-down flex flex-col gap-3 shrink-0">
                 {loopA.map((r, i) => (
@@ -134,8 +164,6 @@ export function Reviews() {
                 ))}
               </div>
             </div>
-
-            {/* Column 2 — scrolls UP */}
             <div className="flex flex-col">
               <div className="animate-marquee-up flex flex-col gap-3 shrink-0">
                 {loopB.map((r, i) => (

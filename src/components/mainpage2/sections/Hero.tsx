@@ -17,7 +17,7 @@ function StarIcon({ size = 12 }: { size?: number }) {
 
 function YelpMark() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="#FF1A1A" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M3.70463 11.591C3.33131 12.1645 3.17481 13.9682 3.30491 15.164C3.35016 15.5584 3.42558 15.8877 3.53305 16.0849C3.68201 16.3562 3.93278 16.519 4.21749 16.5281C4.40038 16.5371 4.51539 16.5064 7.95641 15.4444C7.95641 15.4444 9.48554 14.9759 9.49309 14.9722C9.87396 14.8782 10.1323 14.5417 10.1568 14.1129C10.1813 13.6715 9.9456 13.2825 9.55342 13.1432L8.47304 12.7217C4.77371 11.2581 4.60778 11.2002 4.42112 11.1984C4.13453 11.1894 3.88187 11.3269 3.70463 11.591ZM11.9782 22.4982C12.0385 22.3317 12.046 22.2178 12.0555 18.7479C12.0555 18.7479 12.063 17.2155 12.0649 17.1993C12.0894 16.823 11.8367 16.481 11.4219 16.3273C10.9939 16.1699 10.5339 16.2676 10.2756 16.5751C10.2756 16.5751 9.52137 17.4345 9.5176 17.4345C6.92694 20.3544 6.81758 20.4901 6.75536 20.6619C6.71576 20.7632 6.70256 20.8718 6.71388 20.9803C6.72896 21.1359 6.80249 21.2879 6.92316 21.4308C7.52464 22.1164 10.4057 23.1332 11.3258 22.9812C11.6482 22.9287 11.8801 22.7569 11.9782 22.4982ZM17.8251 21.2915C18.6943 20.9586 20.5892 18.6466 20.7231 17.7547C20.7702 17.4453 20.6684 17.1776 20.4459 17.0075C20.3007 16.9026 20.1895 16.861 16.7484 15.7773C16.7484 15.7773 15.2401 15.2997 15.2193 15.2906C14.8535 15.155 14.4368 15.2816 14.1578 15.6127C13.8655 15.9528 13.8222 16.4033 14.056 16.7416L14.6631 17.6895C16.7051 20.8718 16.8616 21.0961 17.0086 21.2065C17.2349 21.3783 17.5234 21.4073 17.8251 21.2915ZM16.047 13.0998C19.9557 12.1916 20.1084 12.1428 20.2611 12.0451C20.4987 11.8913 20.6175 11.6362 20.5967 11.3251C20.5967 11.316 20.5986 11.3052 20.5967 11.2943C20.4968 10.3717 18.8149 7.97639 17.9853 7.58743C17.6912 7.45174 17.3971 7.46079 17.1538 7.61818C17.003 7.71226 16.8917 7.85518 14.7989 10.6032C14.7989 10.6032 13.8542 11.8389 13.8429 11.8515C13.594 12.1428 13.5903 12.5589 13.8335 12.9171C14.0861 13.288 14.5123 13.4671 14.9026 13.3639C14.9026 13.3639 14.8875 13.3911 14.8837 13.3947C15.076 13.3241 15.4192 13.2427 16.047 13.0998ZM12.1233 10.0026C12.0555 8.5155 11.5898 1.89595 11.5351 1.5902C11.4559 1.3116 11.2296 1.11441 10.9053 1.03481C9.90601 0.797811 6.09166 1.82358 5.38461 2.5219C5.15646 2.74985 5.0735 3.02845 5.14138 3.2763C5.25262 3.4952 9.97954 10.6304 9.97954 10.6304C10.6772 11.7176 11.2485 11.5476 11.4351 11.4915C11.6199 11.439 12.1875 11.269 12.1233 10.0026Z" />
     </svg>
   );
@@ -51,74 +51,90 @@ export function Hero() {
       {/* Content wrapper — constrained by Container */}
       <div className="relative z-20 flex-1 flex flex-col pt-28 sm:pt-32 md:pt-36 pb-10 md:pb-14">
         <Container className="relative flex-1 flex flex-col">
-          {/* Right-side rating callouts — clickable, open Yelp/Google in new tab */}
+          {/* Right-side rating pills — glass cards matching navbar style */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 1 }}
-            className="hidden md:flex flex-col gap-5 absolute right-0 bottom-0 text-right"
+            className="hidden md:flex flex-col gap-2.5 absolute right-0 bottom-0"
           >
             {[
               {
                 href: company.social.yelp,
                 Mark: YelpMark,
-                label: "Yelp rating",
+                platform: "Yelp",
                 score: company.rating.yelp.score,
                 count: company.rating.yelp.label,
+                // Yelp logo red at rest, white on red bg on hover
+                brandClass: "text-[#FF1A1A] group-hover:bg-[#FF1A1A] group-hover:text-white",
+                invertOnHover: false,
               },
               {
                 href: company.social.google,
                 Mark: GoogleMark,
-                label: "Google rating",
+                platform: "Google",
                 score: company.rating.google.score,
                 count: company.rating.google.label,
+                // Multicolor Google at rest, forced to white on blue bg on hover (via filter)
+                brandClass: "group-hover:bg-[#4285F4]",
+                invertOnHover: true,
               },
-            ].map(({ href, Mark, label, score, count }) => (
+            ].map(({ href, Mark, platform, score, count, brandClass, invertOnHover }) => (
               <a
-                key={label}
+                key={platform}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Read our ${label} — ${score} stars from ${count} reviews`}
-                className="group block min-w-[200px] pb-3 border-b border-white/25 hover:border-accent transition-colors"
+                aria-label={`Read our ${platform} reviews — ${score} stars from ${count} reviews`}
+                className="glass-phone-btn group flex items-center gap-3 h-14 pl-2 pr-5 rounded-full bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/15 hover:border-white/30 transition-colors"
               >
-                <div className="font-mono text-[0.7rem] uppercase tracking-[0.12em] text-white/60 flex items-center justify-end gap-1.5">
-                  <Mark />
-                  {label}
-                </div>
-                <div className="mt-1 flex items-center justify-end gap-2">
-                  <span className="text-2xl sm:text-[1.75rem] font-semibold text-white leading-none tracking-[-0.02em]">
-                    {score}
-                  </span>
-                  <span className="flex items-center gap-0.5">
-                    {[...Array(5)].map((_, i) => <StarIcon key={i} size={12} />)}
-                  </span>
-                </div>
-                <div className="mt-1 font-mono text-[0.7rem] text-white/50 tracking-[0.05em] flex items-center justify-end gap-1.5 group-hover:text-white/80 transition-colors">
-                  {count} reviews
-                  <svg
-                    width="10"
-                    height="10"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                <span className={`glass-phone-badge grid place-items-center w-10 h-10 rounded-full bg-white/10 transition-colors duration-300 ${brandClass}`}>
+                  <span
+                    className={
+                      invertOnHover
+                        ? "transition-[filter] duration-300 group-hover:brightness-0 group-hover:invert"
+                        : "contents"
+                    }
                   >
-                    <line x1="7" y1="17" x2="17" y2="7" />
-                    <polyline points="7 7 17 7 17 17" />
-                  </svg>
+                    <Mark />
+                  </span>
+                </span>
+                <div className="flex flex-col gap-0.5 pr-1">
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-white text-[0.9375rem] tabular-nums leading-none tracking-[-0.01em]">
+                      {score}
+                    </span>
+                    <span className="flex items-center gap-[1px]">
+                      {[...Array(5)].map((_, i) => <StarIcon key={i} size={11} />)}
+                    </span>
+                  </div>
+                  <span className="font-mono text-[0.65rem] uppercase tracking-[0.1em] text-white/55">
+                    {count} {platform} reviews
+                  </span>
                 </div>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  className="shrink-0 text-white/50 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
               </a>
             ))}
           </motion.div>
 
           {/* LEFT — H1 group (h1 + tagline + subtitle + CTA) mid-left; stats row bottom-left */}
           <div className="flex-1 flex flex-col max-w-[44rem]">
-            <div className="flex-1 flex flex-col justify-center gap-5 sm:gap-7">
+            {/* Push content to bottom on mobile, center on md+ */}
+            <div className="flex-1 flex flex-col justify-end md:justify-center gap-5 sm:gap-7">
               <h1 className="text-white" aria-label={hero.title}>
                 <RevealText as="span" className="block" delay={0.4}>
                   SOS Moving
@@ -183,29 +199,29 @@ export function Hero() {
               </motion.div>
             </div>
 
-            {/* Stats row — bottom-left */}
+            {/* Stats row — bottom-left. Single-line on mobile (smaller type + tighter gaps) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-10"
+              className="flex items-center gap-x-4 sm:gap-x-8 gap-y-4 pt-8 md:pt-10"
             >
               {[
                 { value: company.stats.moves, label: "Successful Moves" },
                 { value: company.rating.overall, label: "Average Rating" },
                 { value: company.stats.cities, label: "Serving Cities" },
               ].map((stat, i, arr) => (
-                <div key={stat.label} className="flex items-center gap-10">
+                <div key={stat.label} className="flex items-center gap-4 sm:gap-8">
                   <div className="text-left">
-                    <div className="hero-stat-value text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] text-white font-semibold leading-none tracking-[-0.03em]">
+                    <div className="hero-stat-value text-xl sm:text-3xl md:text-4xl lg:text-[3rem] text-white font-semibold leading-none tracking-[-0.03em]">
                       {stat.value}
                     </div>
-                    <div className="hero-stat-label text-xs sm:text-sm text-white/55 mt-2 tracking-[0.02em]">
+                    <div className="hero-stat-label text-[0.65rem] sm:text-xs text-white/55 mt-1.5 sm:mt-2 tracking-[0.02em]">
                       {stat.label}
                     </div>
                   </div>
                   {i < arr.length - 1 && (
-                    <div className="h-12 sm:h-16 w-px bg-white/15 hidden sm:block" />
+                    <div className="h-8 sm:h-12 w-px bg-white/15" />
                   )}
                 </div>
               ))}

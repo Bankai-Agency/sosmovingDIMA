@@ -20,8 +20,16 @@
     "founded": 2022,
     "rating": {
       "overall": 4.9,
-      "google": { "score": 4.98, "count": 1000, "label": "1,000+" },
-      "yelp": { "score": 4.89, "count": 1600, "label": "1,600+" }
+      "google": {
+        "score": 4.98,
+        "count": 1000,
+        "label": "1,000+"
+      },
+      "yelp": {
+        "score": 4.89,
+        "count": 1600,
+        "label": "1,600+"
+      }
     },
     "stats": {
       "moves": "10,000+",
@@ -157,39 +165,121 @@
       "title": "Packing Services",
       "slug": "packing-services",
       "description": "Full-service packing with quality materials to protect your belongings.",
-      "image": "/mainpage2/images/packing-img.webp"
+      "image": "/mainpage2/images/Packers-and-movers.avif"
     },
     {
       "title": "Storage",
       "slug": "storage",
       "description": "Secure, climate-controlled storage solutions for short and long-term needs.",
-      "image": "/mainpage2/images/storage-img.webp"
+      "image": "/mainpage2/images/storage-bg.webp"
     }
   ],
   "serviceAreas": [
     {
       "region": "Los Angeles County",
-      "cities": ["Downtown LA", "Hollywood", "Beverly Hills", "Santa Monica", "Glendale", "Burbank", "Pasadena", "Culver City", "Malibu", "West Hollywood", "Los Feliz", "Silver Lake", "Echo Park", "Highland Park", "Eagle Rock", "El Segundo", "Manhattan Beach", "Redondo Beach", "Torrance", "Inglewood", "Hawthorne", "Carson"]
+      "cities": [
+        "Downtown LA",
+        "Hollywood",
+        "Beverly Hills",
+        "Santa Monica",
+        "Glendale",
+        "Burbank",
+        "Pasadena",
+        "Culver City",
+        "Malibu",
+        "West Hollywood",
+        "Los Feliz",
+        "Silver Lake",
+        "Echo Park",
+        "Highland Park",
+        "Eagle Rock",
+        "El Segundo",
+        "Manhattan Beach",
+        "Redondo Beach",
+        "Torrance",
+        "Inglewood",
+        "Hawthorne",
+        "Carson"
+      ]
     },
     {
       "region": "San Fernando Valley",
-      "cities": ["Sherman Oaks", "Studio City", "North Hollywood", "Van Nuys", "Woodland Hills", "Canoga Park", "Northridge", "Chatsworth", "Reseda", "Panorama City", "Tujunga", "Simi Valley"]
+      "cities": [
+        "Sherman Oaks",
+        "Studio City",
+        "North Hollywood",
+        "Van Nuys",
+        "Woodland Hills",
+        "Canoga Park",
+        "Northridge",
+        "Chatsworth",
+        "Reseda",
+        "Panorama City",
+        "Tujunga",
+        "Simi Valley"
+      ]
     },
     {
       "region": "Orange County",
-      "cities": ["Santa Ana", "Irvine", "Anaheim", "Huntington Beach", "Newport Beach", "Costa Mesa", "Tustin", "Fullerton", "Buena Park", "Garden Grove", "Westminster", "Yorba Linda", "Brea", "Placentia", "La Habra", "Aliso Viejo", "Fountain Valley", "Cerritos", "La Mirada"]
+      "cities": [
+        "Santa Ana",
+        "Irvine",
+        "Anaheim",
+        "Huntington Beach",
+        "Newport Beach",
+        "Costa Mesa",
+        "Tustin",
+        "Fullerton",
+        "Buena Park",
+        "Garden Grove",
+        "Westminster",
+        "Yorba Linda",
+        "Brea",
+        "Placentia",
+        "La Habra",
+        "Aliso Viejo",
+        "Fountain Valley",
+        "Cerritos",
+        "La Mirada"
+      ]
     },
     {
       "region": "Inland Empire",
-      "cities": ["Fontana", "Ontario", "Rancho Cucamonga", "Corona", "Chino Hills", "Upland", "Eastvale"]
+      "cities": [
+        "Fontana",
+        "Ontario",
+        "Rancho Cucamonga",
+        "Corona",
+        "Chino Hills",
+        "Upland",
+        "Eastvale"
+      ]
     },
     {
       "region": "Oregon",
-      "cities": ["Portland", "Beaverton", "Gresham", "Hillsboro", "Lake Oswego", "Tigard", "Tualatin", "Oregon City", "Wilsonville", "Salem", "McMinnville", "Camas", "Willamette", "Rose City"]
+      "cities": [
+        "Portland",
+        "Beaverton",
+        "Gresham",
+        "Hillsboro",
+        "Lake Oswego",
+        "Tigard",
+        "Tualatin",
+        "Oregon City",
+        "Wilsonville",
+        "Salem",
+        "McMinnville",
+        "Camas",
+        "Willamette",
+        "Rose City"
+      ]
     },
     {
       "region": "Washington & Colorado",
-      "cities": ["Seattle", "Denver"]
+      "cities": [
+        "Seattle",
+        "Denver"
+      ]
     }
   ],
   "faq": [
@@ -227,9 +317,15 @@
     }
   ],
   "press": [
-    { "name": "AP News" },
-    { "name": "Business Insider" },
-    { "name": "NY Entrepreneur" }
+    {
+      "name": "AP News"
+    },
+    {
+      "name": "Business Insider"
+    },
+    {
+      "name": "NY Entrepreneur"
+    }
   ],
   "locations": [
     {

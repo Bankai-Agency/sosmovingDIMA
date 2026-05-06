@@ -36,7 +36,7 @@ function ArrowIcon() {
 }
 
 const base =
-  "pill-btn inline-flex items-center justify-center gap-3 h-12 px-6 rounded-full font-semibold leading-none tracking-[-0.02em] whitespace-nowrap text-[0.9375rem] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "pill-btn inline-flex items-center justify-center gap-3 md:gap-4 h-12 md:h-14 lg:h-[60px] px-6 md:px-8 lg:px-9 rounded-full font-semibold leading-none tracking-[-0.02em] whitespace-nowrap text-[0.9375rem] md:text-base lg:text-[1.0625rem] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent w-full sm:w-auto";
 
 const variants = {
   primary: "pill-btn--primary bg-accent text-accent-text",

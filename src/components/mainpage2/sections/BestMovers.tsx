@@ -78,23 +78,18 @@ export function BestMovers() {
               </p>
             </FadeUp>
 
-            {/* Numbered highlights — Steps-style hairline dividers */}
-            <StaggerContainer className="flex flex-col border-t border-white/10" staggerDelay={0.06}>
+            {/* Highlight cards — rounded surface plates */}
+            <StaggerContainer className="flex flex-col gap-3" staggerDelay={0.06}>
               {highlights.map((item, i) => (
                 <StaggerItem key={i}>
-                  <div className="flex items-start gap-5 md:gap-6 py-5 md:py-6 border-b border-white/10">
+                  <div className="flex items-start gap-5 md:gap-6 p-5 md:p-6 rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] transition-colors">
                     <div className="shrink-0 grid place-items-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/[0.06] text-accent">
                       {item.icon}
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
-                      <div className="flex items-baseline gap-3">
-                        <span className="font-mono text-xs tracking-[0.08em] tabular-nums text-white/40">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <h3 className="text-lg md:text-xl font-semibold text-white leading-[1.2] tracking-[-0.02em]">
-                          {item.title}
-                        </h3>
-                      </div>
+                      <h3 className="text-lg md:text-xl font-semibold text-white leading-[1.2] tracking-[-0.02em]">
+                        {item.title}
+                      </h3>
                       <p className="text-sm md:text-[0.9375rem] text-text-muted leading-[1.5] max-w-[48ch]">
                         {item.text}
                       </p>

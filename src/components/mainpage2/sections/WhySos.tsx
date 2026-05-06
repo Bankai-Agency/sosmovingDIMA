@@ -49,7 +49,7 @@ export function WhySos() {
   const current = benefits[active];
 
   return (
-    <section id="why-sos" className="py-20 md:py-28">
+    <section id="why-sos" className="relative">
       {/* Full-bleed image — viewport width AND height */}
       <div
         className="relative overflow-hidden bg-black w-screen h-screen left-1/2 -translate-x-1/2"
@@ -72,8 +72,8 @@ export function WhySos() {
               priority={false}
             />
             {/* Top + bottom gradients for text legibility (title on top, tabs on bottom) */}
-            <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-black/95 via-black/60 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
           </motion.div>
         </AnimatePresence>
 
@@ -87,6 +87,19 @@ export function WhySos() {
             >
               Not your average movers
             </RevealText>
+            {/* Description — swaps with active tab */}
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={`desc-${active}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                className="max-w-xl text-white/85 text-base sm:text-lg md:text-xl leading-[1.4] tracking-[-0.01em]"
+              >
+                {current.text}
+              </motion.p>
+            </AnimatePresence>
           </div>
         </div>
 
@@ -101,13 +114,24 @@ export function WhySos() {
                     key={i}
                     type="button"
                     onClick={() => setActive(i)}
-                    className={`group relative overflow-hidden text-left rounded-xl p-4 sm:p-5 transition-colors duration-300 backdrop-blur-md ${
+                    className={`group relative overflow-hidden text-left rounded-xl p-4 sm:p-5 transition-colors duration-300 backdrop-blur-md text-white ${
                       isActive
-                        ? "bg-white/10 text-white"
-                        : "bg-black/30 text-white hover:bg-black/40 border border-white/10"
+                        ? "bg-white/20"
+                        : "bg-white/[0.08] hover:bg-white/[0.14]"
                     }`}
                     aria-pressed={isActive}
                   >
+                    <span
+                      className={`relative z-10 block font-mono text-xs tracking-[0.08em] mb-6 sm:mb-10 ${
+                        isActive ? "text-white/70" : "text-white/60"
+                      }`}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="relative z-10 block font-mono font-bold uppercase text-sm sm:text-base leading-[1.15] tracking-[-0.02em]">
+                      {b.label}
+                    </span>
+                    {/* Progress bar — thin accent line at bottom of active tab, fills over 5s */}
                     {isActive && (
                       <motion.span
                         key={`progress-${active}`}
@@ -119,23 +143,9 @@ export function WhySos() {
                           ease: "linear",
                         }}
                         style={{ originX: 0 }}
-                        className="absolute inset-0 bg-accent z-0"
+                        className="absolute left-0 right-0 bottom-0 h-[3px] bg-accent z-20"
                       />
                     )}
-                    <span
-                      className={`relative z-10 block font-mono text-xs tracking-[0.08em] mb-6 sm:mb-10 ${
-                        isActive ? "text-accent-text/60" : "text-white/60"
-                      }`}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span
-                      className={`relative z-10 block font-mono font-bold uppercase text-sm sm:text-base leading-[1.15] tracking-[-0.02em] ${
-                        isActive ? "text-accent-text" : ""
-                      }`}
-                    >
-                      {b.label}
-                    </span>
                   </button>
                 );
               })}

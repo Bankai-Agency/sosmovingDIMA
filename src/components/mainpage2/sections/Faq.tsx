@@ -11,24 +11,24 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-16 md:py-20">
+    <section id="faq" className="py-14 md:py-16">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <RevealText
           as="h2"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold text-white leading-[0.95] tracking-[-0.04em] mb-8 md:mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[0.95] tracking-[-0.04em] mb-6 md:mb-10"
         >
           Frequently Asked Questions
         </RevealText>
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,460px)] gap-6 lg:gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,380px)] gap-6 lg:gap-8 items-start">
           {/* LEFT — accordion */}
           <div>
-            <div className="rounded-3xl bg-surface py-4">
+            <div className="rounded-3xl bg-surface py-2">
               {faq.map((item, i) => {
                 const isOpen = openIndex === i;
                 return (
                   <div
                     key={i}
-                    className={`px-6 md:px-10 py-6 ${
+                    className={`px-5 md:px-8 py-4 md:py-5 ${
                       i > 0 ? "border-t border-border" : ""
                     }`}
                   >
@@ -36,21 +36,21 @@ export function Faq() {
                       type="button"
                       onClick={() => setOpenIndex(isOpen ? null : i)}
                       aria-expanded={isOpen}
-                      className="flex w-full items-start justify-between gap-6 text-left"
+                      className="flex w-full items-start justify-between gap-5 text-left"
                     >
-                      <h3 className="flex-1 text-2xl lg:text-[1.75rem] font-semibold text-white leading-[1.15] tracking-[-0.02em]">
+                      <h3 className="flex-1 text-lg md:text-xl lg:text-[1.375rem] font-semibold text-white leading-[1.2] tracking-[-0.02em]">
                         {item.question}
                       </h3>
                       <span
-                        className={`shrink-0 grid place-items-center h-10 w-10 md:h-12 md:w-12 rounded-full transition-colors duration-300 ${
+                        className={`shrink-0 grid place-items-center h-9 w-9 md:h-10 md:w-10 rounded-full transition-colors duration-300 ${
                           isOpen
                             ? "bg-accent text-accent-text"
                             : "bg-surface-hover text-white"
                         }`}
                       >
                         <motion.svg
-                          width="20"
-                          height="20"
+                          width="16"
+                          height="16"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -81,7 +81,7 @@ export function Faq() {
                           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                           className="overflow-hidden"
                         >
-                          <p className="pt-4 pr-12 text-base md:text-lg font-normal text-text-muted leading-[1.5] tracking-[-0.01em]">
+                          <p className="pt-3 pr-10 text-sm md:text-base font-normal text-text-muted leading-[1.5] tracking-[-0.01em]">
                             {item.answer}
                           </p>
                         </motion.div>
@@ -94,12 +94,12 @@ export function Faq() {
           </div>
 
           {/* RIGHT — "Any questions left?" sidebar */}
-          <aside className="rounded-3xl bg-surface p-8 md:p-12 flex flex-col gap-8">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-3xl md:text-[2.5rem] font-medium text-white leading-[1.1] tracking-[-0.04em]">
+          <aside className="rounded-3xl bg-surface p-6 md:p-8 flex flex-col gap-6">
+            <div className="flex flex-col gap-1.5">
+              <h3 className="text-2xl md:text-3xl font-medium text-white leading-[1.1] tracking-[-0.04em]">
                 Any questions left?
               </h3>
-              <p className="text-lg md:text-2xl font-normal text-text-muted leading-[1.1] tracking-[-0.02em]">
+              <p className="text-base md:text-lg font-normal text-text-muted leading-[1.2] tracking-[-0.02em]">
                 We are ready to answer them!
               </p>
             </div>

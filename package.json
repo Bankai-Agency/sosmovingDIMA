@@ -17,6 +17,7 @@
     "@blocknote/core": "^0.48.1",
     "@blocknote/mantine": "^0.48.1",
     "@blocknote/react": "^0.48.1",
+    "@gsap/react": "^2.1.2",
     "@neondatabase/serverless": "^1.1.0",
     "@octokit/rest": "^22.0.1",
     "@radix-ui/react-avatar": "^1.1.11",

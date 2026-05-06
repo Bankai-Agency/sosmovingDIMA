@@ -23,12 +23,14 @@ export function VideoReviewPlayer({ src, poster, title, className = "" }: Props)
   return (
     <div
       data-video-card={playing ? "playing" : "idle"}
-      onClick={play}
-      role="button"
-      tabIndex={0}
-      aria-label={`Play ${title}`}
+      // Only hijack the click while idle — once playing, let clicks reach the
+      // native <video> controls so the user can pause / scrub.
+      onClick={playing ? undefined : play}
+      role={playing ? undefined : "button"}
+      tabIndex={playing ? undefined : 0}
+      aria-label={playing ? undefined : `Play ${title}`}
       onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
+        if (!playing && (e.key === "Enter" || e.key === " ")) {
           e.preventDefault();
           play();
         }
@@ -44,7 +46,9 @@ export function VideoReviewPlayer({ src, poster, title, className = "" }: Props)
         preload="metadata"
         playsInline
         controls={playing}
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className={`absolute inset-0 w-full h-full object-cover ${
+          playing ? "" : "pointer-events-none"
+        }`}
       />
       {!playing && (
         <>

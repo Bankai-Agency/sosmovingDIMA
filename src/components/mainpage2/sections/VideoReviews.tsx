@@ -54,6 +54,18 @@ const videoReviews = [
 export function VideoReviews() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  // Drag state — tracks pointer start + scroll offset + whether movement crossed
+  // the "this is a drag, not a click" threshold (so card-click → play is suppressed).
+  const dragRef = useRef<{
+    startX: number;
+    startScroll: number;
+    moved: boolean;
+    pointerId: number;
+    captured: boolean;
+  } | null>(null);
+  // Point history for post-release inertia (velocity computed from last ~80ms)
+  const historyRef = useRef<{ x: number; t: number }[]>([]);
+  const inertiaRef = useRef<number | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
@@ -61,6 +73,103 @@ export function VideoReviews() {
       left: direction === "left" ? -460 : 460,
       behavior: "smooth",
     });
+  };
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    // Ignore touch — native inertial scroll handles those well.
+    if (e.pointerType === "touch") return;
+    // Cancel any running inertia so new drag starts from current position.
+    if (inertiaRef.current !== null) {
+      cancelAnimationFrame(inertiaRef.current);
+      inertiaRef.current = null;
+    }
+    // Record state, but DON'T capture the pointer yet — capturing now would
+    // redirect the click target and break the card's onClick (= video play)
+    // for simple taps. We capture mid-move once a real drag starts.
+    dragRef.current = {
+      startX: e.clientX,
+      startScroll: el.scrollLeft,
+      moved: false,
+      pointerId: e.pointerId,
+      captured: false,
+    };
+    historyRef.current = [{ x: e.clientX, t: performance.now() }];
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const s = dragRef.current;
+    const el = scrollRef.current;
+    if (!s || !el) return;
+    const dx = e.clientX - s.startX;
+    if (Math.abs(dx) > 5 && !s.moved) {
+      // Crossed drag threshold — NOW take pointer capture and switch cursor.
+      s.moved = true;
+      s.captured = true;
+      try {
+        el.setPointerCapture(e.pointerId);
+      } catch {
+        /* capture may fail on some edge cases — still ok, we just pan */
+      }
+      el.style.cursor = "grabbing";
+    }
+    if (s.moved) {
+      el.scrollLeft = s.startScroll - dx;
+      // Keep a rolling window of the last ~80ms for velocity math on release.
+      const now = performance.now();
+      const hist = historyRef.current;
+      hist.push({ x: e.clientX, t: now });
+      while (hist.length > 1 && now - hist[0].t > 80) hist.shift();
+    }
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    const s = dragRef.current;
+    const el = scrollRef.current;
+    if (!s || !el) return;
+    if (s.captured) {
+      try {
+        el.releasePointerCapture(e.pointerId);
+      } catch {
+        /* pointer was already released */
+      }
+    }
+    el.style.cursor = "";
+    if (s.moved) {
+      // Swallow the click that fires after a drag, so we don't auto-play the
+      // card the user happened to release over.
+      const onceClick = (ev: MouseEvent) => {
+        ev.stopPropagation();
+        ev.preventDefault();
+      };
+      el.addEventListener("click", onceClick, { capture: true, once: true });
+
+      // Momentum: compute velocity (px/ms) from the last ~80ms, then decay.
+      const hist = historyRef.current;
+      if (hist.length >= 2) {
+        const first = hist[0];
+        const last = hist[hist.length - 1];
+        const dt = last.t - first.t;
+        if (dt > 0) {
+          // Negative because scrollLeft moves opposite to pointer delta.
+          let velocity = -((last.x - first.x) / dt) * 16; // px per ~frame (16ms)
+          const step = () => {
+            if (!scrollRef.current) return;
+            if (Math.abs(velocity) < 0.4) {
+              inertiaRef.current = null;
+              return;
+            }
+            scrollRef.current.scrollLeft += velocity;
+            velocity *= 0.93; // friction
+            inertiaRef.current = requestAnimationFrame(step);
+          };
+          inertiaRef.current = requestAnimationFrame(step);
+        }
+      }
+    }
+    dragRef.current = null;
+    historyRef.current = [];
   };
 
   return (
@@ -111,10 +220,14 @@ export function VideoReviews() {
         </div>
       </Container>
 
-      {/* Horizontal scroller — with left/right edge fade */}
+      {/* Horizontal scroller — with left/right edge fade + drag-to-pan */}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pl-4 sm:pl-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] pr-8 pb-2 scroll-pl-4 sm:scroll-pl-6 lg:scroll-pl-[max(2rem,calc((100vw-80rem)/2+2rem))]"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+        className="flex gap-4 overflow-x-auto select-none cursor-grab [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pl-4 sm:pl-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] pr-8 pb-2"
         style={{
           maskImage:
             "linear-gradient(to right, transparent 0%, black 4%, black 94%, transparent 100%)",
@@ -125,7 +238,7 @@ export function VideoReviews() {
         {videoReviews.map((v) => (
           <div
             key={v.src}
-            className="flex-shrink-0 w-[70vw] xs:w-[60vw] sm:w-[320px] md:w-[340px] lg:w-[360px] snap-start rounded-2xl overflow-hidden bg-surface"
+            className="flex-shrink-0 w-[70vw] xs:w-[60vw] sm:w-[320px] md:w-[340px] lg:w-[360px] rounded-2xl overflow-hidden bg-surface"
           >
             <div className="relative aspect-[3/4]">
               <VideoReviewPlayer src={v.src} title={v.title} />
