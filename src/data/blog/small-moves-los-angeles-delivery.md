@@ -5,7 +5,7 @@ metaDescription: "Small moves in LA from $250. Single furniture pieces, dorm roo
 featuredImage: "/images/blog/69060e6ea05e41e391386bcb_small-moves-los-angeles-delivery-img.jpg"
 publishDate: "October 31, 2025"
 lastUpdated: "October 31, 2025"
-category: "small moves in los angeles: single item to studio apartments"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

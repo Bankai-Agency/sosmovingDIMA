@@ -5,7 +5,7 @@ metaDescription: "Moving from NYC to LA? Complete guide: costs $3,000-8,000, 7-1
 featuredImage: "/images/blog/692d6e76702da60e9679c15a_nyc-to-la-moving-cross-country-guide-img.jpg"
 publishDate: "November 28, 2025"
 lastUpdated: "November 28, 2025"
-category: "nyc to la moving - cross country guide"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

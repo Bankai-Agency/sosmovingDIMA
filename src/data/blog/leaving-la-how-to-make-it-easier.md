@@ -5,7 +5,7 @@ metaDescription: "Are you leaving LA and you are not too happy about it? There i
 featuredImage: "/images/blog/645ab1d979228796ec5bf3b3_pexels-veeterzy-1412235-1.jpg"
 publishDate: "March 5, 2021"
 lastUpdated: "March 5, 2021"
-category: "leaving la – how to make it easier?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

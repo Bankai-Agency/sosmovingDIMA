@@ -5,7 +5,7 @@ metaDescription: "Do you need to move but you do not have enough time? If yes, t
 featuredImage: "/images/blog/645ab1d979228774845bf271_age-barros-rBPOfVqROzY-unsplash-scaled-e1630502301212.jpg"
 publishDate: "September 11, 2021"
 lastUpdated: "September 11, 2021"
-category: "last minute move packing advice"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

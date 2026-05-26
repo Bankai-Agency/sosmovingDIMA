@@ -5,7 +5,7 @@ metaDescription: "Learn everything about Certificate of Insurance (COI) in SOS M
 featuredImage: "/images/blog/645ab1d97922875ec95bf1fd_all-you-need-to-know-about-a-moving-certificate-of-insurance.jpg"
 publishDate: "November 7, 2022"
 lastUpdated: "November 7, 2022"
-category: "all you need to know about a moving certificate of insurance"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

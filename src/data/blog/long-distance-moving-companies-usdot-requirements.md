@@ -5,7 +5,7 @@ metaDescription: "USDOT requirements for long distance movers from LA. Verify li
 featuredImage: "/images/blog/69344f89c9ec48264e93abfe_long-distance-moving-companies-usdot-requirements-img.jpg"
 publishDate: "December 5, 2025"
 lastUpdated: "December 5, 2025"
-category: "long distance moving companies - usdot requirements"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

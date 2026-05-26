@@ -5,7 +5,7 @@ metaDescription: "In case you are interested to keep your pets safe and entertai
 featuredImage: "/images/blog/645ab1d9792287acae5bf262_F-1.jpg"
 publishDate: "September 19, 2021"
 lastUpdated: "September 19, 2021"
-category: "how to keep your pets safe and entertained while packing for a move?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

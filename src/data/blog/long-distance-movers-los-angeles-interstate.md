@@ -5,7 +5,7 @@ metaDescription: "Professional long distance moving from LA. Cross-country reloc
 featuredImage: "/images/blog/68ff683197d9c65fa21f31f4_long-distance-movers-los-angeles-interstate-img.jpg"
 publishDate: "October 25, 2025"
 lastUpdated: "October 25, 2025"
-category: "long distance movers from los angeles: interstate moving guide"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

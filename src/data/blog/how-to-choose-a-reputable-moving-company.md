@@ -5,7 +5,7 @@ metaDescription: "Start planning early. Figure out what services you need. Find 
 featuredImage: "/images/blog/645ab1d97922870a565bf237_how-to-choose-reputable-moving-company.jpg"
 publishDate: "March 7, 2022"
 lastUpdated: "March 7, 2022"
-category: "how to choose a reputable moving company?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "There are many reasons to hire professional movers when moving
 featuredImage: "/images/blog/645ab1d979228794ba5bf2ae_izayah-ramos-cR05i3WgRlQ-unsplash-scaled-1-2048x1366.jpg"
 publishDate: "August 7, 2021"
 lastUpdated: "August 7, 2021"
-category: "reasons to hire professional movers when moving locally in la"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

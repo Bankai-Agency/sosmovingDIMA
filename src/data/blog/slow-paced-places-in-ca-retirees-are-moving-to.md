@@ -5,7 +5,7 @@ metaDescription: "Are you considering moving to California? Then, here are all t
 featuredImage: "/images/blog/645ab1d97922872ea35bf26f_julian-myles-2YGrbLlbz6Y-unsplash-scaled-e1631419867182.jpg"
 publishDate: "September 18, 2021"
 lastUpdated: "September 18, 2021"
-category: "slow-paced places in ca retirees are moving to"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

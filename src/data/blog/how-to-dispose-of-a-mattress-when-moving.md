@@ -5,7 +5,7 @@ metaDescription: "Need to dispose of a mattress before moving in LA? Free pickup
 featuredImage: "/images/blog/692d6b384596439c9a01ad08_how-to-dispose-of-a-mattress-when-moving-img.jpg"
 publishDate: "November 25, 2025"
 lastUpdated: "November 25, 2025"
-category: "how to dispose of a mattress when moving"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

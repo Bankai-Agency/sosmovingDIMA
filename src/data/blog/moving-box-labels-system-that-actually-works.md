@@ -5,7 +5,7 @@ metaDescription: "A labeling system that saves hours on moving day and makes unp
 featuredImage: "/images/blog/69aff0d4c2939d283246d495_moving-box-labels-system-that-actually-works.png"
 publishDate: "March 11, 2026"
 lastUpdated: "March 11, 2026"
-category: "moving box labels system that actually works"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

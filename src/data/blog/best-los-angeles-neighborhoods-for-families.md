@@ -5,7 +5,7 @@ metaDescription: "Find the perfect LA neighborhood for your family! Compare scho
 featuredImage: "/images/blog/68d2da686f28ea9adf7e23e7_best-los-angeles-neighborhoods-for-families-img.jpg"
 publishDate: "September 21, 2025"
 lastUpdated: "September 21, 2025"
-category: "best los angeles neighborhoods for families: the 2025 complete guide"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

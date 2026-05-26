@@ -5,7 +5,7 @@ metaDescription: "In case you are thinking about how to treat your LA movers, yo
 featuredImage: "/images/blog/645ab1d9792287595d5bf36c_robinson-greig-HrnAxAUwle8-unsplash-scaled-e1617982494590-1.jpg"
 publishDate: "April 6, 2021"
 lastUpdated: "April 6, 2021"
-category: "how to treat your la movers?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

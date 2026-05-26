@@ -5,7 +5,7 @@ metaDescription: "What makes them legitimate? Make sure your movers are licensed
 featuredImage: "/images/blog/645ab1d9792287759c5bf21e_check-if-moving-company-is-legit.jpg"
 publishDate: "April 4, 2022"
 lastUpdated: "April 4, 2022"
-category: "5 quick ways to check if a moving company is legitimate"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

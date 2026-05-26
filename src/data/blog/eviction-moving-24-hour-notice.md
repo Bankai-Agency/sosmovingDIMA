@@ -5,7 +5,7 @@ metaDescription: "Facing 24-hour eviction in LA? Sheriff arrives tomorrow 8am. E
 featuredImage: "/images/blog/695267043a61a746b71f2b0c_eviction-moving-24-hour-notice.jpg"
 publishDate: "December 13, 2025"
 lastUpdated: "December 13, 2025"
-category: "eviction moving - 24 hour notice"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

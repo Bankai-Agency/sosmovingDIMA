@@ -5,7 +5,7 @@ metaDescription: "Are you wondering what should be on the list of moving supplie
 featuredImage: "/images/blog/645ab1d97922873e405bf35b_pexels-karolina-grabowska-4498152-4-1.jpg"
 publishDate: "April 21, 2021"
 lastUpdated: "April 21, 2021"
-category: "the ultimate list of moving supplies for an la move"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

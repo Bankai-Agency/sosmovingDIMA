@@ -5,7 +5,7 @@ metaDescription: "Should you leave everything to movers or help? Here are all th
 featuredImage: "/images/blog/645ab1d979228787485bf3ad_krakenimages-376KN_ISplE-unsplash-scaled-e1614699230490-1.jpg"
 publishDate: "March 6, 2021"
 lastUpdated: "March 6, 2021"
-category: "important instructions for your los angeles movers to note"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

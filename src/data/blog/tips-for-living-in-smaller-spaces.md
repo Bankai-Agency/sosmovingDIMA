@@ -5,7 +5,7 @@ metaDescription: "Thinking about Living in Smaller Spaces? Our guide is packed w
 featuredImage: "/images/blog/645ab1d979228764965bf3b5_pexels-vecislavas-popa-1571468-1.jpg"
 publishDate: "March 3, 2021"
 lastUpdated: "March 3, 2021"
-category: "tips for living in smaller spaces"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

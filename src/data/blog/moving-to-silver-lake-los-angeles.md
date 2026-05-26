@@ -5,7 +5,7 @@ metaDescription: "Moving to Silver Lake LA? Discover the hipster capital's music
 featuredImage: "/images/blog/68ff6005751dc92551613bd4_moving-to-silver-lake-los-angeles-img (1).jpg"
 publishDate: "October 15, 2025"
 lastUpdated: "October 15, 2025"
-category: "moving to silver lake: la's creative hub on the hillside"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

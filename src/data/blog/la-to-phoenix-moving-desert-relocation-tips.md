@@ -5,7 +5,7 @@ metaDescription: "Moving from LA to Phoenix? Real costs, I-10 route tips, heat p
 featuredImage: "/images/blog/69aff4fec895228ea11f02e2_la-to-phoenix-moving-desert-relocation-tips.png"
 publishDate: "March 13, 2026"
 lastUpdated: "March 13, 2026"
-category: "la to phoenix moving - desert relocation tips"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Do you want to move to NY but you have less than a week? Then,
 featuredImage: "/images/blog/645ab1d97922877c855bf2ca_andreas-kruck-l8ypMiU1Hio-unsplash-scaled-e1625901339246.jpg"
 publishDate: "July 14, 2021"
 lastUpdated: "July 14, 2021"
-category: "how to pack for your move from ca to ny in a week?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

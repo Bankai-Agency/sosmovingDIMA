@@ -5,7 +5,7 @@ metaDescription: "Are you looking for the ways to reduce storing expenses? SOS M
 featuredImage: "/images/blog/645ab1d979228752295bf42f_savings-2789137_1280-1.jpg"
 publishDate: "December 31, 2020"
 lastUpdated: "December 31, 2020"
-category: "how to reduce storing expenses in ca?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Here are some tips on how to speed up your California move. Fe
 featuredImage: "/images/blog/645ab1d97922871b175bf352_pexels-samer-daboul-1209999.jpg"
 publishDate: "May 1, 2021"
 lastUpdated: "May 1, 2021"
-category: "how to speed up your california move?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

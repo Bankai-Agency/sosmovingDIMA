@@ -5,7 +5,7 @@ metaDescription: "There are many moving mistakes you should avoid when relocatin
 featuredImage: "/images/blog/645ab1d9792287d6ff5bf438_checklist-4279387_1920-e1608077148504-1.jpg"
 publishDate: "December 26, 2020"
 lastUpdated: "December 26, 2020"
-category: "moving mistakes you should avoid when relocating to co"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Opting for a DIY move might seem like a good choice but here a
 featuredImage: "/images/blog/645ab1d979228707005bf347_hiveboxx-deX-KChuboY-unsplash-scaled-e1619784799891.jpg"
 publishDate: "May 2, 2021"
 lastUpdated: "May 2, 2021"
-category: "diy moving mistakes you should avoid"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

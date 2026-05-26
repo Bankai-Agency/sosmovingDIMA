@@ -5,7 +5,7 @@ metaDescription: "If you wish to overcome the challenges of a local LA move, you
 featuredImage: "/images/blog/645ab1d9792287306f5bf26d_F-3.jpg"
 publishDate: "September 7, 2021"
 lastUpdated: "September 7, 2021"
-category: "how to overcome the challenges of a local la move?"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

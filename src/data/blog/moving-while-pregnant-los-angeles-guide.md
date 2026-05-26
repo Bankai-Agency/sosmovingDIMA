@@ -5,7 +5,7 @@ metaDescription: "Pregnant and need to move in LA? Safety tips, timing advice, a
 featuredImage: "/images/blog/68ff6124517edf9a8537fc39_moving-while-pregnant-los-angeles-guide-img.jpg"
 publishDate: "October 18, 2025"
 lastUpdated: "October 18, 2025"
-category: "moving while pregnant: a safety-first guide for expecting mothers"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

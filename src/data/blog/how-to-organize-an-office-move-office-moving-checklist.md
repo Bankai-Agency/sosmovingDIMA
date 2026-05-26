@@ -5,7 +5,7 @@ metaDescription: "Plan your office move in advance. Communication. Preparation. 
 featuredImage: "/images/blog/645ab1d979228725d45bf21d_office-moving-checklist.jpg"
 publishDate: "April 25, 2022"
 lastUpdated: "April 25, 2022"
-category: "how to organize an office move: office moving checklist"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

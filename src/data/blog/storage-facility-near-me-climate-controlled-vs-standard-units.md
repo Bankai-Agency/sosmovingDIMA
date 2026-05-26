@@ -5,7 +5,7 @@ metaDescription: "Climate controlled vs standard storage: +$50/month prevents $2
 featuredImage: "/images/blog/6981cf6b1222404a3cb80ecb_storage-facility-near-me-climate-controlled-vs-standard-units.png"
 publishDate: "February 4, 2026"
 lastUpdated: "February 4, 2026"
-category: "storage facility near me - climate controlled vs standard units"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

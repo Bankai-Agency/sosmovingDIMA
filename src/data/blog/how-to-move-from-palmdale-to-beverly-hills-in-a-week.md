@@ -5,7 +5,7 @@ metaDescription: "Do you have to relocate fast to Beverly Hills from Palmdale? H
 featuredImage: "/images/blog/645ab1d979228790765bf2a2_beverly-2008767_1280.jpg"
 publishDate: "August 11, 2021"
 lastUpdated: "August 11, 2021"
-category: "how to move from palmdale to beverly hills in a week?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

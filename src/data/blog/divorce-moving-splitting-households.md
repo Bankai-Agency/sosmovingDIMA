@@ -5,7 +5,7 @@ metaDescription: "Splitting a household during divorce? Practical moving logisti
 featuredImage: "/images/blog/699eb954502c4fb3720b5b98_divorce-moving-splitting-households.png"
 publishDate: "February 25, 2026"
 lastUpdated: "February 25, 2026"
-category: "divorce moving - splitting households"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

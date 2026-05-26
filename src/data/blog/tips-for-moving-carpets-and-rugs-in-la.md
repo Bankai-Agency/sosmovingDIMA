@@ -5,7 +5,7 @@ metaDescription: "When you're moving to LA you can't miss taking your carpets wi
 featuredImage: "/images/blog/645ab1d97922872c865bf3a5_rug-main-1.jpg"
 publishDate: "March 16, 2021"
 lastUpdated: "March 16, 2021"
-category: "tips for moving carpets and rugs in la"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

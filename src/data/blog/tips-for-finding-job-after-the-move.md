@@ -5,7 +5,7 @@ metaDescription: "Have you moved recently? Struggling to find a new job? Take a 
 featuredImage: "/images/blog/645ab1d979228718195bf3ef_pexels-loe-moshkovska-722244-scaled-e1611398077670-1.jpg"
 publishDate: "January 30, 2021"
 lastUpdated: "January 30, 2021"
-category: "tips for finding job after the move"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

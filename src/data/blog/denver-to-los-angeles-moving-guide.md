@@ -5,7 +5,7 @@ metaDescription: "Moving from Denver to LA? Real costs, best routes, and what ch
 featuredImage: "/images/blog/6996fa7d694257a98149b53d_denver-to-los-angeles-moving-guide.png"
 publishDate: "February 19, 2026"
 lastUpdated: "February 19, 2026"
-category: "denver to los angeles moving guide"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

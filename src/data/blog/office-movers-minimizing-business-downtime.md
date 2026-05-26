@@ -5,7 +5,7 @@ metaDescription: "Office moving in LA without losing revenue. Weekend moves, IT 
 featuredImage: "/images/blog/695d1baa1a4c1f79ca1155bd_office-movers-minimizing-business-downtime.png"
 publishDate: "January 2, 2026"
 lastUpdated: "January 2, 2026"
-category: "office movers - minimizing business downtime"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

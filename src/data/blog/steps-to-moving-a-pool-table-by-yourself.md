@@ -5,7 +5,7 @@ metaDescription: "Expert tips and valuable insights on moving a pool table by yo
 featuredImage: "/images/blog/645ab1d979228733655bf18d_steps-to-moving-a-pool-table-by-yourself.jpg"
 publishDate: "November 28, 2022"
 lastUpdated: "November 28, 2022"
-category: "steps to moving a pool table by yourself"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

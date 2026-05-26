@@ -5,7 +5,7 @@ metaDescription: "What are the best ways to organize your new office after movin
 featuredImage: "/images/blog/645ab1d97922872e0a5bf2ba_pexels-pixabay-263209-e1625684459890.jpg"
 publishDate: "July 24, 2021"
 lastUpdated: "July 24, 2021"
-category: "organize your new office after moving to nyc"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

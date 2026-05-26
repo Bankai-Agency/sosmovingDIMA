@@ -5,7 +5,7 @@ metaDescription: "The moving process is not completed before you unpack everythi
 featuredImage: "/images/blog/645ab1d9792287ac595bf378_pexels-karolina-grabowska-4498124-1.jpg"
 publishDate: "April 7, 2021"
 lastUpdated: "April 7, 2021"
-category: "moving house: the day after the move to la"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

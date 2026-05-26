@@ -5,7 +5,7 @@ metaDescription: "Trying DIY relocation? SOS Moving and Storage Los Angeles give
 featuredImage: "/images/blog/645ab1d97922871fb45bf458_phillip-goldsberry-fZuleEfeA1Q-unsplash-scaled-e1603850496229.jpg"
 publishDate: "November 24, 2020"
 lastUpdated: "November 24, 2020"
-category: "genius hacks and solutions for moving furniture"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

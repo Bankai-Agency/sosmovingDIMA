@@ -5,7 +5,7 @@ metaDescription: "Choosing a mover? Our expert guide covers 5 essential tips, fr
 featuredImage: "/images/blog/68bb1280428ae5b17c70b04c_how-to-choose-a-moving-company-5-essential-tips-img.jpg"
 publishDate: "September 2, 2025"
 lastUpdated: "September 2, 2025"
-category: "how to choose a moving company: 5 essential tips"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

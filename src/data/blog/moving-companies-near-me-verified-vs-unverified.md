@@ -5,7 +5,7 @@ metaDescription: "Verified movers have CPUC license, insurance, real address. Un
 featuredImage: "/images/blog/69527799bb4f1de23b3a84cb_moving-companies-near-me-verified-vs-unverified.png"
 publishDate: "December 17, 2025"
 lastUpdated: "December 17, 2025"
-category: "moving companies near me - verified vs unverified"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

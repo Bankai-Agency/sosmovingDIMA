@@ -5,7 +5,7 @@ metaDescription: "Starting fresh after divorce in LA? Practical moving tips, leg
 featuredImage: "/images/blog/68e3e1c899f485f330246ae9_moving-after-divorce-los-angeles-guide-img.jpg"
 publishDate: "October 6, 2025"
 lastUpdated: "October 6, 2025"
-category: "moving after divorce: your guide to starting fresh in los angeles"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

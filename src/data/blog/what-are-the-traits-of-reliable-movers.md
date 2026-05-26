@@ -5,7 +5,7 @@ metaDescription: "You're wondering what are the traits of reliable movers? SOS M
 featuredImage: "/images/blog/645ab1d979228712a55bf451_pexels-photo-5025638-e1605470929421-1.jpeg"
 publishDate: "November 21, 2020"
 lastUpdated: "November 21, 2020"
-category: "what are the traits of reliable movers"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

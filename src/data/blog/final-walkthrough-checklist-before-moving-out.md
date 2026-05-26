@@ -5,7 +5,7 @@ metaDescription: "There are many important things to do when moving out. Go trou
 featuredImage: "/images/blog/645ab1d9792287e6555bf2f8_pexels-suzy-hazelwood-1226398-1.jpg"
 publishDate: "June 29, 2021"
 lastUpdated: "June 29, 2021"
-category: "final walkthrough checklist before moving out"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

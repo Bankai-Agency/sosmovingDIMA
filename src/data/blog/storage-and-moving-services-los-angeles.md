@@ -5,7 +5,7 @@ metaDescription: "Combined storage and moving services in LA. Short-term, long-t
 featuredImage: "/images/blog/68ff689832efe2e47fbd8279_storage-and-moving-services-los-angeles-img.jpg"
 publishDate: "October 26, 2025"
 lastUpdated: "October 26, 2025"
-category: "storage and moving services in los angeles: complete solutions"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

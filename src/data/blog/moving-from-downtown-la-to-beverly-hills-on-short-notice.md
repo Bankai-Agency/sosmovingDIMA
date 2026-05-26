@@ -5,7 +5,7 @@ metaDescription: "Are you moving from Downtown LA to Beverly Hills on short noti
 featuredImage: "/images/blog/645ab1d97922875d125bf272_mitchell-hollander-8b1cWDyvT7Y-unsplash-e1630522779187.jpg"
 publishDate: "September 4, 2021"
 lastUpdated: "September 4, 2021"
-category: "moving from downtown la to beverly hills on short notice"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

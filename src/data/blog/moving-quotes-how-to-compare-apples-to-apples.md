@@ -5,7 +5,7 @@ metaDescription: "Moving quotes comparison: $800 vs $1,200 isn't apples-to-apple
 featuredImage: "/images/blog/696e16152164476ab04452b7_moving-quotes-how-to-compare-apples-to-apples.png"
 publishDate: "January 27, 2026"
 lastUpdated: "January 27, 2026"
-category: "moving quotes - how to compare apples to apples"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Studio needs 20-30 boxes, 2-bedroom needs 60-80. Exact calcula
 featuredImage: "/images/blog/695272f15555eff0c072d0a5_boxes-for-moving-how-many-do-you-really-need.jpg"
 publishDate: "December 16, 2025"
 lastUpdated: "December 16, 2025"
-category: "boxes for moving - how many do you really need"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

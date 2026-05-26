@@ -5,7 +5,7 @@ metaDescription: "There are some ways you can pack a mirror for your LA move. If
 featuredImage: "/images/blog/645ab1d9792287f70b5bf356_Featured-3-1.jpg"
 publishDate: "April 28, 2021"
 lastUpdated: "April 28, 2021"
-category: "how to pack a mirror for your la move?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

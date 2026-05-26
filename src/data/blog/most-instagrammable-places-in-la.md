@@ -5,7 +5,7 @@ metaDescription: "In case you are interested in some of the most instagrammable 
 featuredImage: "/images/blog/645ab1d9792287af5e5bf252_F-2.jpg"
 publishDate: "September 25, 2021"
 lastUpdated: "September 25, 2021"
-category: "most instagrammable places in la"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

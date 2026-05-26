@@ -5,7 +5,7 @@ metaDescription: "If you need to know how to protect your belongings from the ra
 featuredImage: "/images/blog/645ab1d979228755935bf457_jonathan-crews-miEunFiMuWc-unsplash-e1604218582747-1.jpg"
 publishDate: "November 3, 2020"
 lastUpdated: "November 3, 2020"
-category: "how to protect your belongings from the rain while moving?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

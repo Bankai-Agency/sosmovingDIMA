@@ -5,7 +5,7 @@ metaDescription: "Moving office IT equipment in LA? Servers, workstations, and n
 featuredImage: "/images/blog/69b070a4153a7756c8a3b823_commercial-moving-companies-it-equipment-focus.png"
 publishDate: "March 14, 2026"
 lastUpdated: "March 14, 2026"
-category: "commercial moving companies - it equipment focus"
+category: "business-relocation"
 readTime: ""
 author:
   name: "SOS Moving"

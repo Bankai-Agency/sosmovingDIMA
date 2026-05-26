@@ -5,7 +5,7 @@ metaDescription: "It is best not to be moving during coronavirus outbreak, to te
 featuredImage: "/images/blog/645ab1d979228754005bf411_pexels-miguel-a-padrinan-3936421-scaled-e1609848084478-1.jpg"
 publishDate: "January 14, 2021"
 lastUpdated: "January 14, 2021"
-category: "guide for moving during coronavirus outbreak"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

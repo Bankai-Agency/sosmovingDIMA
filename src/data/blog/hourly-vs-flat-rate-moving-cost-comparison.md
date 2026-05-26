@@ -5,7 +5,7 @@ metaDescription: "Hourly or flat rate movers — which pricing model saves money
 featuredImage: "/images/blog/69b06f7c52fef5ac6491ba0a_hourly-vs-flat-rate-moving-cost-comparison.png"
 publishDate: "March 14, 2026"
 lastUpdated: "March 14, 2026"
-category: "hourly vs flat rate moving - cost comparison"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

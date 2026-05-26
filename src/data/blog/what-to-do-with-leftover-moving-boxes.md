@@ -5,7 +5,7 @@ metaDescription: "What to Do With Leftover Moving Boxes? Don't just throw them a
 featuredImage: "/images/blog/645ab1d979228746f35bf46f_rizki-ramadhan-1ZdE_X5Hz3c-unsplash-e1603099427330-1.jpg"
 publishDate: "October 16, 2020"
 lastUpdated: "October 16, 2020"
-category: "what to do with leftover moving boxes?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

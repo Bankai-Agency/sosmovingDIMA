@@ -5,7 +5,7 @@ metaDescription: "LA is a big city and you really need some time to get used to 
 featuredImage: "/images/blog/645ab1d979228748b65bf3b2_pet-main-1.jpg"
 publishDate: "March 7, 2021"
 lastUpdated: "March 7, 2021"
-category: "helping your pets adapt after moving to la"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

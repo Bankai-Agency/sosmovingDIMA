@@ -5,7 +5,7 @@ metaDescription: "Moving insurance vs homeowners coverage — what actually prot
 featuredImage: "/images/blog/6995a1f35124d142b587f114_moving-insurance-vs-homeowners-coverage.png"
 publishDate: "February 18, 2026"
 lastUpdated: "February 18, 2026"
-category: "moving insurance vs homeowners coverage"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

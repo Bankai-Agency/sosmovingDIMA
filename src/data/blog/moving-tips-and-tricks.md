@@ -5,7 +5,7 @@ metaDescription: "Moving tips and tricks are here to help you experience a stres
 featuredImage: "/images/blog/645ab1d979228748215bf491_Moving_tips_and_tricks_main__750x4251_large-1.jpg"
 publishDate: "September 15, 2020"
 lastUpdated: "September 15, 2020"
-category: "moving tips and tricks"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

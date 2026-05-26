@@ -5,7 +5,7 @@ metaDescription: "Before you can prepare your moving plan, you must know about t
 featuredImage: "/images/blog/645ab1d97922872d765bf3c8_pexels-tima-miroshnichenko-6169670-1.jpg"
 publishDate: "February 28, 2021"
 lastUpdated: "February 28, 2021"
-category: "5 most demanding obstacles for moving crews"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

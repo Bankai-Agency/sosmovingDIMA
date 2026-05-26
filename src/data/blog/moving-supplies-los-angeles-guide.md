@@ -5,7 +5,7 @@ metaDescription: "Complete guide to moving supplies in LA. Box sizes, quantities
 featuredImage: "/images/blog/690c8f3bba898fac174eb7ea_moving-supplies-los-angeles-guide-img.jpg"
 publishDate: "November 3, 2025"
 lastUpdated: "November 3, 2025"
-category: "moving supplies in los angeles: complete guide to boxes and packing materials"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "You are about to move from Lancaster to Westwood with kids but
 featuredImage: "/images/blog/645ab1d979228708cd5bf29b_pexels-trinity-kubassek-225017.jpg"
 publishDate: "August 16, 2021"
 lastUpdated: "August 16, 2021"
-category: "how to move from lancaster to westwood with kids?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

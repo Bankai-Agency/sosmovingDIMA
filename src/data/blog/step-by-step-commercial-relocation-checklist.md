@@ -5,7 +5,7 @@ metaDescription: "Our Step-By-Step Commercial Relocation Checklist makes office 
 featuredImage: "/images/blog/645ab1d9792287d0625bf492_pexels-fauxels-3183197-scaled-e1600365264132-1.jpg"
 publishDate: "September 22, 2020"
 lastUpdated: "September 22, 2020"
-category: "step-by-step commercial relocation checklist"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "NYC storage habits don't work in LA. More space here means les
 featuredImage: "/images/blog/695270d223db3b5abc75a88d_manhattan-mini-storage-overflow-la-storage-solutions.jpg"
 publishDate: "December 15, 2025"
 lastUpdated: "December 15, 2025"
-category: "manhattan mini storage overflow - la storage solutions"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Follow these 9 steps to move your shed. Avoid common mistakes 
 featuredImage: "/images/blog/645ab1d9792287833a5bf166_how-to-move-shed-safely.jpg"
 publishDate: "January 26, 2023"
 lastUpdated: "January 26, 2023"
-category: "how to move a shed safely – a step-by-step guide?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

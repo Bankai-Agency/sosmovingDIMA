@@ -5,7 +5,7 @@ metaDescription: "In case you wish to hire movers for a long distance move to or
 featuredImage: "/images/blog/645ab1d9792287a3e35bf2ac_F.jpg"
 publishDate: "July 31, 2021"
 lastUpdated: "July 31, 2021"
-category: "reason to hire movers for a long distance move to or from la"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

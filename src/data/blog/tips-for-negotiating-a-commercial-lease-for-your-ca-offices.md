@@ -5,7 +5,7 @@ metaDescription: "Do you need tips for negotiating a commercial lease for your C
 featuredImage: "/images/blog/645ab1d97922877eba5bf2f2_jeremy-bishop-KthnAO0Nlpw-unsplash-e1623659232339-1.jpg"
 publishDate: "June 2, 2021"
 lastUpdated: "June 2, 2021"
-category: "tips for negotiating a commercial lease for your ca offices"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

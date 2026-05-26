@@ -5,7 +5,7 @@ metaDescription: "Moving during LA's rainy season? Complete guide for protecting
 featuredImage: "/images/blog/68e3e0fc5777b728366afa62_moving-in-rain-los-angeles-guide-img.jpg"
 publishDate: "October 5, 2025"
 lastUpdated: "October 5, 2025"
-category: "moving in the rain: how to handle rainy day moves in los angeles"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

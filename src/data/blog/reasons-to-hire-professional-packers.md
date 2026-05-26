@@ -5,7 +5,7 @@ metaDescription: "There are many reasons to hire professional packers. If you ar
 featuredImage: "/images/blog/645ab1d9792287db9a5bf38a_Featured-2-3.jpg"
 publishDate: "April 2, 2021"
 lastUpdated: "April 2, 2021"
-category: "reasons to hire professional packers"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

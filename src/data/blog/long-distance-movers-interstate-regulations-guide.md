@@ -5,7 +5,7 @@ metaDescription: "Federal rules for long distance moving from LA. USDOT requirem
 featuredImage: "/images/blog/692194de0e6c6c565e9d7926_long-distance-movers-interstate-regulations-guide-img.jpg"
 publishDate: "November 22, 2025"
 lastUpdated: "November 22, 2025"
-category: "long distance movers - interstate regulations guide"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

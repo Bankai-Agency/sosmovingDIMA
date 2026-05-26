@@ -5,7 +5,7 @@ metaDescription: "Glendale moving: 40% Armenian population, family businesses, A
 featuredImage: "/images/blog/696e1879c5ec8007e40b010f_glendale-movers-armenian-community-hub.png"
 publishDate: "January 30, 2026"
 lastUpdated: "January 30, 2026"
-category: "glendale movers - armenian community hub"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

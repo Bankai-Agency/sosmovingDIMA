@@ -5,7 +5,7 @@ metaDescription: "Cross country moving insurance: Basic $0.60/lb worthless, full
 featuredImage: "/images/blog/6952928588864d7f5a050530_cross-country-moving-companies-insurance-essentials.png"
 publishDate: "December 31, 2025"
 lastUpdated: "December 31, 2025"
-category: "cross country moving companies - insurance essentials"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

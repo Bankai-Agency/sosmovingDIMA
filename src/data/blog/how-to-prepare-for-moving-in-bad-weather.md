@@ -5,7 +5,7 @@ metaDescription: "What are the challenges associated with moving in bad weather?
 featuredImage: "/images/blog/645ab1d979228721e25bf344_boots-5028821_1280-1.jpg"
 publishDate: "May 7, 2021"
 lastUpdated: "May 7, 2021"
-category: "how to prepare for moving in bad weather?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

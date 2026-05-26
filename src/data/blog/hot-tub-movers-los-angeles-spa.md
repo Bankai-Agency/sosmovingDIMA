@@ -5,7 +5,7 @@ metaDescription: "Professional hot tub moving in LA. Cranes, disconnection, safe
 featuredImage: "/images/blog/69060d3307c1b8e6e714d06a_hot-tub-movers-los-angeles-spa-img.jpg"
 publishDate: "October 29, 2025"
 lastUpdated: "October 29, 2025"
-category: "hot tub movers los angeles: spa and jacuzzi relocation experts"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

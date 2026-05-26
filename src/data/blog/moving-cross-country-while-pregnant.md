@@ -5,7 +5,7 @@ metaDescription: "The turbulent period of 40 weeks is filled with numerous psych
 featuredImage: "/images/blog/645ab1d97922873dfe5bf420_man-couple-love-people-4568736.jpg"
 publishDate: "December 15, 2020"
 lastUpdated: "December 15, 2020"
-category: "moving cross country while pregnant"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

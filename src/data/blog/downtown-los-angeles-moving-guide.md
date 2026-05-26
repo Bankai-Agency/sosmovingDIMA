@@ -5,7 +5,7 @@ metaDescription: "Moving to Downtown LA? Parking permits, building requirements,
 featuredImage: "/images/blog/692d6cfcddf0d04be62aa389_downtown-los-angeles-moving-guide-img.jpg"
 publishDate: "November 26, 2025"
 lastUpdated: "November 26, 2025"
-category: "downtown los angeles moving guide"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

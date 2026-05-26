@@ -5,7 +5,7 @@ metaDescription: "We are here today to give you some guidelines on how to become
 featuredImage: "/images/blog/645ab1d9792287b6f75bf3fc_woman-typing-on-laptop-while-ethnic-boyfriend-unpacking-4247752.jpg"
 publishDate: "January 26, 2021"
 lastUpdated: "January 26, 2021"
-category: "cross-country packing guidelines"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

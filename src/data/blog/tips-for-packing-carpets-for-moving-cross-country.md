@@ -5,7 +5,7 @@ metaDescription: "Do you need to move across the country? Then, here are all the
 featuredImage: "/images/blog/645ab1d9792287bbea5bf2a1_sina-saadatmand-gB9hryu1q40-unsplash-scaled-e1627736215597.jpg"
 publishDate: "August 10, 2021"
 lastUpdated: "August 10, 2021"
-category: "tips for packing carpets for moving cross country"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

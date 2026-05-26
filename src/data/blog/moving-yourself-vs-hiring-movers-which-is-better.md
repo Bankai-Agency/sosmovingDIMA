@@ -5,7 +5,7 @@ metaDescription: "When you plan a move, one of the most crucial questions relate
 featuredImage: "/images/blog/645ab1d9792287a5e45bf229_2-movers-with-a-ruler.jpg"
 publishDate: "March 28, 2022"
 lastUpdated: "March 28, 2022"
-category: "moving yourself vs hiring movers – which is better?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

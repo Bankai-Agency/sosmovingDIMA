@@ -5,7 +5,7 @@ metaDescription: "Need emergency movers today in LA? Same-day service for evicti
 featuredImage: "/images/blog/692d6fce445b6f76f1f97b1f_emergency-moving-services-same-day-img.jpg"
 publishDate: "November 30, 2025"
 lastUpdated: "November 30, 2025"
-category: "emergency moving services - same day"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

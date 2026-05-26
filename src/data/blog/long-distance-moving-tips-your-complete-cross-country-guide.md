@@ -5,7 +5,7 @@ metaDescription: "Moving across the country? Our expert long-distance moving tip
 featuredImage: "/images/blog/68c065bb6eaf247cb93f2a5e_long-distance-moving-tips-your-complete-cross-country-guide-img.jpg"
 publishDate: "September 10, 2025"
 lastUpdated: "September 10, 2025"
-category: "long distance moving tips: your complete cross-country guide"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

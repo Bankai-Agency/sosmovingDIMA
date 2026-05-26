@@ -5,7 +5,7 @@ metaDescription: "There are some things that will help you simplify packing for 
 featuredImage: "/images/blog/645ab1d9792287684e5bf331_F-1-1.jpg"
 publishDate: "May 22, 2021"
 lastUpdated: "May 22, 2021"
-category: "how to simplify packing for your last-minute glendale move?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

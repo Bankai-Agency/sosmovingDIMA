@@ -5,7 +5,7 @@ metaDescription: "There are some ways to avoid downtime when relocating your bus
 featuredImage: "/images/blog/645ab1d97922879a835bf2cc_F-1.jpg"
 publishDate: "July 18, 2021"
 lastUpdated: "July 18, 2021"
-category: "how to avoid downtime when relocating your business to ca?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

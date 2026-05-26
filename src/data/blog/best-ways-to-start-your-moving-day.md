@@ -5,7 +5,7 @@ metaDescription: "Start your moving day easily and without stress. Here are some
 featuredImage: "/images/blog/645ab1d9792287adce5bf2e9_pexels-mart-production-7414919-e1623860242610-1.jpg"
 publishDate: "June 27, 2021"
 lastUpdated: "June 27, 2021"
-category: "best ways to start your moving day"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

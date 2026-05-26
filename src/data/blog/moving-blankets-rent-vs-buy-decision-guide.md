@@ -5,7 +5,7 @@ metaDescription: "Moving blankets: buy $120 for 12, rent $3/day each. Analyze us
 featuredImage: "/images/blog/696e137e88bf1f79a1eee3b3_moving-blankets-rent-vs-buy-decision-guide.png"
 publishDate: "January 24, 2026"
 lastUpdated: "January 24, 2026"
-category: "moving blankets - rent vs buy decision guide"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

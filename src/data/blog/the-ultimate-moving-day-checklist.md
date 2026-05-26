@@ -5,7 +5,7 @@ metaDescription: "Don't let moving day overwhelm you. Our ultimate moving day ch
 featuredImage: "/images/blog/68bb0f81ebbdb1b952f499cf_the-ultimate-moving-day-checklist-img.jpg"
 publishDate: "September 3, 2025"
 lastUpdated: "September 3, 2025"
-category: "the ultimate moving day checklist"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

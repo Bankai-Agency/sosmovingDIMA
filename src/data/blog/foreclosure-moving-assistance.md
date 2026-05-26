@@ -5,7 +5,7 @@ metaDescription: "Facing foreclosure in LA? Free resources, emergency moving hel
 featuredImage: "/images/blog/69528ca053721610d0412b4e_foreclosure-moving-assistance.png"
 publishDate: "December 26, 2025"
 lastUpdated: "December 26, 2025"
-category: "foreclosure moving assistance"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

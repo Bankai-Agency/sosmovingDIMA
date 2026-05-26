@@ -5,7 +5,7 @@ metaDescription: "Moving from Austin to LA? Real costs, route options, lifestyle
 featuredImage: "/images/blog/69b933e2cc5dff4326899097_austin-to-los-angeles-relocation.jpg"
 publishDate: "March 18, 2026"
 lastUpdated: "March 18, 2026"
-category: "austin to los angeles relocation"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

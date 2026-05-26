@@ -5,7 +5,7 @@ metaDescription: "Need a storage locker for your small apartment move in LA? Siz
 featuredImage: "/images/blog/69afebfe129672be8d7302ed_storage-lockers-near-me-for-small-apartment-moves.png"
 publishDate: "March 11, 2026"
 lastUpdated: "March 11, 2026"
-category: "storage lockers near me for small apartment moves"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

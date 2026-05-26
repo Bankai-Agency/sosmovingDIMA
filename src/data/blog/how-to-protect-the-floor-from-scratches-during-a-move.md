@@ -5,7 +5,7 @@ metaDescription: "Measure everything. Wrap furniture legs. Place doormats. Use d
 featuredImage: "/images/blog/645ab1d9792287114e5bf19f_how-to-protect-floors-when-moving (2).jpg"
 publishDate: "January 5, 2023"
 lastUpdated: "January 5, 2023"
-category: "how to protect the floor from scratches during a move?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

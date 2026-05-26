@@ -5,7 +5,7 @@ metaDescription: "Just moved in? Our new home checklist covers the first things 
 featuredImage: "/images/blog/68bb106e6510ce132548aae7_first-things-to-do-after-moving-into-a-new-house-your-checklist-img.jpg"
 publishDate: "September 3, 2025"
 lastUpdated: "September 3, 2025"
-category: "first things to do after moving into a new house: your checklist"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Books are the heaviest items per box in any move. How to pack 
 featuredImage: "/images/blog/69cd4557d7076909e19e1470_how-to-pack-books-without-breaking-boxes.jpg"
 publishDate: "March 31, 2026"
 lastUpdated: "March 31, 2026"
-category: "how to pack books without breaking boxes"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

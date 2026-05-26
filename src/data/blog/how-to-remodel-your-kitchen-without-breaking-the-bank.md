@@ -5,7 +5,7 @@ metaDescription: "Do you want to remodel your kitchen but you do not have a lot 
 featuredImage: "/images/blog/645ab1d979228763285bf310_r-architecture-TRCJ-87Yoh0-unsplash-scaled-e1623473355724-1.jpg"
 publishDate: "June 15, 2021"
 lastUpdated: "June 15, 2021"
-category: "how to remodel your kitchen without breaking the bank?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

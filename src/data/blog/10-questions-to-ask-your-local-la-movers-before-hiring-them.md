@@ -5,7 +5,7 @@ metaDescription: "It can be difficult to hire movers. Therefore, here are all th
 featuredImage: "/images/blog/645ab1d9792287704f5bf297_christina-wocintechchat-com-yyp_HpXrUfw-unsplash-scaled-e1628259807171.jpg"
 publishDate: "August 15, 2021"
 lastUpdated: "August 15, 2021"
-category: "10 questions to ask your local la movers before hiring them"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

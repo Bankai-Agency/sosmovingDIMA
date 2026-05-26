@@ -5,7 +5,7 @@ metaDescription: "How to pack a fishing tank for your move from Glendale CA - he
 featuredImage: "/images/blog/645ab1d9792287201f5bf2c9_delbert-pagayona-46v8clmNjY8-unsplash-e1625220559252.jpg"
 publishDate: "July 13, 2021"
 lastUpdated: "July 13, 2021"
-category: "how to pack a fishing tank for your move from glendale ca?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Affordable LA movers: $119-159/hour legitimate range. Value me
 featuredImage: "/images/blog/6966117d78750dc636941fd2_affordable-movers-finding-value-in-la-market.png"
 publishDate: "January 14, 2026"
 lastUpdated: "January 14, 2026"
-category: "affordable movers - finding value in la market"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

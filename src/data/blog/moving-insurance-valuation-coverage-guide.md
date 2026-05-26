@@ -5,7 +5,7 @@ metaDescription: "Understand the difference between moving insurance and valuati
 featuredImage: "/images/blog/68dab3f45f29f0f3e2b17a9d_moving-insurance-valuation-coverage-guide-img.jpg"
 publishDate: "September 25, 2025"
 lastUpdated: "September 25, 2025"
-category: "moving insurance vs. valuation coverage: the complete protection guide"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

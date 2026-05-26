@@ -5,7 +5,7 @@ metaDescription: "If you don't know whether to write a moving review after your 
 featuredImage: "/images/blog/645ab1d979228724215bf2ff_pexels-photo-4065400-e1622784144736-1.jpeg"
 publishDate: "June 19, 2021"
 lastUpdated: "June 19, 2021"
-category: "reasons to write a moving review after your ca move"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

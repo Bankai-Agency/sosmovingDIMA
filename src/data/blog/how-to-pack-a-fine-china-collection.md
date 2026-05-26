@@ -5,7 +5,7 @@ metaDescription: "Do have a big fine China collection? Then, if you need to move
 featuredImage: "/images/blog/645ab1d97922876cee5bf27a_jannet-serhan-snHXvw1C690-unsplash-scaled-e1629907577280.jpg"
 publishDate: "August 29, 2021"
 lastUpdated: "August 29, 2021"
-category: "how to pack a fine china collection?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

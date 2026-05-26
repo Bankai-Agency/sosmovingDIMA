@@ -5,7 +5,7 @@ metaDescription: "Free moving boxes LA: liquor stores, grocery stores, Craigslis
 featuredImage: "/images/blog/6981d04f64f66a4450736cf5_where-to-get-free-moving-boxes-in-los-angeles.png"
 publishDate: "February 5, 2026"
 lastUpdated: "February 5, 2026"
-category: "where to get free moving boxes in los angeles"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

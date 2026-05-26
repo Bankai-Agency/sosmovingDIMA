@@ -5,7 +5,7 @@ metaDescription: "LA weekend office moving: Friday 6pm start, Monday operational
 featuredImage: "/images/blog/696752c3b0d316d5370ee440_commercial-movers-weekend-office-relocation.png"
 publishDate: "January 15, 2026"
 lastUpdated: "January 15, 2026"
-category: "commercial movers - weekend office relocation"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

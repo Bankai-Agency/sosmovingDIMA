@@ -5,7 +5,7 @@ metaDescription: "Feeling the moving stress? You're not alone. Our expert guide 
 featuredImage: "/images/blog/645ab1d9792287b6f75bf3fc_woman-typing-on-laptop-while-ethnic-boyfriend-unpacking-4247752.jpg"
 publishDate: "November 18, 2020"
 lastUpdated: "November 18, 2020"
-category: "tips to cope with moving stress"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

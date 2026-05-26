@@ -5,7 +5,7 @@ metaDescription: "Moving from Dallas to LA? Real costs, route options, lifestyle
 featuredImage: "/images/blog/69cf92bfaccde3571ef55b3b_dallas-to-los-angeles-moving.jpg"
 publishDate: "April 3, 2026"
 lastUpdated: "April 3, 2026"
-category: "dallas to los angeles moving"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

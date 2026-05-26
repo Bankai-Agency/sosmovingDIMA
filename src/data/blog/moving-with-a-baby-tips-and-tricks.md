@@ -5,7 +5,7 @@ metaDescription: "Moving with a baby is not something that should scare you, you
 featuredImage: "/images/blog/645ab1d97922870a9a5bf466_ignacio-campo-tC9boyqy_40-unsplash-scaled-e1602904718437-1.jpg"
 publishDate: "October 23, 2020"
 lastUpdated: "October 23, 2020"
-category: "moving with a baby: tips and tricks"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

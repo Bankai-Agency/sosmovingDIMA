@@ -5,7 +5,7 @@ metaDescription: "Expert moving tips from LA professionals. Save money, prevent 
 featuredImage: "/images/blog/690c8e95d13b93a238137e67_moving-tips-los-angeles-professional-advice-img.jpg"
 publishDate: "November 2, 2025"
 lastUpdated: "November 2, 2025"
-category: "50 essential moving tips for los angeles: insider secrets from professional movers"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

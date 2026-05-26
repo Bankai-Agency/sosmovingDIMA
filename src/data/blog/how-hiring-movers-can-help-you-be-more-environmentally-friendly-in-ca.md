@@ -5,7 +5,7 @@ metaDescription: "Do you want to be eco-friendly when moving? Then, find out how
 featuredImage: "/images/blog/645ab1d9792287617a5bf364_FEatured-2-2.jpg"
 publishDate: "April 24, 2021"
 lastUpdated: "April 24, 2021"
-category: "how hiring movers can help you be more environmentally-friendly in ca?"
+category: "move-sustainably"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Professional office moving in LA. Minimize downtime, protect e
 featuredImage: "/images/blog/68e694ba8c00fb3290b5623f_office-moving-services-los-angeles-img.jpg"
 publishDate: "October 8, 2025"
 lastUpdated: "October 8, 2025"
-category: "office moving in los angeles: complete guide for business relocation"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

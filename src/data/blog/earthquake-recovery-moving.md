@@ -5,7 +5,7 @@ metaDescription: "LA earthquake recovery moving: 72-hour response, structural as
 featuredImage: "/images/blog/6980d0e58adbe25d566d856e_earthquake-recovery-moving.png"
 publishDate: "February 3, 2026"
 lastUpdated: "February 3, 2026"
-category: "earthquake recovery moving"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

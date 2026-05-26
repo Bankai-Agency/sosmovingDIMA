@@ -5,7 +5,7 @@ metaDescription: "If you are moving during the holidays to NYC - you're in for a
 featuredImage: "/images/blog/645ab1d979228735935bf43a_father-christmas-1149928_1280-1.jpg"
 publishDate: "December 23, 2020"
 lastUpdated: "December 23, 2020"
-category: "guide for moving during the holidays to nyc"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

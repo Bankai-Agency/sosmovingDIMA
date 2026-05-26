@@ -5,7 +5,7 @@ metaDescription: "LA flood damage moving: 24-48 hour response, salvage coordinat
 featuredImage: "/images/blog/696e11f81ee5e5b50dbfbc90_flood-damage-moving-help.png"
 publishDate: "January 21, 2026"
 lastUpdated: "January 21, 2026"
-category: "flood damage moving help"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

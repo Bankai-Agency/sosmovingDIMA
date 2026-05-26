@@ -5,7 +5,7 @@ metaDescription: "Do you need to transfer utilities when moving, but aren't sure
 featuredImage: "/images/blog/645ab1d97922876fec5bf444_cable-1868352_1280-1.jpg"
 publishDate: "December 12, 2020"
 lastUpdated: "December 12, 2020"
-category: "how to transfer utilities when moving"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

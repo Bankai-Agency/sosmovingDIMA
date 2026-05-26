@@ -5,7 +5,7 @@ metaDescription: "Learn the different types of moving estimates (binding vs. non
 featuredImage: "/images/blog/645ab1d9792287890b5bf47b_neonbrand-JW6r_0CPYec-unsplash-e1601928505733-1.jpg"
 publishDate: "October 8, 2020"
 lastUpdated: "October 8, 2020"
-category: "what are the different types of moving estimates?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving in LA summer heat? Start at 6am, hydrate every 20 minut
 featuredImage: "/images/blog/69525919f5351c4fa6bbf829_summer-moving-tips-beat-the-heat.png"
 publishDate: "December 12, 2025"
 lastUpdated: "December 12, 2025"
-category: "summer moving tips - beat the heat"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

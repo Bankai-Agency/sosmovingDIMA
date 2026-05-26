@@ -5,7 +5,7 @@ metaDescription: "Moving from CA to TX? Complete guide with costs, timeline, and
 featuredImage: "/images/blog/68dab82769b8a948ed76378b_california-to-texas-moving-complete-guide-img.jpg"
 publishDate: "September 27, 2025"
 lastUpdated: "September 27, 2025"
-category: "california to texas moving: costs, timeline & tips"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

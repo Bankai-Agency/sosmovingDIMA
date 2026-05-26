@@ -5,7 +5,7 @@ metaDescription: "If you are interested in how to pack and move a fish tank, thi
 featuredImage: "/images/blog/645ab1d9792287569d5bf39c_aquarium-390745_1280-1.jpg"
 publishDate: "March 24, 2021"
 lastUpdated: "March 24, 2021"
-category: "how to pack and move a fish tank?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

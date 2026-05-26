@@ -5,7 +5,7 @@ metaDescription: "Moving to Koreatown LA? Discover K-town's vibrant culture, aff
 featuredImage: "/images/blog/68ecfcd15cca0c98a18c9b0e_moving-to-koreatown-los-angeles-img.jpg"
 publishDate: "October 10, 2025"
 lastUpdated: "October 10, 2025"
-category: "moving to koreatown: la's most densely packed cultural hub"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

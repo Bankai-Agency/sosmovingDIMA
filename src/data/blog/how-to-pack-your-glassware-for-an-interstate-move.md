@@ -5,7 +5,7 @@ metaDescription: "If you want to learn how to pack your glassware you came to th
 featuredImage: "/images/blog/645ab1d97922876b725bf434_pexels-photo-1148450-1.jpeg"
 publishDate: "December 27, 2020"
 lastUpdated: "December 27, 2020"
-category: "how to pack your glassware for an interstate move?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Emergency eviction moving in LA. Fast response, judgment-free 
 featuredImage: "/images/blog/691b155a0553b0797b8a1da3_eviction-moving-services-los-angeles-emergency-img.jpg"
 publishDate: "November 17, 2025"
 lastUpdated: "November 17, 2025"
-category: "eviction moving services los angeles: emergency relocation assistance"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

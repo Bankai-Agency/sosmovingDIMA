@@ -5,7 +5,7 @@ metaDescription: "Find legitimate cheap movers in LA. Compare rates, avoid scams
 featuredImage: "/images/blog/68ff62f221076a29d95ed94f_cheap-movers-los-angeles-guide-img.jpg"
 publishDate: "October 19, 2025"
 lastUpdated: "October 19, 2025"
-category: "how to find cheap movers in los angeles without getting scammed"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

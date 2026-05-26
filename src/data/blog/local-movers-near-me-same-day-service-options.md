@@ -5,7 +5,7 @@ metaDescription: "Need movers TODAY in LA? Same day service available: 2-hour re
 featuredImage: "/images/blog/695291ccb44a98754976445b_local-movers-near-me-same-day-service-options.png"
 publishDate: "December 30, 2025"
 lastUpdated: "December 30, 2025"
-category: "local movers near me - same day service options"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

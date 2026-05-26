@@ -5,7 +5,7 @@ metaDescription: "Compassionate senior moving services in LA. Downsizing assista
 featuredImage: "/images/blog/68ecfd8afb2fcbf33c580268_senior-moving-services-los-angeles-img.jpg"
 publishDate: "October 11, 2025"
 lastUpdated: "October 11, 2025"
-category: "senior moving services: helping elderly parents transition safely"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

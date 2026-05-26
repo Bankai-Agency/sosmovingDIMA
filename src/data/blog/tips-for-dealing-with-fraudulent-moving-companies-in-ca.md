@@ -5,7 +5,7 @@ metaDescription: "If you don't want to be dealing with fraudulent moving compani
 featuredImage: "/images/blog/645ab1d979228718535bf406_pexels-anna-tarazevich-5697256-scaled-e1610527750355-1.jpg"
 publishDate: "January 20, 2021"
 lastUpdated: "January 20, 2021"
-category: "tips for dealing with fraudulent moving companies in ca"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

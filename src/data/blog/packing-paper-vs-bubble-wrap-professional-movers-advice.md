@@ -5,7 +5,7 @@ metaDescription: "Packing paper $55 wraps everything, bubble wrap $55 for fragil
 featuredImage: "/images/blog/69529123d52e0f49a065a0e8_packing-paper-vs-bubble-wrap-professional-movers-advice.png"
 publishDate: "December 29, 2025"
 lastUpdated: "December 29, 2025"
-category: "packing paper vs bubble wrap - professional movers advice"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

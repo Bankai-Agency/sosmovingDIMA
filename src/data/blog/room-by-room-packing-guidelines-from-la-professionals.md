@@ -5,7 +5,7 @@ metaDescription: "If you want to try room-by-room packing for your upcomming rel
 featuredImage: "/images/blog/645ab1d979228706b15bf482_bench-accounting-MGaFENpDCsw-unsplash-scaled-e1601899327986-1.jpg"
 publishDate: "October 5, 2020"
 lastUpdated: "October 5, 2020"
-category: "room-by-room packing guidelines from la professionals"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

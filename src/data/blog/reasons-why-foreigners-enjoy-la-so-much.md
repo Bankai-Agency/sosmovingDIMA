@@ -5,7 +5,7 @@ metaDescription: "Foreigners enjoy LA so much for its splendid mixture of natura
 featuredImage: "/images/blog/645ab1d9792287a4f45bf2c0_nick-sarvari-1AkOwS-5vPM-unsplash-e1626415618795.jpg"
 publishDate: "July 25, 2021"
 lastUpdated: "July 25, 2021"
-category: "reasons why foreigners enjoy la so much"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

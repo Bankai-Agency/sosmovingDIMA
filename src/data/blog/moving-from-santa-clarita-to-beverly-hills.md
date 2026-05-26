@@ -5,7 +5,7 @@ metaDescription: "Moving from Santa Clarita to Beverly Hills? It's a good idea t
 featuredImage: "/images/blog/645ab1d9792287d8085bf2a7_sos-main.jpg"
 publishDate: "August 1, 2021"
 lastUpdated: "August 1, 2021"
-category: "moving from santa clarita to beverly hills?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

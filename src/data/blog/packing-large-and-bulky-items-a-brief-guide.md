@@ -5,7 +5,7 @@ metaDescription: "Do you want to relocate your entire household, including large
 featuredImage: "/images/blog/645ab1d9792287269e5bf2e1_kam-idris-kyt0PkBSCNQ-unsplash-scaled-e1624776641254-1.jpg"
 publishDate: "June 30, 2021"
 lastUpdated: "June 30, 2021"
-category: "packing large and bulky items: a brief guide"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "In case you are looking for some reliable local LA movers, the
 featuredImage: "/images/blog/645ab1d9792287da325bf28b_F-1.jpg"
 publishDate: "August 22, 2021"
 lastUpdated: "August 22, 2021"
-category: "7 traits of reliable local la movers"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

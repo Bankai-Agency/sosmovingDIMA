@@ -5,7 +5,7 @@ metaDescription: "If you are not sure about how to pack Halloween costumes for P
 featuredImage: "/images/blog/645ab1d9792287114a5bf23e_F.jpg"
 publishDate: "October 6, 2021"
 lastUpdated: "October 6, 2021"
-category: "how to pack halloween costumes for palmdale relocation?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

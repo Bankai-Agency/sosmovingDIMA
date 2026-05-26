@@ -5,7 +5,7 @@ metaDescription: "Everything about moving to West Hollywood! Neighborhoods, cost
 featuredImage: "/images/blog/68d2dccc0cd42b219a690f5d_moving-to-west-hollywood-complete-guide-img.jpg"
 publishDate: "September 18, 2025"
 lastUpdated: "September 18, 2025"
-category: "moving to west hollywood: the insider's complete guide"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

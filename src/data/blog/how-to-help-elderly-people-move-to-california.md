@@ -5,7 +5,7 @@ metaDescription: "Do your seniors want to move to a new city? Then, you should h
 featuredImage: "/images/blog/645ab1d97922871ee35bf362_matthew-bennett-78hTqvjYMS4-unsplash-scaled-e1618574352850-1.jpg"
 publishDate: "April 18, 2021"
 lastUpdated: "April 18, 2021"
-category: "how to help elderly people move to california?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

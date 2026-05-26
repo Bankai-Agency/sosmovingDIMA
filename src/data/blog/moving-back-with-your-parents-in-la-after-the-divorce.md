@@ -5,7 +5,7 @@ metaDescription: "Moving back with your parents in LA after the divorce doesn't 
 featuredImage: "/images/blog/645ab1d9792287e1f55bf251_pexels-roberto-nickson-2545122.jpg"
 publishDate: "October 3, 2021"
 lastUpdated: "October 3, 2021"
-category: "moving back with your parents in la after the divorce"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

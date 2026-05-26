@@ -5,7 +5,7 @@ metaDescription: "There are many packing mistakes to avoid when moving to LA whi
 featuredImage: "/images/blog/645ab1d9792287a5735bf253_pexels-rodnae-productions-7464429.jpg"
 publishDate: "September 28, 2021"
 lastUpdated: "September 28, 2021"
-category: "packing mistakes to avoid when moving to la"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

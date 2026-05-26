@@ -5,7 +5,7 @@ metaDescription: "Everything about moving boxes in LA: sizes guide, prices ($4-6
 featuredImage: "/images/blog/69219371ce17890b34c0878d_moving-boxes-complete-guide-sizes-prices-where-to-buy-img.jpg"
 publishDate: "November 20, 2025"
 lastUpdated: "November 20, 2025"
-category: "moving boxes complete guide - sizes, prices, where to buy"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

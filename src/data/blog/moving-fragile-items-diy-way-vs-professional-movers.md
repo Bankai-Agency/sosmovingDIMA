@@ -5,7 +5,7 @@ metaDescription: "In case you are moving fragile items , there are some things y
 featuredImage: "/images/blog/645ab1d9792287d3a45bf2e3_F-3.jpg"
 publishDate: "July 7, 2021"
 lastUpdated: "July 7, 2021"
-category: "moving fragile items – diy way vs professional movers"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

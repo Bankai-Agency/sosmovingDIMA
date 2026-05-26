@@ -5,7 +5,7 @@ metaDescription: "There are many ways to reuse packing materials. If you are not
 featuredImage: "/images/blog/645ab1d979228710725bf365_zachary-kadolph-6oYfeooUrCM-unsplash-1.jpg"
 publishDate: "April 23, 2021"
 lastUpdated: "April 23, 2021"
-category: "ways to reuse packing materials"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

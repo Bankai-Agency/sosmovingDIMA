@@ -5,7 +5,7 @@ metaDescription: "Complete LA moving checklist with timeline. 8 weeks of organiz
 featuredImage: "/images/blog/69060f10c796eab55d6cdb96_moving-checklist-los-angeles-timeline-img.jpg"
 publishDate: "November 1, 2025"
 lastUpdated: "November 1, 2025"
-category: "ultimate moving checklist for los angeles: complete timeline guide"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

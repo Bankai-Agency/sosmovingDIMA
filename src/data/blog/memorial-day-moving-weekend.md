@@ -5,7 +5,7 @@ metaDescription: "Memorial Day weekend moving: 3-day weekend = amateur hour chao
 featuredImage: "/images/blog/69771a20fd53ccad9bdc168f_memorial-day-moving-weekend.png"
 publishDate: "February 2, 2026"
 lastUpdated: "February 2, 2026"
-category: "memorial day moving weekend"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

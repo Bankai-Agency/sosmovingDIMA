@@ -5,7 +5,7 @@ metaDescription: "Are you planning to change your adress? Take a look at our sho
 featuredImage: "/images/blog/645ab1d979228713c85bf403_pexels-ylanite-koppens-697672-e1610792027606-1.jpg"
 publishDate: "January 22, 2021"
 lastUpdated: "January 22, 2021"
-category: "packing musical instruments – tips and tricks"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Are you moving locally, interstate or long-distance? During su
 featuredImage: "/images/blog/645ab1d9792287b32f5bf21c_how-long-in-advance-to-book-movers.jpg"
 publishDate: "May 2, 2022"
 lastUpdated: "May 2, 2022"
-category: "how long in advance to book movers?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

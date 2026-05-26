@@ -5,7 +5,7 @@ metaDescription: "Learn the best ways to pack clothes for moving. From wardrobe 
 featuredImage: "/images/blog/68c815a4cf3e65c360f54ee0_how-to-pack-clothes-for-moving-img.jpg"
 publishDate: "September 16, 2025"
 lastUpdated: "September 16, 2025"
-category: "how to pack clothes for moving: the complete guide to wrinkle-free relocation"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

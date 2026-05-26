@@ -5,7 +5,7 @@ metaDescription: "Is your moving company's deposit legit or a scam? Red flags, s
 featuredImage: "/images/blog/69c660950c497c84e09a2118_moving-company-deposit-scam-warning-signs.jpg"
 publishDate: "March 15, 2026"
 lastUpdated: "March 15, 2026"
-category: "moving company deposit - scam warning signs"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

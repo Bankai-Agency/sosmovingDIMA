@@ -5,7 +5,7 @@ metaDescription: "Here are moving planner ideas to lift your spirits. Put them i
 featuredImage: "/images/blog/645ab1d9792287d4f45bf3e1_pexels-ava-motive-1236678-1.jpg"
 publishDate: "February 5, 2021"
 lastUpdated: "February 5, 2021"
-category: "10 moving planner ideas to lift your spirits"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

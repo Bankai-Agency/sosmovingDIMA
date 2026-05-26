@@ -5,7 +5,7 @@ metaDescription: "Moving with your pet across states requires prior preparation.
 featuredImage: "/images/blog/645ab1d979228700b55bf3fd_pexels-zen-chung-5745218-e1610883963725-1.jpg"
 publishDate: "January 23, 2021"
 lastUpdated: "January 23, 2021"
-category: "how to prepare your pets for a cross-country move?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

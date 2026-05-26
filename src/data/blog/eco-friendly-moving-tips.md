@@ -5,7 +5,7 @@ metaDescription: "Do you need to move but want to be as eco-friendly as possible
 featuredImage: "/images/blog/645ab1d97922871da15bf345_mika-baumeister-u29d3Qwbz58-unsplash-scaled-e1620215653368-1.jpg"
 publishDate: "May 15, 2021"
 lastUpdated: "May 15, 2021"
-category: "eco-friendly moving tips"
+category: "move-sustainably"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Here are some tips on how to organize a winter-themed housewar
 featuredImage: "/images/blog/645ab1d979228732f55bf3ed_pexels-thanakorn-phanthura-3183392-1.jpg"
 publishDate: "February 8, 2021"
 lastUpdated: "February 8, 2021"
-category: "how to organize a winter-themed housewarming party in la?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving to CA during the summer can be tough no matter how expe
 featuredImage: "/images/blog/645ab1d9792287df405bf2b2_matthew-hamilton-3RlGBpFeoQg-unsplash-scaled-1-2048x1366.jpg"
 publishDate: "August 3, 2021"
 lastUpdated: "August 3, 2021"
-category: "moving to ca during the summer – how to do it right?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

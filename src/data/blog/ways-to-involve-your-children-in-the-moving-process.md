@@ -5,7 +5,7 @@ metaDescription: "There are ways you can involve your children in the moving pro
 featuredImage: "/images/blog/645ab1d979228719bb5bf437_geature-mom-and-dauther-1.jpg"
 publishDate: "December 29, 2020"
 lastUpdated: "December 29, 2020"
-category: "ways to involve your children in the moving process"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

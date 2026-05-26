@@ -5,7 +5,7 @@ metaDescription: "Senior Move Foreman Amir breaks down gun safe weight classes, 
 featuredImage: "/images/blog/69de02826d5b1e7ae79f05ea_how-to-move-a-gun-safe-weight-and-permit-requirements.jpeg"
 publishDate: "April 15, 2026"
 lastUpdated: "April 15, 2026"
-category: "how to move a gun safe: weight classes, permits, and pro techniques"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

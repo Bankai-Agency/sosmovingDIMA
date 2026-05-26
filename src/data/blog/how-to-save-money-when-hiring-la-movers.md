@@ -5,7 +5,7 @@ metaDescription: "Either if you are relocating on budget or not, here are some p
 featuredImage: "/images/blog/645ab1d97922872cb95bf38c_pexels-alexander-mils-2068975-3-1.jpg"
 publishDate: "March 27, 2021"
 lastUpdated: "March 27, 2021"
-category: "how to save money when hiring la movers?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

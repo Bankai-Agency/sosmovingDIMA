@@ -5,7 +5,7 @@ metaDescription: "LA storage facilities: $89-350/month, climate control extra, h
 featuredImage: "/images/blog/69528ef064d80285e2767394_storage-facilities-near-me-comparing-options-during-your-move.png"
 publishDate: "December 28, 2025"
 lastUpdated: "December 28, 2025"
-category: "storage facilities near me - comparing options during your move"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

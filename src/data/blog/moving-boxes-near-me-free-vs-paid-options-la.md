@@ -5,7 +5,7 @@ metaDescription: "Free moving boxes in LA: liquor stores, Craigslist, grocery st
 featuredImage: "/images/blog/69344e37b053778bf73cc216_moving-boxes-near-me-free-vs-paid-options-la-img.jpg"
 publishDate: "December 3, 2025"
 lastUpdated: "December 3, 2025"
-category: "moving boxes near me - free vs paid options in la"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

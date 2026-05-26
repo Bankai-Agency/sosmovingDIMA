@@ -5,7 +5,7 @@ metaDescription: "Wondering how to pack fragile items? Our expert guide shows yo
 featuredImage: "/images/blog/645ab1d979228725b25bf48c_james-harris-kKNFL7ggDoM-unsplash-scaled-e1600124675320-1.jpg"
 publishDate: "September 25, 2020"
 lastUpdated: "September 25, 2020"
-category: "how to pack fragile items?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

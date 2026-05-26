@@ -5,7 +5,7 @@ metaDescription: "There are many things you could do in order to get to know Bur
 featuredImage: "/images/blog/645ab1d979228731b15bf265_pexels-roberto-nickson-2525903.jpg"
 publishDate: "September 10, 2021"
 lastUpdated: "September 10, 2021"
-category: "how to get to know burbank after relocation?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

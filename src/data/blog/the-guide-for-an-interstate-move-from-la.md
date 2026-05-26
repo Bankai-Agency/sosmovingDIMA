@@ -5,7 +5,7 @@ metaDescription: "If you need to perform an interstate move from LA, you will ne
 featuredImage: "/images/blog/645ab1d979228776415bf447_pexels-andrea-piacquadio-3769146-scaled-e1607537834731-1.jpg"
 publishDate: "December 17, 2020"
 lastUpdated: "December 17, 2020"
-category: "the guide for an interstate move from la"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

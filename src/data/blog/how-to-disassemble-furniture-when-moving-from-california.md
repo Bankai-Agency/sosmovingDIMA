@@ -5,7 +5,7 @@ metaDescription: "If you need to know how to disassemble furniture, you need to 
 featuredImage: "/images/blog/645ab1d97922871fb45bf458_phillip-goldsberry-fZuleEfeA1Q-unsplash-scaled-e1603850496229.jpg"
 publishDate: "October 30, 2020"
 lastUpdated: "October 30, 2020"
-category: "how to disassemble furniture when moving from california?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

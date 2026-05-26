@@ -5,7 +5,7 @@ metaDescription: "Moving to Santa Monica? Rent control, $3K+ for 1-bedroom, park
 featuredImage: "/images/blog/695e17f9fad07eb16886b39a_santa-monica-moving-beach-community-guide.png"
 publishDate: "January 4, 2026"
 lastUpdated: "January 4, 2026"
-category: "santa monica moving - beach community guide"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

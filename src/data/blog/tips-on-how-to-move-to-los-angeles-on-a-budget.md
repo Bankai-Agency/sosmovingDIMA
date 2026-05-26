@@ -5,7 +5,7 @@ metaDescription: "Cost of living in LA. Calculate your moving costs. Think about
 featuredImage: "/images/blog/645ab1d979228705fe5bf213_how-to-move-to-los-angeles-on-a-budget.jpg"
 publishDate: "May 9, 2022"
 lastUpdated: "May 9, 2022"
-category: "tips on how to move to los angeles on a budget"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

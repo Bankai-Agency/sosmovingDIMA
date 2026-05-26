@@ -5,7 +5,7 @@ metaDescription: "Moving is quite expensive. For this reason, here is how you ca
 featuredImage: "/images/blog/645ab1d97922872e6c5bf371_josh-appel-NeTPASr-bmQ-unsplash-scaled-e1617979344255-1.jpg"
 publishDate: "April 11, 2021"
 lastUpdated: "April 11, 2021"
-category: "how to cut moving expenses for your california move?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

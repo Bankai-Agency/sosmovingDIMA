@@ -5,7 +5,7 @@ metaDescription: "Find trusted movers near your LA location. Service all neighbo
 featuredImage: "/images/blog/68ff644d173671f42a60a6e8_movers-near-me-los-angeles-img.jpg"
 publishDate: "October 20, 2025"
 lastUpdated: "October 20, 2025"
-category: "finding reliable movers near you in los angeles"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

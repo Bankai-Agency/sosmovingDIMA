@@ -5,7 +5,7 @@ metaDescription: "Plastic bins or cardboard boxes for your move? Real cost compa
 featuredImage: "/images/blog/69b9333a2e3fb675b72871a9_plastic-bins-vs-cardboard-boxes-for-moving.jpg"
 publishDate: "March 17, 2026"
 lastUpdated: "March 17, 2026"
-category: "plastic bins vs cardboard boxes for moving"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

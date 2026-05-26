@@ -5,7 +5,7 @@ metaDescription: "Comparing moving companies in CA is all about finding all the 
 featuredImage: ""
 publishDate: "February 17, 2021"
 lastUpdated: "February 17, 2021"
-category: "guide for comparing moving companies in ca"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

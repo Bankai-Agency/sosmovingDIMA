@@ -5,7 +5,7 @@ metaDescription: "LA fire evacuation moving: 2-hour notice reality, emergency ra
 featuredImage: "/images/blog/6960bb787080a291c58be5c9_fire-evacuation-moving-services.png"
 publishDate: "January 8, 2026"
 lastUpdated: "January 8, 2026"
-category: "fire evacuation moving services"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

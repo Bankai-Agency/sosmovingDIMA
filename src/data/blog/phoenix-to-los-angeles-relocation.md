@@ -5,7 +5,7 @@ metaDescription: "Moving Phoenix to LA: Desert to ocean, $900 rent to $2,800, he
 featuredImage: "/images/blog/6969ef206c18a676385ab391_phoenix-to-los-angeles-relocation.png"
 publishDate: "January 19, 2026"
 lastUpdated: "January 19, 2026"
-category: "phoenix to los angeles relocation"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

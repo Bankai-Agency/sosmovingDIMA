@@ -5,7 +5,7 @@ metaDescription: "In case you wish to move furniture long distance from CA to NY
 featuredImage: "/images/blog/645ab1d97922877ed95bf2ef_F-2-1.jpg"
 publishDate: "June 26, 2021"
 lastUpdated: "June 26, 2021"
-category: "how to safely move furniture long distance from ca to ny?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

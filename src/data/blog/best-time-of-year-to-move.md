@@ -5,7 +5,7 @@ metaDescription: "Save money and stress by timing your move right! Our monthly g
 featuredImage: "/images/blog/68d2db830cd42b219a68b511_best-time-of-year-to-move-img.jpg"
 publishDate: "September 20, 2025"
 lastUpdated: "September 20, 2025"
-category: "best time of year to move: the complete monthly strategy guide"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "There are some specialty items only moving professionals shoul
 featuredImage: "/images/blog/645ab1d9792287a1a65bf3d0_Featured1-1.jpg"
 publishDate: "February 25, 2021"
 lastUpdated: "February 25, 2021"
-category: "7 specialty items only moving professionals should handle"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

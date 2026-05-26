@@ -5,7 +5,7 @@ metaDescription: "Room-by-room packing guide: kitchen 2 weeks early, bedroom las
 featuredImage: "/images/blog/696e17b1be75912e088e30c8_how-to-pack-for-a-move-room-by-room-guide.png"
 publishDate: "January 29, 2026"
 lastUpdated: "January 29, 2026"
-category: "how to pack for a move - room by room guide"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

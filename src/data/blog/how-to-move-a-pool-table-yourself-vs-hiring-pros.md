@@ -5,7 +5,7 @@ metaDescription: "Moving a pool table yourself risks $3,000+ damage, injury guar
 featuredImage: "/images/blog/69675395329acbafddd17a2b_how-to-move-a-pool-table-yourself-vs-hiring-pros.png"
 publishDate: "January 16, 2026"
 lastUpdated: "January 16, 2026"
-category: "how to move a pool table yourself vs hiring pros"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

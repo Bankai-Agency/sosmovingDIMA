@@ -5,7 +5,7 @@ metaDescription: "Moving in Hollywood? Navigate tourist chaos, film shoots, park
 featuredImage: "/images/blog/69523dd1d462cfffbb36fa30_hollywood-movers-entertainment-district-tips.png"
 publishDate: "December 9, 2025"
 lastUpdated: "December 9, 2025"
-category: "hollywood movers - entertainment district tips"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

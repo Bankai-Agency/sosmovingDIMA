@@ -5,7 +5,7 @@ metaDescription: "Knowing what size of moving boxes you need for your relocation
 featuredImage: "/images/blog/645ab1d9792287b91b5bf44f_brandable-box-8mCsyImZRGY-unsplash-scaled-e1604906481289-1.jpg"
 publishDate: "November 13, 2020"
 lastUpdated: "November 13, 2020"
-category: "how to choose the right size of moving boxes?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

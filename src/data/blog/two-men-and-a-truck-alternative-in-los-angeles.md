@@ -5,7 +5,7 @@ metaDescription: "Looking for a Two Men and a Truck alternative in LA? Compare p
 featuredImage: "/images/blog/69c6572f7861aa3a09419070_two-men-and-a-truck-alternative-in-los-angeles.jpg"
 publishDate: "March 13, 2026"
 lastUpdated: "March 13, 2026"
-category: "two men and a truck alternative in los angeles"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

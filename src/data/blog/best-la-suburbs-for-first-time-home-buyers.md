@@ -5,7 +5,7 @@ metaDescription: "Do you want to buy a house in Los Angeles? Then, here are all 
 featuredImage: "/images/blog/645ab1d9792287c64f5bf37a_sterling-davis-4iXagiKXn3Y-unsplash-scaled-e1617439040168-1.jpg"
 publishDate: "April 4, 2021"
 lastUpdated: "April 4, 2021"
-category: "best la suburbs for first-time home buyers"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

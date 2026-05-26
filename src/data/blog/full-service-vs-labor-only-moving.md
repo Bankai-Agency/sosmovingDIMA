@@ -5,7 +5,7 @@ metaDescription: "Full service moving $800-1500 complete vs labor only $300-600 
 featuredImage: "/images/blog/6968cf644bf71d8deaa720df_full-service-vs-labor-only-moving.png"
 publishDate: "January 18, 2026"
 lastUpdated: "January 18, 2026"
-category: "full service vs labor only moving"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

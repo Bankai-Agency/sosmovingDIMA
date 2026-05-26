@@ -5,7 +5,7 @@ metaDescription: "There are some things you can do to expand your business to CA
 featuredImage: "/images/blog/645ab1d97922873e8f5bf312_F-4-2048x864.jpg"
 publishDate: "June 12, 2021"
 lastUpdated: "June 12, 2021"
-category: "expand your business to ca without breaking the bank"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

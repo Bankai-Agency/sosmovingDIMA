@@ -5,7 +5,7 @@ metaDescription: "What do you need to pack in your essentials bag for a long dis
 featuredImage: "/images/blog/645ab1d979228757645bf30f_erol-ahmed-9XiN0r2NWSM-unsplash-scaled-e1622552374692-1.jpg"
 publishDate: "June 7, 2021"
 lastUpdated: "June 7, 2021"
-category: "what to pack in your essentials bag for a long distance move from ca to ny?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving from CA to FL? Compare costs, climates, and cultures. P
 featuredImage: "/images/blog/68ecff6696924bc375e3db05_california-to-florida-moving-guide-img.jpg"
 publishDate: "October 13, 2025"
 lastUpdated: "October 13, 2025"
-category: "california to florida moving guide: trading beaches for different beaches"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

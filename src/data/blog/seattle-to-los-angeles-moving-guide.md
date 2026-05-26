@@ -5,7 +5,7 @@ metaDescription: "Seattle to LA moving: rain to sunshine, $2,200 rent to $3,000,
 featuredImage: "/images/blog/697718999b53bdf7db0fff73_seattle-to-los-angeles-moving-guide.png"
 publishDate: "February 1, 2026"
 lastUpdated: "February 1, 2026"
-category: "seattle to los angeles moving guide"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

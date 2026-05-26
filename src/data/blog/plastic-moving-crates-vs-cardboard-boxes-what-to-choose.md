@@ -5,7 +5,7 @@ metaDescription: "Quick tricks and tips that will help you go through pros and c
 featuredImage: "/images/blog/645ab1d97922877a865bf3e9_alex-mecl-18gIbWGdbNk-unsplash.jpg"
 publishDate: "February 6, 2021"
 lastUpdated: "February 6, 2021"
-category: "plastic moving crates vs. cardboard boxes- what to choose?"
+category: "move-sustainably"
 readTime: ""
 author:
   name: "SOS Moving"

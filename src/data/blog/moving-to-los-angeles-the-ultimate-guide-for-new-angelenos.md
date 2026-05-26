@@ -5,7 +5,7 @@ metaDescription: "Moving to LA? Our local guide covers neighborhoods, costs, tra
 featuredImage: "/images/blog/68c2edcadfccd0c191b20e2a_moving-to-los-angeles-the-ultimate-guide-for-new-angelenos-img.jpg"
 publishDate: "September 11, 2025"
 lastUpdated: "September 11, 2025"
-category: "moving to los angeles: the ultimate guide for new angelenos"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

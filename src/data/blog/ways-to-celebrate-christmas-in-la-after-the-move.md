@@ -5,7 +5,7 @@ metaDescription: "Have you recently moved and you're looking for ways to celebra
 featuredImage: "/images/blog/645ab1d979228711e15bf440_pexels-photo-3626214-1-1.jpeg"
 publishDate: "December 22, 2020"
 lastUpdated: "December 22, 2020"
-category: "ways to celebrate christmas in la after the move"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

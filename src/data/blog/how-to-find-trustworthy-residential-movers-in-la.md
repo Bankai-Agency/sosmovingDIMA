@@ -5,7 +5,7 @@ metaDescription: "It is always better to hire movers when moving but you need to
 featuredImage: "/images/blog/645ab1d9792287595d5bf36c_robinson-greig-HrnAxAUwle8-unsplash-scaled-e1617982494590-1.jpg"
 publishDate: "April 13, 2021"
 lastUpdated: "April 13, 2021"
-category: "how to find trustworthy residential movers in la?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

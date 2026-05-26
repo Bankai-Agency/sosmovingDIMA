@@ -5,7 +5,7 @@ metaDescription: "Do you want to change something about your home? Then, here ar
 featuredImage: "/images/blog/645ab1d979228781785bf2d9_harmen-jelle-van-mourik-0yfWDwHOB0g-unsplash-scaled-e1625371151597.jpg"
 publishDate: "July 10, 2021"
 lastUpdated: "July 10, 2021"
-category: "creative decorating ideas to explore"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

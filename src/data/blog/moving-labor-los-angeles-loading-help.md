@@ -5,7 +5,7 @@ metaDescription: "Professional moving labor in LA. Load your rental truck, PODs,
 featuredImage: "/images/blog/6911c4731ac956c663517fe0_moving-labor-los-angeles-loading-help-img.jpg"
 publishDate: "November 8, 2025"
 lastUpdated: "November 8, 2025"
-category: "moving labor services in los angeles: professional help without the truck"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "There are some things that make your California move expensive
 featuredImage: "/images/blog/645ab1d97922875bcf5bf34d_Feature-1.jpg"
 publishDate: "May 5, 2021"
 lastUpdated: "May 5, 2021"
-category: "things that make your california move expensive"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

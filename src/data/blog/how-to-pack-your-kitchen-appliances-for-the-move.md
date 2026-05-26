@@ -5,7 +5,7 @@ metaDescription: "It can be quite hard to prepare your kitchen when you are movi
 featuredImage: "/images/blog/645ab1d979228722395bf2b9_jason-briscoe-GliaHAJ3_5A-unsplash-scaled-e1627114360682.jpg"
 publishDate: "July 28, 2021"
 lastUpdated: "July 28, 2021"
-category: "how to pack your kitchen appliances for the move?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

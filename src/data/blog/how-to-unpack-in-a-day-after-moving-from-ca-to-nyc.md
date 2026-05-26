@@ -5,7 +5,7 @@ metaDescription: "Do you have to unpack in a day after moving from CA to NYC? SO
 featuredImage: "/images/blog/645ab1d979228751255bf340_pexels-photo-4568706-e1620371762372-1.jpeg"
 publishDate: "May 18, 2021"
 lastUpdated: "May 18, 2021"
-category: "how to unpack in a day after moving from ca to nyc?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

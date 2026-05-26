@@ -5,7 +5,7 @@ metaDescription: "Should you move on weekend in LA? Compare Saturday vs Sunday r
 featuredImage: "/images/blog/68e3e00d37a3911dd4e04244_weekend-moving-los-angeles-guide-img.jpg"
 publishDate: "October 4, 2025"
 lastUpdated: "October 4, 2025"
-category: "weekend moving in los angeles: everything you need to know"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

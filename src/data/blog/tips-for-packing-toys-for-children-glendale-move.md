@@ -5,7 +5,7 @@ metaDescription: "Do you need to move your child's room? This means moving all t
 featuredImage: "/images/blog/645ab1d9792287e92d5bf31e_shirota-yuri-p0hDztR46cw-unsplash-scaled-e1622299375709.jpg"
 publishDate: "June 1, 2021"
 lastUpdated: "June 1, 2021"
-category: "tips for packing toys for children glendale move"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

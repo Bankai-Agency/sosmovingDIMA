@@ -5,7 +5,7 @@ metaDescription: "In case you wish to include your kids in the unpacking process
 featuredImage: "/images/blog/645ab1d97922873c375bf3a0_Featured-1-1.jpg"
 publishDate: "March 17, 2021"
 lastUpdated: "March 17, 2021"
-category: "include your kids in the unpacking process"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

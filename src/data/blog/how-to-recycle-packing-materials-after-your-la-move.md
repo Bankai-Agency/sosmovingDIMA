@@ -5,7 +5,7 @@ metaDescription: "Are you thinking about what to do with your packing materials 
 featuredImage: "/images/blog/645ab1d9792287ac595bf378_pexels-karolina-grabowska-4498124-1.jpg"
 publishDate: "April 3, 2021"
 lastUpdated: "April 3, 2021"
-category: "how to recycle packing materials after your la move?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving from LA to Portland? Oregon tax implications, real cost
 featuredImage: "/images/blog/69c65c98595d6be58040fc93_la-to-portland-moving-tax-implications.jpg"
 publishDate: "March 14, 2026"
 lastUpdated: "March 14, 2026"
-category: "la to portland moving - tax implications"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

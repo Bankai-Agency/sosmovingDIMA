@@ -5,7 +5,7 @@ metaDescription: "In case you are packing the garage before your LA move, make s
 featuredImage: "/images/blog/645ab1d979228715475bf377_Featured-1-1.jpg"
 publishDate: "April 14, 2021"
 lastUpdated: "April 14, 2021"
-category: "tips for packing the garage before your la move"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

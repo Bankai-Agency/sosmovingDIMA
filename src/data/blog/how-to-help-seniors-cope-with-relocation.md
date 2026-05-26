@@ -5,7 +5,7 @@ metaDescription: "If you are interested to learn how to help seniors cope with r
 featuredImage: "/images/blog/645ab1d9792287689b5bf3e7_Featured-2.jpg"
 publishDate: "February 16, 2021"
 lastUpdated: "February 16, 2021"
-category: "how to help seniors cope with relocation?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving to a ground floor apartment in LA? Pros, cons, safety t
 featuredImage: "/images/blog/68e3de9690debede5254b4ea_moving-to-first-floor-apartment-guide-img.jpg"
 publishDate: "October 2, 2025"
 lastUpdated: "October 2, 2025"
-category: "moving to a first floor apartment: everything you need to know"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

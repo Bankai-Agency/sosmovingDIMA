@@ -5,7 +5,7 @@ metaDescription: "Professional movers vs day laborers — real cost comparison i
 featuredImage: "/images/blog/69aff23ceb261d140e5ac747_professional-movers-vs-day-laborers-cost-analysis.png"
 publishDate: "March 12, 2026"
 lastUpdated: "March 12, 2026"
-category: "professional movers vs day laborers cost analysis"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "How to move houseplants safely in Los Angeles. Packing tips, t
 featuredImage: "/images/blog/68e3df5a10c459395c62035d_moving-with-plants-complete-guide-img.jpg"
 publishDate: "October 3, 2025"
 lastUpdated: "October 3, 2025"
-category: "moving with plants: how to safely relocate your green friends"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

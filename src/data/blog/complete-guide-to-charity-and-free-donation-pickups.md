@@ -5,7 +5,7 @@ metaDescription: "Find the suitable non-profits. Prepare your donations correctl
 featuredImage: "/images/blog/645ab1d979228751be5bf1f5_complete-guide-to-charity-and-free-donation-pickups.jpg"
 publishDate: "November 14, 2022"
 lastUpdated: "November 14, 2022"
-category: "complete guide to charity and free donation pickups"
+category: "move-sustainably"
 readTime: ""
 author:
   name: "SOS Moving"

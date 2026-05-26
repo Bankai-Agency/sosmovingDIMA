@@ -5,7 +5,7 @@ metaDescription: "Moving is a lot of things, but cheap is not one of them. That 
 featuredImage: "/images/blog/645ab1d97922874c1f5bf46c_feature-2.jpg"
 publishDate: "October 20, 2020"
 lastUpdated: "October 20, 2020"
-category: "how to boost your relocation budget?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

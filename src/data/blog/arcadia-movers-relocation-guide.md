@@ -5,7 +5,7 @@ metaDescription: "Moving to Arcadia CA? Excellent schools, strong Asian communit
 featuredImage: "/images/blog/68dab8fbb5499fe8fe9d31d5_lancaster-movers-complete-guide-img.jpg"
 publishDate: "September 28, 2025"
 lastUpdated: "September 28, 2025"
-category: "moving to arcadia: family paradise in san gabriel valley"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

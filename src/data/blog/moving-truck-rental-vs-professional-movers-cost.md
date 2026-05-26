@@ -5,7 +5,7 @@ metaDescription: "U-Haul costs $29.95 + hidden fees = $400+. Professional movers
 featuredImage: "/images/blog/692d6d9f3a8b98e2457785cc_moving-truck-rental-vs-professional-movers-cost-img.jpg"
 publishDate: "November 27, 2025"
 lastUpdated: "November 27, 2025"
-category: "moving truck rental vs professional movers cost"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

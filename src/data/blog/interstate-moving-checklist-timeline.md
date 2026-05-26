@@ -5,7 +5,7 @@ metaDescription: "Moving to another state? Our detailed interstate moving checkl
 featuredImage: "/images/blog/68d2d938a28ebe67c57cddb4_interstate-moving-checklist-timeline-img.jpg"
 publishDate: "September 23, 2025"
 lastUpdated: "September 23, 2025"
-category: "the ultimate interstate moving checklist: your 60-day timeline"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Relocating home is much harder when kids are around. You must 
 featuredImage: "/images/blog/645ab1d97922873e975bf418_pexels-olia-danilevich-5088180-1.jpg"
 publishDate: "January 16, 2021"
 lastUpdated: "January 16, 2021"
-category: "how to help kids adapt to a new school after the move?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

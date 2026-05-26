@@ -5,7 +5,7 @@ metaDescription: "PODS cost $3,000-5,000, take 2 weeks delivery. Movers $2,000-4
 featuredImage: "/images/blog/695f764ba6bf5c9a8afac491_pods-vs-moving-companies-pros-and-cons.png"
 publishDate: "January 5, 2026"
 lastUpdated: "January 5, 2026"
-category: "pods vs moving companies - pros and cons"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

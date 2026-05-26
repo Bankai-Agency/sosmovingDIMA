@@ -5,7 +5,7 @@ metaDescription: "Here is what to know when you are selecting a moving company. 
 featuredImage: "/images/blog/645ab1d979228709365bf48b_labor_large-1.jpg"
 publishDate: "September 16, 2020"
 lastUpdated: "September 16, 2020"
-category: "what to know when you are selecting a moving company?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

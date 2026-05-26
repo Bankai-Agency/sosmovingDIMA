@@ -5,7 +5,7 @@ metaDescription: "Packing and moving bulky items can be a demanding process. Wit
 featuredImage: "/images/blog/645ab1d9792287df6c5bf30a_pexels-cottonbro-5650529-1.jpg"
 publishDate: "June 13, 2021"
 lastUpdated: "June 13, 2021"
-category: "tips for packing and moving bulky items"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "If you need to be packing your game room for relocation, in a 
 featuredImage: "/images/blog/645ab1d979228716bb5bf3c4_pexels-fox-1038916-scaled-e1613511540287-1.jpg"
 publishDate: "February 26, 2021"
 lastUpdated: "February 26, 2021"
-category: "packing your game room for relocation – simple guide"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Do you want to visit places around Southern California? Then, 
 featuredImage: "/images/blog/645ab1d979228762e35bf260_gustavo-zambelli-3fpAmmQ-WXA-unsplash-scaled-e1631982172305.jpg"
 publishDate: "September 22, 2021"
 lastUpdated: "September 22, 2021"
-category: "the most beautiful places in south california for nature lovers"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

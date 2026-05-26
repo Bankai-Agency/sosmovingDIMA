@@ -5,7 +5,7 @@ metaDescription: "Moving with roommates in LA? Avoid conflicts, split costs fair
 featuredImage: "/images/blog/68ff60bf1fc2800046424fec_moving-with-roommates-los-angeles-guide-img.jpg"
 publishDate: "October 17, 2025"
 lastUpdated: "October 17, 2025"
-category: "moving with roommates: how to navigate shared relocations in la"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

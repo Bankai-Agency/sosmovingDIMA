@@ -5,7 +5,7 @@ metaDescription: "There are some ideas you might have for helping your CA movers
 featuredImage: "/images/blog/645ab1d979228718905bf316_F-3-1.jpg"
 publishDate: "June 4, 2021"
 lastUpdated: "June 4, 2021"
-category: "tips for helping your ca movers speed up the process"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

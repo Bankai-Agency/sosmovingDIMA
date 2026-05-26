@@ -5,7 +5,7 @@ metaDescription: "CA to NY moving: 2,800 miles, $4K-8K cost, 7-14 days transit. 
 featuredImage: "/images/blog/696e1588e86eb85d77bb9ac0_california-to-new-york-moving-complete-guide.png"
 publishDate: "January 26, 2026"
 lastUpdated: "January 26, 2026"
-category: "california to new york moving complete guide"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

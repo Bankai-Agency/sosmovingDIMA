@@ -5,7 +5,7 @@ metaDescription: "U-Haul seems cheaper until you add everything: truck $39.95 + 
 featuredImage: "/images/blog/6952525071326b3449ed3f0c_freepik__professional-moving-company-workers-in-uniforms-ca__80757 (1).png"
 publishDate: "December 10, 2025"
 lastUpdated: "December 10, 2025"
-category: "u-haul vs professional moving companies"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Want a greener move in LA? Eco-friendly boxes, reusable materi
 featuredImage: "/images/blog/69c65516f2e1e32d4a00b98c_eco-friendly-moving-boxes-and-green-packing.jpg"
 publishDate: "March 12, 2026"
 lastUpdated: "March 12, 2026"
-category: "eco-friendly moving boxes and green packing"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

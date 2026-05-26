@@ -5,7 +5,7 @@ metaDescription: "Cross country moving from LA: 7-21 day delivery, $3,000-10,000
 featuredImage: "/images/blog/69527c565274ffb6de3d62ca_cross-country-movers-coast-to-coast-planning.jpg"
 publishDate: "December 18, 2025"
 lastUpdated: "December 18, 2025"
-category: "cross country movers - coast to coast planning"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "How should you evaluate your interstate movers? What should yo
 featuredImage: "/images/blog/645ab1d979228781465bf456_feature-1.jpg"
 publishDate: "November 6, 2020"
 lastUpdated: "November 6, 2020"
-category: "how to evaluate your interstate movers?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

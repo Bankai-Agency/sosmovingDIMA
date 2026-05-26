@@ -5,7 +5,7 @@ metaDescription: "LA moving day weather problems? Rain procedures, heat protocol
 featuredImage: "/images/blog/69526c35101e496079c62f96_moving-day-weather-contingency-plans.jpg"
 publishDate: "December 14, 2025"
 lastUpdated: "December 14, 2025"
-category: "moving day weather contingency plans"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

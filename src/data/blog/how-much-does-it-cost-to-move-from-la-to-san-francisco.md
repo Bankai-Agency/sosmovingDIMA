@@ -5,7 +5,7 @@ metaDescription: "Have you been considering moving from LA to SF lately? Well, t
 featuredImage: "/images/blog/645ab1d979228751cf5bf211_moving-from-la-to-sf.jpg"
 publishDate: "May 30, 2022"
 lastUpdated: "May 30, 2022"
-category: "how much does it cost to move from la to san francisco?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

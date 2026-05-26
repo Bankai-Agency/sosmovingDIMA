@@ -5,7 +5,7 @@ metaDescription: "Sos Moving Los Angeles will help you with planning and organiz
 featuredImage: "/images/blog/645ab1d9792287b1975bf395_pexels-cottonbro-4569879-1.jpg"
 publishDate: "March 23, 2021"
 lastUpdated: "March 23, 2021"
-category: "organizing a family relocation to florida"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

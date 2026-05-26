@@ -5,7 +5,7 @@ metaDescription: "Specialized senior moving in LA. Downsizing assistance, patien
 featuredImage: "/images/blog/691b12829a673bb27b9fad52_senior-moving-services-los-angeles-elderly-img.jpg"
 publishDate: "November 13, 2025"
 lastUpdated: "November 13, 2025"
-category: "senior moving services los angeles: compassionate relocation for older adults"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

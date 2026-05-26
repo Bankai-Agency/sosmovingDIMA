@@ -5,7 +5,7 @@ metaDescription: "In case you are interested in some California places to move t
 featuredImage: "/images/blog/645ab1d9792287c1825bf205_what-to-know-before-moving-to-los-angeles.jpg"
 publishDate: "October 2, 2021"
 lastUpdated: "October 2, 2021"
-category: "7 south california places to move to after retirement"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

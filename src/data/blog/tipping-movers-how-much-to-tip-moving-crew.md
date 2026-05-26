@@ -5,7 +5,7 @@ metaDescription: "How much to tip movers in LA? $20-50 per mover for local, $50-
 featuredImage: "/images/blog/698b5e9f3181b46645c453ba_tipping-movers-how-much-to-tip-moving-crew.png"
 publishDate: "February 11, 2026"
 lastUpdated: "February 11, 2026"
-category: "tipping movers - how much to tip your moving crew in 2026"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

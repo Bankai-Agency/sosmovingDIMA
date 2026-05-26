@@ -5,7 +5,7 @@ metaDescription: "Surreal estimates. Hard to find online. No proper certificatio
 featuredImage: "/images/blog/645ab1d979228763c25bf22a_red-flags-to-watch-out-when-hiring-moving-company.jpg"
 publishDate: "March 21, 2022"
 lastUpdated: "March 21, 2022"
-category: "13 red flags to watch out for when hiring a moving company"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

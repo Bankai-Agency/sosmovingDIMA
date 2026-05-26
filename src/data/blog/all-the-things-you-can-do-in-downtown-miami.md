@@ -5,7 +5,7 @@ metaDescription: "You want to know about all the things you can do in downtown M
 featuredImage: "/images/blog/645ab1d9792287a7475bf2c4_pexels-one-shot-3663416.jpg"
 publishDate: "July 27, 2021"
 lastUpdated: "July 27, 2021"
-category: "all the things you can do in downtown miami"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

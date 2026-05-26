@@ -5,7 +5,7 @@ metaDescription: "Why it is important. Who to announce about moving to a new off
 featuredImage: "/images/blog/645ab1d97922871ba15bf210_how-to-announce-your-office-relocation (1).jpg"
 publishDate: "May 23, 2022"
 lastUpdated: "May 23, 2022"
-category: "how to announce your office relocation: 6 great tips"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

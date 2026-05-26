@@ -5,7 +5,7 @@ metaDescription: "Local move coming up? Our complete preparation checklist cover
 featuredImage: "/images/blog/68c81338f6102be51567156a_how-to-prepare-for-a-local-move-img.jpg"
 publishDate: "September 13, 2025"
 lastUpdated: "September 13, 2025"
-category: "how to prepare for a local move: the 30-day action plan"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

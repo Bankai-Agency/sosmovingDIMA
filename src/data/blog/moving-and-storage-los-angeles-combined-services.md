@@ -5,7 +5,7 @@ metaDescription: "Combined moving and storage in LA. Short-term, long-term, clim
 featuredImage: "/images/blog/6921854fa13129a7e874e27a_moving-and-storage-los-angeles-combined-services-img.jpg"
 publishDate: "November 18, 2025"
 lastUpdated: "November 18, 2025"
-category: "moving and storage los angeles: combined relocation and storage solutions"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

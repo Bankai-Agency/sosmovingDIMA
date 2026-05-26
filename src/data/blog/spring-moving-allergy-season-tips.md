@@ -5,7 +5,7 @@ metaDescription: "LA spring moving with allergies: pollen counts peak March-May,
 featuredImage: "/images/blog/6960ba1612dd5d1d33d90d9f_spring-moving-allergy-season-tips.png"
 publishDate: "January 7, 2026"
 lastUpdated: "January 7, 2026"
-category: "spring moving - allergy season tips"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

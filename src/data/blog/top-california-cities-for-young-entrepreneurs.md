@@ -5,7 +5,7 @@ metaDescription: "If you're planning to start a successful business, you have to
 featuredImage: "/images/blog/645ab1d979228720ca5bf31c_pexels-photo-237325-e1622161439299-1.jpeg"
 publishDate: "May 30, 2021"
 lastUpdated: "May 30, 2021"
-category: "top california cities for young entrepreneurs"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

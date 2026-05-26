@@ -5,7 +5,7 @@ metaDescription: "Piano moving in LA: uprights vs grands require different techn
 featuredImage: "/images/blog/692d6a98dea7ae957dc4a346_piano-movers-near-me-upright-vs-grand-piano-img.jpg"
 publishDate: "November 24, 2025"
 lastUpdated: "November 24, 2025"
-category: "piano movers near me - upright vs grand piano"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

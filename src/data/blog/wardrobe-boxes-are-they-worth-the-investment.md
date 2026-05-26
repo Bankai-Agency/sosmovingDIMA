@@ -5,7 +5,7 @@ metaDescription: "Discover if wardrobe boxes are worth the cost for your move. C
 featuredImage: "/images/blog/698f5d0d9001feef165ec593_wardrobe-boxes-are-they-worth-the-investment.png"
 publishDate: "February 13, 2026"
 lastUpdated: "February 13, 2026"
-category: "wardrobe boxes - are they worth the investment"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

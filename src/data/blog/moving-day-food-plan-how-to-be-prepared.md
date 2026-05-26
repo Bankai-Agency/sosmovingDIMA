@@ -5,7 +5,7 @@ metaDescription: "If you want to make sure that you go through a relocation in t
 featuredImage: "/images/blog/645ab1d97922879bf65bf3ce_pexels-mikhail-nilov-6613958-scaled-e1612975121165-1.jpg"
 publishDate: "February 20, 2021"
 lastUpdated: "February 20, 2021"
-category: "moving day food plan – how to be prepared!"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

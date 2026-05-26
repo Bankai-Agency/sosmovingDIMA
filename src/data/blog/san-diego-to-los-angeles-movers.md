@@ -5,7 +5,7 @@ metaDescription: "Moving San Diego to LA: 2-hour drive, $1,500-3,500 cost. Beach
 featuredImage: "/images/blog/6952885af72810b6c6a665dc_san-diego-to-los-angeles-movers.png"
 publishDate: "December 24, 2025"
 lastUpdated: "December 24, 2025"
-category: "san diego to los angeles movers"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

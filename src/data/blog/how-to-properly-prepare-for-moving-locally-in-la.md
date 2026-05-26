@@ -5,7 +5,7 @@ metaDescription: "In case you wish to properly prepare for moving locally in LA,
 featuredImage: "/images/blog/645ab1d9792287d1935bf26b_F.jpg"
 publishDate: "September 14, 2021"
 lastUpdated: "September 14, 2021"
-category: "how to properly prepare for moving locally in la?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

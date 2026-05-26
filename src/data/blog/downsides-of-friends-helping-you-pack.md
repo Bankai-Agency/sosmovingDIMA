@@ -5,7 +5,7 @@ metaDescription: "Let's see all the downsides of friends helping you pack - and 
 featuredImage: "/images/blog/645ab1d9792287b6f75bf3fc_woman-typing-on-laptop-while-ethnic-boyfriend-unpacking-4247752.jpg"
 publishDate: "December 5, 2020"
 lastUpdated: "December 5, 2020"
-category: "downsides of friends helping you pack"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Professional piano moving in LA. Uprights, baby grands, concer
 featuredImage: "/images/blog/68ff6959e6754210810d53ac_piano-movers-los-angeles-specialists-img.jpg"
 publishDate: "October 27, 2025"
 lastUpdated: "October 27, 2025"
-category: "professional piano movers in los angeles: specialized expertise"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

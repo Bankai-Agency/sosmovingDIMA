@@ -5,7 +5,7 @@ metaDescription: "Complete guide to moving boxes in LA. Best places to buy, free
 featuredImage: "/images/blog/6911c36b9606289f93b507a2_moving-boxes-los-angeles-complete-guide-img.jpg"
 publishDate: "November 7, 2025"
 lastUpdated: "November 7, 2025"
-category: "moving boxes in los angeles: complete guide to sizes, sources, and savings"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

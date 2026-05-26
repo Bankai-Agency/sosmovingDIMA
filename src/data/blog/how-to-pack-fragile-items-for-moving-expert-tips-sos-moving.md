@@ -5,7 +5,7 @@ metaDescription: "Don't risk broken dishes or heirlooms. Learn how to pack fragi
 featuredImage: "/images/blog/68bb0e1e8ffd9ebc5f4c70f6_how-to-pack-fragile-items-for-moving-expert-tips-sos-moving-img.jpg"
 publishDate: "September 4, 2025"
 lastUpdated: "September 4, 2025"
-category: "how to pack fragile items for moving: an expert's complete guide"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

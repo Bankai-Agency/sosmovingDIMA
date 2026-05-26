@@ -5,7 +5,7 @@ metaDescription: "Senior moving LA: downsizing 50 years of memories, estate coor
 featuredImage: "/images/blog/696e171dba554ce343ade52c_senior-moving-services-downsizing-with-dignity.png"
 publishDate: "January 28, 2026"
 lastUpdated: "January 28, 2026"
-category: "senior moving services - downsizing with dignity"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

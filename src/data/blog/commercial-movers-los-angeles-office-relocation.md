@@ -5,7 +5,7 @@ metaDescription: "Professional commercial moving in LA. Offices, retail, warehou
 featuredImage: "/images/blog/6911c73dae6c034acebe4183_commercial-movers-los-angeles-office-relocation-img.jpg"
 publishDate: "November 10, 2025"
 lastUpdated: "November 10, 2025"
-category: "commercial movers los angeles: office and business relocation experts"
+category: "business-relocation"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Compare top moving companies in Los Angeles. Licensed movers, 
 featuredImage: "/images/blog/68e3dd0ddd09f0da5eca8451_best-moving-companies-los-angeles-comparison-img.jpg"
 publishDate: "October 1, 2025"
 lastUpdated: "October 1, 2025"
-category: "top moving companies in los angeles: how to choose the right one"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

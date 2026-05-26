@@ -5,7 +5,7 @@ metaDescription: "Packing the bag of essentials for your interstate move has nev
 featuredImage: "/images/blog/645ab1d97922870ef05bf27e_pexels-vinta-supply-co-_-nyc-842959.jpg"
 publishDate: "August 28, 2021"
 lastUpdated: "August 28, 2021"
-category: "packing the bag of essentials for your interstate move"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

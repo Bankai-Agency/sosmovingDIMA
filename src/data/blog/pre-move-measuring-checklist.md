@@ -5,7 +5,7 @@ metaDescription: "Did you know that there is a thing called a pre-move measuring
 featuredImage: "/images/blog/645ab1d9792287b9195bf3b0_measuring-tape-2202258_1280-1.jpg"
 publishDate: "March 8, 2021"
 lastUpdated: "March 8, 2021"
-category: "pre-move measuring checklist"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

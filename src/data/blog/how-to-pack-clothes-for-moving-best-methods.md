@@ -5,7 +5,7 @@ metaDescription: "Best methods for packing clothes when moving — wardrobe boxe
 featuredImage: "/images/blog/69b92eb94cf1b563911b0131_how-to-pack-clothes-for-moving-best-methods.jpg"
 publishDate: "March 16, 2026"
 lastUpdated: "March 16, 2026"
-category: "how to pack clothes for moving - best methods"
+category: "packing-tips"
 readTime: ""
 author:
   name: "SOS Moving"

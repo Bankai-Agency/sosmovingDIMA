@@ -5,7 +5,7 @@ metaDescription: "Affordable student moving in LA. UCLA, USC, and all colleges. 
 featuredImage: "/images/blog/68ecfb068d845dc96058eb5b_student-moving-services-los-angeles-guide-img.jpg"
 publishDate: "October 9, 2025"
 lastUpdated: "October 9, 2025"
-category: "student moving guide: affordable college moves in los angeles"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

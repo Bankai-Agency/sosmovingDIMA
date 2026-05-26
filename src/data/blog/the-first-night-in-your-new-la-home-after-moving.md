@@ -5,7 +5,7 @@ metaDescription: "SOS Moving Los Angeles decided to give you a few tips on the f
 featuredImage: "/images/blog/645ab1d979228770205bf255_pexels-elina-sazonova-2705755.jpg"
 publishDate: "September 26, 2021"
 lastUpdated: "September 26, 2021"
-category: "the first night in your new la home after moving"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

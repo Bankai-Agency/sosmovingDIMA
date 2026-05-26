@@ -5,7 +5,7 @@ metaDescription: "Are you wondering how to store items during a home renovation?
 featuredImage: "/images/blog/645ab1d97922873dfe5bf420_man-couple-love-people-4568736.jpg"
 publishDate: "January 13, 2021"
 lastUpdated: "January 13, 2021"
-category: "how to store items during a home renovation?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

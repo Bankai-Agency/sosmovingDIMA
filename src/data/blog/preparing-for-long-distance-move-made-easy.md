@@ -5,7 +5,7 @@ metaDescription: "Moving soon to a new city or state? Here is some advice on pre
 featuredImage: "/images/blog/645ab1d9792287c9af5bf3f6_sos-main-1.jpg"
 publishDate: "January 27, 2021"
 lastUpdated: "January 27, 2021"
-category: "preparing for long distance move made easy"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

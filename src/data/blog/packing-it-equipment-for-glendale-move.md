@@ -5,7 +5,7 @@ metaDescription: "In case you are packing IT equipment for Glendale move, you ha
 featuredImage: "/images/blog/645ab1d979228738925bf32e_F-2-1.jpg"
 publishDate: "May 26, 2021"
 lastUpdated: "May 26, 2021"
-category: "packing it equipment for glendale move"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

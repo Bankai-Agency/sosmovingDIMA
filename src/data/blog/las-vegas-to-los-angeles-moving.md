@@ -5,7 +5,7 @@ metaDescription: "Moving Vegas to LA: 4-hour drive, $1,500-3,500 cost. Desert to
 featuredImage: "/images/blog/695f77a37b8ef3fd361e7089_las-vegas-to-los-angeles-moving.png"
 publishDate: "January 6, 2026"
 lastUpdated: "January 6, 2026"
-category: "las vegas to los angeles moving"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

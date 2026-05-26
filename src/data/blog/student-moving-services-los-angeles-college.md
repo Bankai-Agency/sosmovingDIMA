@@ -5,7 +5,7 @@ metaDescription: "Student moving services in LA. Dorm rooms, college apartments,
 featuredImage: "/images/blog/691b14328daa0c1b421b47ef_student-moving-services-los-angeles-college-img.jpg"
 publishDate: "November 15, 2025"
 lastUpdated: "November 15, 2025"
-category: "student moving services los angeles: dorm and college apartment moves"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

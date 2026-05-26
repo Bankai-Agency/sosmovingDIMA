@@ -5,7 +5,7 @@ metaDescription: "LA moving truck parking: 72-hour permits required, $93+ ticket
 featuredImage: "/images/blog/69621c0c6759aeb999e4ed99_moving-truck-parking-regulations-la.png"
 publishDate: "January 9, 2026"
 lastUpdated: "January 9, 2026"
-category: "moving truck parking regulations la"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

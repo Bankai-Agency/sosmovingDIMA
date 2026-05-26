@@ -5,7 +5,7 @@ metaDescription: "Have you moved recently? Do you need to unpack your boxes? The
 featuredImage: "/images/blog/645ab1d97922876a345bf257_michal-balog-66NaCdBrkCs-unsplash-scaled-e1632498898999.jpg"
 publishDate: "September 29, 2021"
 lastUpdated: "September 29, 2021"
-category: "what to do when you lack time to unpack?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

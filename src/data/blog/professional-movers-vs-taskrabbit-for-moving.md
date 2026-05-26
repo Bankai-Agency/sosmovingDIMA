@@ -5,7 +5,7 @@ metaDescription: "TaskRabbit movers vs a professional moving company — real co
 featuredImage: "/images/blog/69ce3bb9485e75c83aea3653_professional-movers-vs-taskrabbit-for-moving.jpg"
 publishDate: "April 1, 2026"
 lastUpdated: "April 1, 2026"
-category: "professional movers vs taskrabbit for moving"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

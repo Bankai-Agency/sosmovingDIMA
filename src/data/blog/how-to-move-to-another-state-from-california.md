@@ -5,7 +5,7 @@ metaDescription: "Moving from California to another state? DMV updates, tax chan
 featuredImage: "/images/blog/695e169034173375113dc3cb_how-to-move-to-another-state-from-california.png"
 publishDate: "January 3, 2026"
 lastUpdated: "January 3, 2026"
-category: "how to move to another state from california"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

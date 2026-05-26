@@ -5,7 +5,7 @@ metaDescription: "Relocating your business from LA? Complete guide for commercia
 featuredImage: "/images/blog/68ff5fafbda78e382383232c_business-relocation-interstate-los-angeles-img.jpg"
 publishDate: "October 14, 2025"
 lastUpdated: "October 14, 2025"
-category: "business relocation from los angeles: interstate moving guide | sos moving"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

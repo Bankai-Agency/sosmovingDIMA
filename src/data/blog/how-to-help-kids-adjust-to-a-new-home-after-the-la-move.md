@@ -5,7 +5,7 @@ metaDescription: "Relocating with childrencan be stressful. But, fear not, we wi
 featuredImage: "/images/blog/645ab1d97922873dfe5bf420_man-couple-love-people-4568736.jpg"
 publishDate: "November 10, 2020"
 lastUpdated: "November 10, 2020"
-category: "how to help kids adjust to a new home after the la move?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

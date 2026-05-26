@@ -5,7 +5,7 @@ metaDescription: "Start planning earlier. Choose the right location. Hire the ri
 featuredImage: "/images/blog/645ab1d979228717235bf212_5-tips-of-moving-a-medical-practice-to-a-new-location.jpg"
 publishDate: "May 16, 2022"
 lastUpdated: "May 16, 2022"
-category: "5 tips of moving a medical practice to a new location"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

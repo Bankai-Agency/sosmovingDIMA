@@ -5,7 +5,7 @@ metaDescription: "Relocating for a new job in LA? How employer relocation packag
 featuredImage: "/images/blog/69b937a9ae16f8172af3f1be_job-relocation-moving-services.jpg"
 publishDate: "March 20, 2026"
 lastUpdated: "March 20, 2026"
-category: "job relocation moving services"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

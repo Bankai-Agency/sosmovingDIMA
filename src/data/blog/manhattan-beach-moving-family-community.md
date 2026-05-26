@@ -5,7 +5,7 @@ metaDescription: "Moving to Manhattan Beach? Family-friendly schools, beach livi
 featuredImage: "/images/blog/69b932dd979a3bfb8c383d73_manhattan-beach-moving-family-community.jpg"
 publishDate: "March 16, 2026"
 lastUpdated: "March 16, 2026"
-category: "manhattan beach moving - family community"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

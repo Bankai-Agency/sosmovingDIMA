@@ -5,7 +5,7 @@ metaDescription: "SOS Moving and Storage Los Angeles will help you with tips and
 featuredImage: "/images/blog/645ab1d979228773875bf41d_man-couple-love-people-4568736-1.jpg"
 publishDate: "January 7, 2021"
 lastUpdated: "January 7, 2021"
-category: "tips for preventing mold in storage units"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

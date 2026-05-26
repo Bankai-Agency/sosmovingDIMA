@@ -5,7 +5,7 @@ metaDescription: "Do you need to move and pack everything? Then, here are all th
 featuredImage: "/images/blog/645ab1d9792287c94e5bf28c_bermix-studio-AqO414rIwZc-unsplash-scaled-e1628947374977.jpg"
 publishDate: "August 19, 2021"
 lastUpdated: "August 19, 2021"
-category: "room-by-room packing tips for interstate move"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

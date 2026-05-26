@@ -5,7 +5,7 @@ metaDescription: "Beverly Hills moving requires discretion, white glove service,
 featuredImage: "/images/blog/69528554ed740cbb9f9a7883_beverly-hills-moving-luxury-relocation.png"
 publishDate: "December 22, 2025"
 lastUpdated: "December 22, 2025"
-category: "beverly hills moving - luxury relocation"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

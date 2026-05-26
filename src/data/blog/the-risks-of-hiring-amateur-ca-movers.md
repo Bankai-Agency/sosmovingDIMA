@@ -5,7 +5,7 @@ metaDescription: "Are you thinking about contacting an amateur moving company? B
 featuredImage: "/images/blog/645ab1d9792287619a5bf3cf_pexels-vlada-karpovich-4050315-3-1.jpg"
 publishDate: "February 24, 2021"
 lastUpdated: "February 24, 2021"
-category: "the risks of hiring amateur ca movers"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

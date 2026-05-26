@@ -5,7 +5,7 @@ metaDescription: "Red flags in moving quotes: too cheap, cash only, no license. 
 featuredImage: "/images/blog/69344ede83e244a8750203d4_mover-near-me-red-flags-in-moving-quotes-img.jpg"
 publishDate: "December 4, 2025"
 lastUpdated: "December 4, 2025"
-category: "mover near me - red flags in moving quotes"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

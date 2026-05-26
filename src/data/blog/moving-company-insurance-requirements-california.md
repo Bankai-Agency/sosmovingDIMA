@@ -5,7 +5,7 @@ metaDescription: "CA moving company insurance: $750K minimum liability, cargo co
 featuredImage: "/images/blog/696e15122d9fc7b455245a69_moving-company-insurance-requirements-california.png"
 publishDate: "January 25, 2026"
 lastUpdated: "January 25, 2026"
-category: "moving company insurance requirements in california"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "In case you wish to speed-up unpacking process, you have come 
 featuredImage: "/images/blog/645ab1d9792287a6d95bf3d9_Featured-1-1.jpg"
 publishDate: "February 19, 2021"
 lastUpdated: "February 19, 2021"
-category: "how to speed-up unpacking process?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

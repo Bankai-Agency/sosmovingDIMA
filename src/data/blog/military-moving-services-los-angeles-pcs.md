@@ -5,7 +5,7 @@ metaDescription: "Military-friendly moving in LA. PCS orders, temporary storage,
 featuredImage: "/images/blog/69060dad6bca5b1b80aad90b_military-moving-services-los-angeles-pcs-img.jpg"
 publishDate: "October 30, 2025"
 lastUpdated: "October 30, 2025"
-category: "military moving services in los angeles: pcs and military relocations"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

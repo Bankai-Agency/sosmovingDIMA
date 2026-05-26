@@ -5,7 +5,7 @@ metaDescription: "You are moving and you want to hire professionals for a next d
 featuredImage: "/images/blog/645ab1d979228750ca5bf2d2_pexels-rodnae-productions-7464426.jpg"
 publishDate: "July 11, 2021"
 lastUpdated: "July 11, 2021"
-category: "reasons to hire professionals for a next door move in la"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

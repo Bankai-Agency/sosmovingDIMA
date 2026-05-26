@@ -5,7 +5,7 @@ metaDescription: "Planning a sustainable move? Our guide covers 7 eco-friendly m
 featuredImage: "/images/blog/68befc043b7169754182d6d1_how-to-have-an-eco-friendly-move-img.jpg"
 publishDate: "September 8, 2025"
 lastUpdated: "September 8, 2025"
-category: "how to have an eco-friendly move: 7 sustainable tips"
+category: "move-sustainably"
 readTime: ""
 author:
   name: "SOS Moving"

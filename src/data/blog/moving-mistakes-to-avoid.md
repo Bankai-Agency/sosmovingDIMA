@@ -5,7 +5,7 @@ metaDescription: "Don't learn the hard way! Discover the 10 most common moving m
 featuredImage: "/images/blog/68c8148fe86f10eb85be1b7e_moving-mistakes-to-avoid-img.jpg"
 publishDate: "September 15, 2025"
 lastUpdated: "September 15, 2025"
-category: "10 costly moving mistakes to avoid (and how to prevent them)"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

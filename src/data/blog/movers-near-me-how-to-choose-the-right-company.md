@@ -5,7 +5,7 @@ metaDescription: "Finding reliable movers near me in Los Angeles? Red flags to a
 featuredImage: "/images/blog/69219452eec8eb7516e7ad52_movers-near-me-how-to-choose-the-right-company-img.jpg"
 publishDate: "November 21, 2025"
 lastUpdated: "November 21, 2025"
-category: "movers near me - how to choose the right company"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

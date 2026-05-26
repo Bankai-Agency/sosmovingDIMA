@@ -5,7 +5,7 @@ metaDescription: "Los Angeles is a city full of wonders. That is why we have nar
 featuredImage: "/images/blog/645ab1d97922875e9e5bf278_griffith-observatory-3897616_1280.png"
 publishDate: "September 12, 2021"
 lastUpdated: "September 12, 2021"
-category: "top places to see after moving to la"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

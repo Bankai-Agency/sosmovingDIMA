@@ -5,7 +5,7 @@ metaDescription: "Do you need to transport your items to your new address? Then,
 featuredImage: "/images/blog/645ab1d979228775815bf388_kendall-henderson-Pj6TgpS_Vt4-unsplash-e1616901662732-1.jpg"
 publishDate: "March 31, 2021"
 lastUpdated: "March 31, 2021"
-category: "how to ensure packages safety during transport?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

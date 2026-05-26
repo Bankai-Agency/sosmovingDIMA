@@ -5,7 +5,7 @@ metaDescription: "LA storage places: Short-term $150-300/month flexible, long-te
 featuredImage: "/images/blog/69621d57376b9a7be12200b7_storage-places-near-me-short-term-vs-long-term-options.png"
 publishDate: "January 10, 2026"
 lastUpdated: "January 10, 2026"
-category: "storage places near me - short term vs long term options"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "If you want to learn how to prepare when moving a beauty salon
 featuredImage: "/images/blog/645ab1d9792287cd175bf2c2_beauty-salon-4043096_640.jpg"
 publishDate: "July 21, 2021"
 lastUpdated: "July 21, 2021"
-category: "how to prepare when moving a beauty salon to ca?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

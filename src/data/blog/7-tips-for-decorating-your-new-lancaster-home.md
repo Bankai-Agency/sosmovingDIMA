@@ -5,7 +5,7 @@ metaDescription: "In case you are interested in decorating your new Lancaster ho
 featuredImage: "/images/blog/645ab1d9792287a3755bf29a_F.jpg"
 publishDate: "August 18, 2021"
 lastUpdated: "August 18, 2021"
-category: "7 tips for decorating your new lancaster home"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

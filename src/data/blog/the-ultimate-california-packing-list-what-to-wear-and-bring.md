@@ -5,7 +5,7 @@ metaDescription: "You will need to make sure that you create the finest Californ
 featuredImage: "/images/blog/645ab1d97922876eac5bf39b_list-3205464_640-1.jpg"
 publishDate: "March 12, 2021"
 lastUpdated: "March 12, 2021"
-category: "the ultimate california packing list: what to wear and bring"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

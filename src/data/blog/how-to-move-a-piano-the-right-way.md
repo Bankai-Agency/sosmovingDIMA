@@ -5,7 +5,7 @@ metaDescription: "Table of Contents Make Sure You Want to Do it Yourself Before 
 featuredImage: "/images/blog/645ab1d979228775565bf1fa_how-to-move-a-piano-the-right-way.jpg"
 publishDate: "January 24, 2023"
 lastUpdated: "January 24, 2023"
-category: "how to move a piano the right way?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

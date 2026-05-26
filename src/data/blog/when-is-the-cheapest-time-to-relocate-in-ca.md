@@ -5,7 +5,7 @@ metaDescription: "Have you been wondering when the cheapest time to relocate in 
 featuredImage: "/images/blog/645ab1d9792287a6845bf41a_ethan-robertson-SYx3UCHZJlo-unsplash-scaled-e1609779820465-1.jpg"
 publishDate: "January 5, 2021"
 lastUpdated: "January 5, 2021"
-category: "when is the cheapest time to relocate in ca?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

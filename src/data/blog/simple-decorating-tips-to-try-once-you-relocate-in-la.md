@@ -5,7 +5,7 @@ metaDescription: "If you are not happy with your new house, here are all the sim
 featuredImage: "/images/blog/645ab1d979228736c65bf409_nathan-dumlao-xxzeV1aiSY8-unsplash-scaled-e1610787504135-1.jpg"
 publishDate: "January 19, 2021"
 lastUpdated: "January 19, 2021"
-category: "simple decorating tips to try once you relocate in la"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

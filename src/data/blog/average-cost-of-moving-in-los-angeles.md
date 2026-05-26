@@ -5,7 +5,7 @@ metaDescription: "Factors affecting moving cost in Los Angeles. Local moving: fu
 featuredImage: "/images/blog/645ab1d979228770075bf203_cost-of-moving-in-los-angeles.jpg"
 publishDate: "October 3, 2022"
 lastUpdated: "October 3, 2022"
-category: "average cost of moving in los angeles"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

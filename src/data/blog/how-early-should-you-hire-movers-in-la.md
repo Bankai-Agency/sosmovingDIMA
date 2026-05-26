@@ -5,7 +5,7 @@ metaDescription: "In case you are interested to hire movers in LA, you have come
 featuredImage: "/images/blog/645ab1d979228725ef5bf3e6_Featured-3.jpg"
 publishDate: "February 3, 2021"
 lastUpdated: "February 3, 2021"
-category: "how early should you hire movers in la?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

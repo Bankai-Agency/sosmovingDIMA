@@ -5,7 +5,7 @@ metaDescription: "Piano moving costs $200-500 in LA. Understand why: specialized
 featuredImage: "/images/blog/6945330bac2306a80a71d62f_piano-moving-cost-why-its-expensive-img.jpg"
 publishDate: "December 7, 2025"
 lastUpdated: "December 7, 2025"
-category: "piano moving cost - why it's expensive"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

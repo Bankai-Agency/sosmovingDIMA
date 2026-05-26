@@ -5,7 +5,7 @@ metaDescription: "LA to SF moving costs: $2K-5K professional, 380 miles, $3K ren
 featuredImage: "/images/blog/6981d31243f2be6885d5c117_los-angeles-to-san-francisco-moving-costs.png"
 publishDate: "February 7, 2026"
 lastUpdated: "February 7, 2026"
-category: "los angeles to san francisco moving costs"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

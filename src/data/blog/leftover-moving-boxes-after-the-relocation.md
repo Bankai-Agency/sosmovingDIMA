@@ -5,7 +5,7 @@ metaDescription: "Here are some tips on what to do with leftover moving boxes af
 featuredImage: "/images/blog/645ab1d9792287321f5bf3cb_pexels-karolina-grabowska-4506263.jpg"
 publishDate: "February 27, 2021"
 lastUpdated: "February 27, 2021"
-category: "what to do with leftover moving boxes after the relocation"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

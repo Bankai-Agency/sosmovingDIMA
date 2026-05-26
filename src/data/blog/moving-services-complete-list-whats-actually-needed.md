@@ -5,7 +5,7 @@ metaDescription: "Moving services breakdown: packing $45/hour necessary, unpacki
 featuredImage: "/images/blog/6981d0f5da00668ba1551cfb_moving-services-complete-list-whats-actually-needed.png"
 publishDate: "February 6, 2026"
 lastUpdated: "February 6, 2026"
-category: "moving services complete list - what's actually needed"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

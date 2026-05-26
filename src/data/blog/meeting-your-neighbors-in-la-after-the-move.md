@@ -5,7 +5,7 @@ metaDescription: "Meeting your neighbors in LA doesn't have to be an awkward and
 featuredImage: "/images/blog/645ab1d9792287f7085bf44e_dillon-shook-u7i7rGNfuNA-unsplash-1-scaled-1-2048x1366.jpg"
 publishDate: "November 28, 2020"
 lastUpdated: "November 28, 2020"
-category: "meeting your neighbors in la after the move"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

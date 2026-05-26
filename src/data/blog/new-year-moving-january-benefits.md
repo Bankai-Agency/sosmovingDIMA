@@ -5,7 +5,7 @@ metaDescription: "January moving in LA means lower rates, more availability, and
 featuredImage: "/images/blog/699d5fdac8fbf20defcc9113_new-year-moving-january-benefits.png"
 publishDate: "February 24, 2026"
 lastUpdated: "February 24, 2026"
-category: "new year moving - january benefits"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

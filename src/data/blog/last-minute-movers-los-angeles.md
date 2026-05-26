@@ -5,7 +5,7 @@ metaDescription: "Need last minute movers in LA? Available today, tomorrow, this
 featuredImage: "/images/blog/68ff656c1fc280004643d8c1_last-minute-movers-los-angeles-img.jpg"
 publishDate: "October 22, 2025"
 lastUpdated: "October 22, 2025"
-category: "last minute movers in los angeles: when you need help now"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

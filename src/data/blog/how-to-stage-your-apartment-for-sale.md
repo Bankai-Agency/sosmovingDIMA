@@ -5,7 +5,7 @@ metaDescription: "Hire top labor and moving services and stage your apartment fo
 featuredImage: "/images/blog/645ab1d979228770eb5bf2fd_pexels-pixabay-259962-1.jpg"
 publishDate: "June 20, 2021"
 lastUpdated: "June 20, 2021"
-category: "how to stage your apartment for sale?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

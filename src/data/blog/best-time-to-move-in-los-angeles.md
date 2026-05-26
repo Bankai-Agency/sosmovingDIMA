@@ -5,7 +5,7 @@ metaDescription: "Best LA moving times: October-February saves 30%. Avoid summer
 featuredImage: "/images/blog/692d6f28e49814496a5a64a6_best-time-to-move-in-los-angeles-img.jpg"
 publishDate: "November 29, 2025"
 lastUpdated: "November 29, 2025"
-category: "best time to move in los angeles"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

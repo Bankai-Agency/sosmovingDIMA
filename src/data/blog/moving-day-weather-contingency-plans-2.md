@@ -5,7 +5,7 @@ metaDescription: "Rain, heat, or Santa Ana winds on moving day? How to plan arou
 featuredImage: "/images/blog/69afea7c0c360f0e06b47a80_moving-day-weather-contingency-plans-2.png"
 publishDate: "March 9, 2026"
 lastUpdated: "March 9, 2026"
-category: "moving day weather contingency plans"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

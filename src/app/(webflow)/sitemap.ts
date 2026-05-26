@@ -1,10 +1,13 @@
 import type { MetadataRoute } from 'next';
+import { readdirSync } from 'fs';
+import { join } from 'path';
 import { getAllCitySlugs } from '@/lib/data/cities';
 import { getAllServiceSlugs } from '@/lib/data/services';
 import { getAllBlogSlugs } from '@/lib/data/blog';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.sosmovingla.net';
+  const pagesDir = join(process.cwd(), 'public/pages');
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -35,12 +38,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Blog posts
-  const blogPages: MetadataRoute.Sitemap = getAllBlogSlugs().map((slug) => ({
+  // Blog posts — объединяем .md (с гейтом draft/publishAt) и HTML-only статьи
+  const mdSlugs = new Set(getAllBlogSlugs());
+  const htmlBlogSlugs = readdirSync(pagesDir)
+    .filter((f) => f.startsWith('blog__') && f.endsWith('.html'))
+    .map((f) => f.replace('blog__', '').replace('.html', ''));
+  const allBlogSlugs = new Set<string>([...mdSlugs, ...htmlBlogSlugs]);
+
+  const blogPages: MetadataRoute.Sitemap = [...allBlogSlugs].map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     changeFrequency: 'weekly',
     priority: 0.6,
   }));
 
-  return [...staticPages, ...cityPages, ...servicePages, ...blogPages];
+  // Career sub-pages (одна страница на каждую вакансию)
+  const careerPages: MetadataRoute.Sitemap = readdirSync(pagesDir)
+    .filter((f) => f.startsWith('careers__') && f.endsWith('.html'))
+    .map((f) => ({
+      url: `${baseUrl}/careers/${f.replace('careers__', '').replace('.html', '')}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }));
+
+  // Category pages (11 категорий блога)
+  const categoryPages: MetadataRoute.Sitemap = [
+    'after-the-move', 'business-relocation', 'general', 'local-moving-tips',
+    'long-distance', 'los-angeles', 'move-sustainably', 'moving-day-preparation',
+    'moving-professionals', 'packing-tips', 'top-places-to-live',
+  ].map((slug) => ({
+    url: `${baseUrl}/category/${slug}`,
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...cityPages, ...servicePages, ...blogPages, ...careerPages, ...categoryPages];
 }

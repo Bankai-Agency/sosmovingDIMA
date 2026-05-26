@@ -5,7 +5,7 @@ metaDescription: "Are you moving in the off-peak season? There are much more ben
 featuredImage: "/images/blog/645ab1d9792287a6295bf3b8_presidio-2107520_1280-1.jpg"
 publishDate: "March 4, 2021"
 lastUpdated: "March 4, 2021"
-category: "tips on moving in the off-peak season"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

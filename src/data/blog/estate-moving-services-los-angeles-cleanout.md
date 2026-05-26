@@ -5,7 +5,7 @@ metaDescription: "Professional estate moving in LA. Sensitive handling of estate
 featuredImage: "/images/blog/691b14c846ca7286a08d7a9a_estate-moving-services-los-angeles-cleanout-img.jpg"
 publishDate: "November 16, 2025"
 lastUpdated: "November 16, 2025"
-category: "estate moving services los angeles: compassionate estate cleanouts and relocations"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

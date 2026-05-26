@@ -5,7 +5,7 @@ metaDescription: "Here is a list of the traits for you to follow when looking fo
 featuredImage: "/images/blog/645ab1d97922877c8d5bf2e0_ludovic-charlet-i3HqNIDArqE-unsplash-e1623839015950.jpg"
 publishDate: "July 3, 2021"
 lastUpdated: "July 3, 2021"
-category: "traits of reliable ca movers"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

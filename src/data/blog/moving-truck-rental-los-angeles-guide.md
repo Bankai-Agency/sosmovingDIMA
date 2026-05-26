@@ -5,7 +5,7 @@ metaDescription: "Complete guide to renting moving trucks in LA. Size calculator
 featuredImage: "/images/blog/6911c658c262a1429552e54e_moving-truck-rental-los-angeles-guide-img.jpg"
 publishDate: "November 9, 2025"
 lastUpdated: "November 9, 2025"
-category: "moving truck rental in los angeles: complete size and cost guide"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

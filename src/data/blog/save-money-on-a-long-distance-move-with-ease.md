@@ -5,7 +5,7 @@ metaDescription: "There are several ways to save money on a long distance move. 
 featuredImage: "/images/blog/645ab1d9792287af0b5bf44c_pexels-alexander-mils-2068975-scaled-e1606434669426.jpg"
 publishDate: "December 1, 2020"
 lastUpdated: "December 1, 2020"
-category: "save money on a long distance move with ease"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

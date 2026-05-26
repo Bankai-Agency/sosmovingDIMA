@@ -5,7 +5,7 @@ metaDescription: "Expert furniture moving in LA. Pianos, antiques, heavy pieces 
 featuredImage: "/images/blog/68ff64daf03ddc4fefd50b17_furniture-movers-los-angeles-img.jpg"
 publishDate: "October 21, 2025"
 lastUpdated: "October 21, 2025"
-category: "professional furniture movers in los angeles: heavy item specialists"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Do you want live in downtown LA? Then, here are all the things
 featuredImage: "/images/blog/645ab1d9792287ded45bf289_olenka-kotyk-9TUkYXQKXec-unsplash-scaled-e1629544721221.jpg"
 publishDate: "August 24, 2021"
 lastUpdated: "August 24, 2021"
-category: "moving from burbank to downtown la – simple guide"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

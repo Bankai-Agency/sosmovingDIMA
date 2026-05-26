@@ -5,7 +5,7 @@ metaDescription: "Moving broker vs carrier: brokers sell your move for $200 prof
 featuredImage: "/images/blog/696e193f886f91ff9ea0fd92_broker-vs-carrier-moving-company-types.png"
 publishDate: "January 31, 2026"
 lastUpdated: "January 31, 2026"
-category: "broker vs carrier - moving company types"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

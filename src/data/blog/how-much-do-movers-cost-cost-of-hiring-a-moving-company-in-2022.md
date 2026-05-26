@@ -5,7 +5,7 @@ metaDescription: "How much do local and long-distance movers cost? What affects 
 featuredImage: "/images/blog/645ab1d9792287467f5bf21b_how-much-do-movers-cost-in-2022.jpg"
 publishDate: "April 18, 2022"
 lastUpdated: "April 18, 2022"
-category: "how much do movers cost? cost of hiring a moving company in 2022"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

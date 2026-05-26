@@ -5,7 +5,7 @@ metaDescription: "LA's best movers 2026: Licensed, insured, $119-250/hour. How t
 featuredImage: "/images/blog/69652bf7ef33d5af0e568342_best-moving-companies-in-los-angeles-rankings-2026.png"
 publishDate: "January 12, 2026"
 lastUpdated: "January 12, 2026"
-category: "best moving companies in los angeles rankings 2026"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

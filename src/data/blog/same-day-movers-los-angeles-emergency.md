@@ -5,7 +5,7 @@ metaDescription: "Need same day movers in LA? Emergency moving services availabl
 featuredImage: "/images/blog/68e6939629152fe6a915434e_same-day-movers-los-angeles-emergency-img.jpg"
 publishDate: "October 7, 2025"
 lastUpdated: "October 7, 2025"
-category: "same day moving in los angeles: when you need to move today"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

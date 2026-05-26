@@ -5,7 +5,7 @@ metaDescription: "SOS Moving and Storage Los Angeles will help you find the best
 featuredImage: "/images/blog/645ab1d979228733b45bf33f_pexels-photo-7464707-e1620202077712-1.jpeg"
 publishDate: "May 11, 2021"
 lastUpdated: "May 11, 2021"
-category: "when is the best time to move from california to colorado?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

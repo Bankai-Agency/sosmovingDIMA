@@ -5,7 +5,7 @@ metaDescription: "Moving to Agoura Hills? Discover top schools, nature access, a
 featuredImage: "/images/blog/68dabc544f19daf69e4fc882_agoura-hills-movers-guide-img.jpg"
 publishDate: "September 29, 2025"
 lastUpdated: "September 29, 2025"
-category: "moving to agoura hills: where city meets nature"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Table of Contents Get an Early Start Inform Your Stakeholders 
 featuredImage: "/images/blog/645ab1d97922872db75bf208_tips-you-need-to-keep-in-mind-when-planning-a-commercial-move.jpg"
 publishDate: "June 6, 2022"
 lastUpdated: "June 6, 2022"
-category: "7 tips you need to keep in mind when planning a commercial move"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving to Marina del Rey? Waterfront logistics, parking rules,
 featuredImage: "/images/blog/699c97afc0c49092d0f18fd0_marina-del-rey-moving-waterfront-living.png"
 publishDate: "February 23, 2026"
 lastUpdated: "February 23, 2026"
-category: "marina del rey moving - waterfront living"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

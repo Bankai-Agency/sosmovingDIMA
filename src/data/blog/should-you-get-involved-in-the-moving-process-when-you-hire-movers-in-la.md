@@ -5,7 +5,7 @@ metaDescription: "Should you get involved in the moving process when you hire mo
 featuredImage: "/images/blog/645ab1d9792287ca7d5bf384_erda-estremera-sxNt9g77PE0-unsplash-scaled-e1616903433103-1.jpg"
 publishDate: "March 30, 2021"
 lastUpdated: "March 30, 2021"
-category: "should you get involved in the moving process when you hire movers in la?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

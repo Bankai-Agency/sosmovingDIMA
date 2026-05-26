@@ -5,7 +5,7 @@ metaDescription: "Does helping kids settle into a new home seem complicated? SOS
 featuredImage: "/images/blog/645ab1d97922876c315bf446_pexels-ketut-subiyanto-4473797-1.jpg"
 publishDate: "December 10, 2020"
 lastUpdated: "December 10, 2020"
-category: "tips for helping kids settle into a new home in west la"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Small storage unit or consolidation service for your move? Com
 featuredImage: "/images/blog/69c6542486c4ea722dc4fdd9_small-storage-units-near-me-vs-consolidation-services.jpg"
 publishDate: "March 11, 2026"
 lastUpdated: "March 11, 2026"
-category: "small storage units near me vs consolidation services"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Moving from Los Angeles to Santa Clarita to retire might be a 
 featuredImage: "/images/blog/645ab1d979228701025bf246_christian-bowen-Cc10IJDoj78-unsplash-scaled-e1633178725528.jpg"
 publishDate: "October 5, 2021"
 lastUpdated: "October 5, 2021"
-category: "moving from los angeles to santa clarita to retire"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Get accurate moving estimates in LA. Compare quote types, avoi
 featuredImage: "/images/blog/690c924f374a8caa568269ee_moving-estimates-los-angeles-accurate-quotes-img.jpg"
 publishDate: "November 6, 2025"
 lastUpdated: "November 6, 2025"
-category: "moving estimates in los angeles: how to get accurate quotes"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

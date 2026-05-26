@@ -5,7 +5,7 @@ metaDescription: "You need to meet new people after relocation. For this reason,
 featuredImage: "/images/blog/645ab1d9792287d3795bf31a_jon-tyson-0rd-uBuds-g-unsplash-scaled-e1622297817948.jpg"
 publishDate: "June 2, 2021"
 lastUpdated: "June 2, 2021"
-category: "how to meet your neighbors after moving to nyc from ca?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

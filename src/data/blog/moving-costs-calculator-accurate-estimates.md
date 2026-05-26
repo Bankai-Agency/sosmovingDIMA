@@ -5,7 +5,7 @@ metaDescription: "Calculate exact LA moving costs: $357-1,400 average. Factor cr
 featuredImage: "/images/blog/692d69f53dc9101e1605d380_how-much-do-movers-cost-los-angeles-2025-img.jpg"
 publishDate: "December 6, 2025"
 lastUpdated: "December 6, 2025"
-category: "moving costs calculator - accurate estimates"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

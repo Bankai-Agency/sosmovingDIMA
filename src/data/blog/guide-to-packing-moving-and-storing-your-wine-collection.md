@@ -5,7 +5,7 @@ metaDescription: "Check out the simple steps to minimize the risk of damage when
 featuredImage: "/images/blog/645ab1d9792287082a5bef9c_blog-post-3.jpg"
 publishDate: "January 26, 2023"
 lastUpdated: "January 26, 2023"
-category: "guide to packing, moving and storing your wine collection"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

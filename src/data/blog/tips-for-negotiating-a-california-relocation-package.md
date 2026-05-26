@@ -5,7 +5,7 @@ metaDescription: "Do you want to start negotiating a California relocation packa
 featuredImage: "/images/blog/645ab1d9792287c9255bf32b_pexels-photo-5668842-e1622209383111-1.jpeg"
 publishDate: "May 29, 2021"
 lastUpdated: "May 29, 2021"
-category: "tips for negotiating a california relocation package"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

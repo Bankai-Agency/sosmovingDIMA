@@ -5,7 +5,7 @@ metaDescription: "Moving to Playa Vista? Discover Silicon Beach's tech scene, lu
 featuredImage: "/images/blog/68dab60ed34fcbed366fcade_playa-vista-movers-silicon-beach-guide-img.jpg"
 publishDate: "September 26, 2025"
 lastUpdated: "September 26, 2025"
-category: "moving to playa vista: your guide to la's silicon beach"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

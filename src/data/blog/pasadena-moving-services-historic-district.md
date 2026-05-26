@@ -5,7 +5,7 @@ metaDescription: "Pasadena moving: Historic homes, narrow driveways, preservatio
 featuredImage: "/images/blog/6968ceace0128ad53c8eb81d_pasadena-moving-services-historic-district.png"
 publishDate: "January 17, 2026"
 lastUpdated: "January 17, 2026"
-category: "pasadena moving services - historic district"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

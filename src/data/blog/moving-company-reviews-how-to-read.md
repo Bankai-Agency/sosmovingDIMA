@@ -5,7 +5,7 @@ metaDescription: "Learn to spot fake moving reviews vs real ones. Red flags, rev
 featuredImage: "/images/blog/692d706259fb682ff61745a2_moving-company-reviews-how-to-read-img.jpg"
 publishDate: "December 1, 2025"
 lastUpdated: "December 1, 2025"
-category: "moving company reviews - how to read"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

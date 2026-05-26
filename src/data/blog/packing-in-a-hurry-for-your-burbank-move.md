@@ -5,7 +5,7 @@ metaDescription: "Do you have to move to Burbank and you do not have much time? 
 featuredImage: "/images/blog/645ab1d9792287dca55bf343_malvestida-magazine-FfbVFLAVscw-unsplash-scaled-e1620214408224-1.jpg"
 publishDate: "May 13, 2021"
 lastUpdated: "May 13, 2021"
-category: "packing in a hurry for your burbank move"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Do you want to move your garden as well with your house? Then,
 featuredImage: "/images/blog/645ab1d979228741f85bf34e_mio-ito-DaGIjXNl5oA-unsplash-scaled-e1619859006700-1.jpg"
 publishDate: "May 4, 2021"
 lastUpdated: "May 4, 2021"
-category: "how to pack your home garden?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

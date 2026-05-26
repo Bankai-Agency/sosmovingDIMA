@@ -5,7 +5,7 @@ metaDescription: "LA fall moving chaos: August apartment rush, September family 
 featuredImage: "/images/blog/6969f0668066966853fcef60_fall-moving-back-to-school-rush.png"
 publishDate: "January 20, 2026"
 lastUpdated: "January 20, 2026"
-category: "fall moving - back to school rush"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

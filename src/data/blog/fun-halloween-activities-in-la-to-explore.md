@@ -5,7 +5,7 @@ metaDescription: "Are you looking for ideas on how to spend Halloween in LA? Her
 featuredImage: "/images/blog/645ab1d97922870d645bf465_pexels-karolina-grabowska-5422739-1.jpg"
 publishDate: "October 27, 2020"
 lastUpdated: "October 27, 2020"
-category: "fun halloween activities in la to explore"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

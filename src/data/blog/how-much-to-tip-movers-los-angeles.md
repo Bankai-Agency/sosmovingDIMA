@@ -5,7 +5,7 @@ metaDescription: "Complete guide to tipping movers in Los Angeles. Standard rate
 featuredImage: "/images/blog/690c9022a2c4eaefc8b552ab_how-much-to-tip-movers-los-angele-img.jpg"
 publishDate: "November 4, 2025"
 lastUpdated: "November 4, 2025"
-category: "how much to tip movers in los angeles: complete guide to moving gratuity"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

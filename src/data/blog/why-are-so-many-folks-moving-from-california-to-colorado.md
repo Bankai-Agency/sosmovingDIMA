@@ -5,7 +5,7 @@ metaDescription: "Why are so many folks moving from California to Colorado? Is t
 featuredImage: "/images/blog/645ab1d979228762985bf35c_kait-herzog-6vWD_xnzPuU-unsplash-scaled-e1619243315680-1.jpg"
 publishDate: "April 27, 2021"
 lastUpdated: "April 27, 2021"
-category: "why are so many folks moving from california to colorado?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

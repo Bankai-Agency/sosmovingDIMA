@@ -5,7 +5,7 @@ metaDescription: "Do not know where to buy packing supplies for your relocation?
 featuredImage: "/images/blog/645ab1d979228776f65bf407_picspree-714520-scaled-1-2048x1402.jpg"
 publishDate: "January 8, 2021"
 lastUpdated: "January 8, 2021"
-category: "best places to find packing supplies"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

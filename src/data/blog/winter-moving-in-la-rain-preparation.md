@@ -5,7 +5,7 @@ metaDescription: "LA winter moving means rain prep: plastic wrap everything, tar
 featuredImage: "/images/blog/6952892fdfe460db808e8044_winter-moving-in-la-rain-preparation.png"
 publishDate: "December 25, 2025"
 lastUpdated: "December 25, 2025"
-category: "winter moving in la - rain preparation"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

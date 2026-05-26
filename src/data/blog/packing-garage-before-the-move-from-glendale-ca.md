@@ -5,7 +5,7 @@ metaDescription: "In case you are packing garage before the move from Glendale C
 featuredImage: "/images/blog/645ab1d97922870b8d5bf303_P1-2-1.jpg"
 publishDate: "June 16, 2021"
 lastUpdated: "June 16, 2021"
-category: "packing garage before the move from glendale ca"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

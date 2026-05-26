@@ -5,7 +5,7 @@ metaDescription: "Moving to La Cañada Flintridge? Discover California's top-rat
 featuredImage: "/images/blog/68dbe6c27c608d144335c31b_la-canada-flintridge-movers-guide-img.jpg"
 publishDate: "September 30, 2025"
 lastUpdated: "September 30, 2025"
-category: "moving to la cañada flintridge: excellence in the foothills"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

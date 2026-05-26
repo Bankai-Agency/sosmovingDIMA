@@ -5,7 +5,7 @@ metaDescription: "Pack like pros: room-by-room system, color coding, weight dist
 featuredImage: "/images/blog/69652b441c00418e9ea8f4c3_packing-boxes-strategy-for-efficient-moving.png"
 publishDate: "January 11, 2026"
 lastUpdated: "January 11, 2026"
-category: "packing boxes strategy for efficient moving"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

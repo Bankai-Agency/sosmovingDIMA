@@ -5,7 +5,7 @@ metaDescription: "Complete guide to moving insurance in LA. Basic vs full covera
 featuredImage: "/images/blog/690c90929456018387b0ae21_moving-insurance-los-angeles-coverage-guide-img.jpg"
 publishDate: "November 5, 2025"
 lastUpdated: "November 5, 2025"
-category: "moving insurance in los angeles: complete coverage guide for your move"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

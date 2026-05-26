@@ -5,7 +5,7 @@ metaDescription: "Need to get rid of a couch before moving in LA? Free pickup, d
 featuredImage: "/images/blog/694533bef3f6ab98ec1265a6_how-to-get-rid-of-a-couch-before-moving-img.jpg"
 publishDate: "December 8, 2025"
 lastUpdated: "December 8, 2025"
-category: "how to get rid of a couch before moving"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

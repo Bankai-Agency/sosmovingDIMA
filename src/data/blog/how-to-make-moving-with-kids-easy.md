@@ -5,7 +5,7 @@ metaDescription: "There are numerous ways to make moving with kids easy. In this
 featuredImage: "/images/blog/645ab1d97922871d545bf421_pexels-daria-shevtsova-1257105-scaled-e1609218649806.jpg"
 publishDate: "January 2, 2021"
 lastUpdated: "January 2, 2021"
-category: "how to make moving with kids easy?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

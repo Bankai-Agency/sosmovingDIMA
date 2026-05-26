@@ -5,7 +5,7 @@ metaDescription: "Learn the strategic way to unpack after moving! Our room-by-ro
 featuredImage: "/images/blog/68d2d8222d692dfef9ecc0ed_how-to-unpack-after-moving-img.jpg"
 publishDate: "September 24, 2025"
 lastUpdated: "September 24, 2025"
-category: "how to unpack after moving: the strategic room-by-room system"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

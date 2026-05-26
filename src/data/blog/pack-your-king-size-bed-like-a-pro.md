@@ -5,7 +5,7 @@ metaDescription: "Do you want to move your bed as well? Then, here is how you sh
 featuredImage: "/images/blog/645ab1d9792287a3485bf2bf_chuttersnap-JUO3MGEHTrQ-unsplash-scaled-e1626401236504.jpg"
 publishDate: "July 20, 2021"
 lastUpdated: "July 20, 2021"
-category: "pack your king size bed like a pro"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

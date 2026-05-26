@@ -5,7 +5,7 @@ metaDescription: "Making the jump from apartment to house in Los Angeles? Space 
 featuredImage: "/images/blog/68ff605d2c4ec2cb939e5ad6_moving-from-apartment-to-house-los-angeles-img.jpg"
 publishDate: "October 16, 2025"
 lastUpdated: "October 16, 2025"
-category: "moving from apartment to house: your la upgrade guide"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

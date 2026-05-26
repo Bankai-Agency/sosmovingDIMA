@@ -5,7 +5,7 @@ metaDescription: "Moving to Hermosa Beach? Narrow streets, beach traffic, parkin
 featuredImage: "/images/blog/69cd45e34c235ceafeeac9e4_hermosa-beach-movers-beach-town-vibes.jpg"
 publishDate: "April 1, 2026"
 lastUpdated: "April 1, 2026"
-category: "hermosa beach movers - beach town vibes"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

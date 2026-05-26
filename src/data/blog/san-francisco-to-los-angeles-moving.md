@@ -5,7 +5,7 @@ metaDescription: "Moving SF to LA? 6-hour drive, $2,500-5,000 cost, tech to ente
 featuredImage: "/images/blog/69525763486e9092fc6c0d44_san-francisco-to-los-angeles-moving.png"
 publishDate: "December 11, 2025"
 lastUpdated: "December 11, 2025"
-category: "san francisco to los angeles moving"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Hoarding cleanup before a move in LA? How professional movers 
 featuredImage: "/images/blog/69cd2a4858c8ae6781db3a3d_hoarding-cleanup-and-moving-services.jpg"
 publishDate: "March 30, 2026"
 lastUpdated: "March 30, 2026"
-category: "hoarding cleanup and moving services"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

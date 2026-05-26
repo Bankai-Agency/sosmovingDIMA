@@ -5,7 +5,7 @@ metaDescription: "Our guide shows you how to Pack Your Plants for a Long-Distanc
 featuredImage: "/images/blog/645ab1d9792287be305bf48d_pexels-cottonbro-4503261.jpg"
 publishDate: "October 2, 2020"
 lastUpdated: "October 2, 2020"
-category: "pack your plants for a long-distance move"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "LA moving costs 2025: $119-225/hour for 2-4 movers. See real p
 featuredImage: "/images/blog/692d69f53dc9101e1605d380_how-much-do-movers-cost-los-angeles-2025-img.jpg"
 publishDate: "November 23, 2025"
 lastUpdated: "November 23, 2025"
-category: "how much do movers cost in los angeles 2025"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

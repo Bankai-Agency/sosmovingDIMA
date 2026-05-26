@@ -5,7 +5,7 @@ metaDescription: "Beyond moving quotes: parking tickets $73-300, building fees $
 featuredImage: "/images/blog/69527d9b1fec64274b6a6759_hidden-moving-costs-nobody-tells-you-about.jpg"
 publishDate: "December 19, 2025"
 lastUpdated: "December 19, 2025"
-category: "hidden moving costs nobody tells you about"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

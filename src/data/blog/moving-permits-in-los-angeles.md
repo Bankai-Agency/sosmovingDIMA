@@ -5,7 +5,7 @@ metaDescription: "LA moving permits: No-parking signs $40 each, 72-hour posting 
 featuredImage: "/images/blog/69528de9a163290e59ac9296_moving-permits-in-los-angeles.png"
 publishDate: "December 27, 2025"
 lastUpdated: "December 27, 2025"
-category: "moving permits in los angeles"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

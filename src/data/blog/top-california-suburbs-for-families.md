@@ -5,7 +5,7 @@ metaDescription: "Do you want to live in California with your family? Then, you 
 featuredImage: "/images/blog/645ab1d9792287c58d5bf323_elijah-ekdahl-Aop1VRaCWzg-unsplash-1-1-1.jpg"
 publishDate: "May 25, 2021"
 lastUpdated: "May 25, 2021"
-category: "top california suburbs for families"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

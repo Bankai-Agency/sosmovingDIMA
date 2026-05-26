@@ -5,7 +5,7 @@ metaDescription: "Cheap movers quoting $50/hour in LA? Red flags: no insurance, 
 featuredImage: "/images/blog/695d16657a8775b791247343_cheap-movers-when-low-price-means-high-risk.png"
 publishDate: "January 1, 2026"
 lastUpdated: "January 1, 2026"
-category: "cheap movers - when low price means high risk"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

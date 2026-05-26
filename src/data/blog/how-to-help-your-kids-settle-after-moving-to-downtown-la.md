@@ -5,7 +5,7 @@ metaDescription: "This guide will give you a few ideas on how to help your kids 
 featuredImage: "/images/blog/645ab1d97922872e835bf31d_pexels-roberto-nickson-2525903.jpg"
 publishDate: "August 31, 2021"
 lastUpdated: "August 31, 2021"
-category: "how to help your kids settle after moving to downtown la?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

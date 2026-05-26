@@ -5,7 +5,7 @@ metaDescription: "When relocating, you should remember to get all of your docume
 featuredImage: "/images/blog/645ab1d9792287cf3f5bf47c_pexels-roman-koval-3059855-1.jpg"
 publishDate: "October 12, 2020"
 lastUpdated: "October 12, 2020"
-category: "post-move paperwork you need to handle"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

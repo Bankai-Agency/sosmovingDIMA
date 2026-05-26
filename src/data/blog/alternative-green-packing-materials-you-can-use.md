@@ -5,7 +5,7 @@ metaDescription: "If you are environmentally-concious, you might want to conside
 featuredImage: "/images/blog/645ab1d9792287b9715bf396_pexels-brotin-biswas-518543-scaled-e1615363115666-1.jpg"
 publishDate: "March 20, 2021"
 lastUpdated: "March 20, 2021"
-category: "alternative green packing materials you can use"
+category: "move-sustainably"
 readTime: ""
 author:
   name: "SOS Moving"

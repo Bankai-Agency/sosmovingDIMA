@@ -5,7 +5,7 @@ metaDescription: "Staying in touch after a long distance move to NYC from CA can
 featuredImage: "/images/blog/645ab1d9792287f0145bf32f_dollar-gill-TWXkrawQ3zc-unsplash-scaled-e1621070208906-1.jpg"
 publishDate: "May 19, 2021"
 lastUpdated: "May 19, 2021"
-category: "the secret to staying in touch after a long distance move to nyc from ca"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

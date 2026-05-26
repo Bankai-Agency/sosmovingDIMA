@@ -5,7 +5,7 @@ metaDescription: "Make moving with kids stress-free! Age-specific tips, activiti
 featuredImage: "/images/blog/68c8166165eb10a405e7dcfb_moving-with-kids-tips-guide-img.jpg"
 publishDate: "September 17, 2025"
 lastUpdated: "September 17, 2025"
-category: "moving with kids: the complete age-by-age survival guide"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

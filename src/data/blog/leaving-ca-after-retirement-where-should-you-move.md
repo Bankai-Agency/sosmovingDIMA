@@ -5,7 +5,7 @@ metaDescription: "Where should you move upon leaving CA after retirement? We've 
 featuredImage: ""
 publishDate: "July 4, 2021"
 lastUpdated: "July 4, 2021"
-category: "leaving ca after retirement: where should you move?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

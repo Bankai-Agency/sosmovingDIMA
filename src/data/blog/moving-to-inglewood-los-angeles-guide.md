@@ -5,7 +5,7 @@ metaDescription: "Moving to Inglewood? Discover the changing face of LA's next h
 featuredImage: "/images/blog/68ecfeb7d1044c30b2622558_moving-to-inglewood-los-angeles-guide-img.jpg"
 publishDate: "October 12, 2025"
 lastUpdated: "October 12, 2025"
-category: "moving to inglewood: la's most rapidly changing neighborhood"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

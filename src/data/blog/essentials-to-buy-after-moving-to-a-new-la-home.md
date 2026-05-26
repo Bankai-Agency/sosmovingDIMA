@@ -5,7 +5,7 @@ metaDescription: "Are you planning on relocating to Los Angeles soon? Take a loo
 featuredImage: "/images/blog/645ab1d97922872ebe5bf3be_minh-pham-OtXADkUh3-I-unsplash-scaled-e1614339919488.jpg"
 publishDate: "March 1, 2021"
 lastUpdated: "March 1, 2021"
-category: "essentials to buy after moving to a new la home"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

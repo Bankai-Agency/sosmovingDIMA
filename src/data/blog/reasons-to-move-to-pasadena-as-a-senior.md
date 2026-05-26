@@ -5,7 +5,7 @@ metaDescription: "Do you want to move to Pasadena but you are not sure? Then, he
 featuredImage: "/images/blog/645ab1d979228702425bf39f_bennett-tobias-9oSKLeR9EQo-unsplash-scaled-e1615691307971-1.jpg"
 publishDate: "March 19, 2021"
 lastUpdated: "March 19, 2021"
-category: "reasons to move to pasadena as a senior"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

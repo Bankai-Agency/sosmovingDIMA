@@ -5,7 +5,7 @@ metaDescription: "Moving from Palmdale to Westwood alone is not going to be an e
 featuredImage: "/images/blog/645ab1d979228770205bf255_pexels-elina-sazonova-2705755.jpg"
 publishDate: "August 21, 2021"
 lastUpdated: "August 21, 2021"
-category: "moving from palmdale to westwood alone – simple guide"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

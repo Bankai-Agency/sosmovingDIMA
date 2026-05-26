@@ -5,7 +5,7 @@ metaDescription: "If you wish to organize a sustainable local move in LA you wil
 featuredImage: "/images/blog/645ab1d979228771bf5bf263_pexels-pixabay-237325-1.jpg"
 publishDate: "September 21, 2021"
 lastUpdated: "September 21, 2021"
-category: "how to organize a sustainable local move in la?"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

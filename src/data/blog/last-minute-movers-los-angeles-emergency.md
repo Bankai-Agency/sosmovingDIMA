@@ -5,7 +5,7 @@ metaDescription: "Emergency moving in LA today! Last-minute movers available for
 featuredImage: "/images/blog/691b11e252125c36245616aa_last-minute-movers-los-angeles-emergency-img.jpg"
 publishDate: "November 12, 2025"
 lastUpdated: "November 12, 2025"
-category: "last minute movers los angeles: emergency same-day moving services"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

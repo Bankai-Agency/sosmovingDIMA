@@ -5,7 +5,7 @@ metaDescription: "Have you been wondering how you should unpack after relocation
 featuredImage: "/images/blog/645ab1d97922871e465bf42a_jens-kreuter-ngMtsE5r9eI-unsplash-e1608581265433-1.jpg"
 publishDate: "December 30, 2020"
 lastUpdated: "December 30, 2020"
-category: "what to unpack first after your move in beverly hills?"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

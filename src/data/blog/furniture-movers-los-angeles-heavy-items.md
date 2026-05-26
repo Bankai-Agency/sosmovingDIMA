@@ -5,7 +5,7 @@ metaDescription: "Professional furniture moving in LA. Single pieces or full hom
 featuredImage: "/images/blog/691b115ac64707dd24435307_furniture-movers-los-angeles-heavy-items-img.jpg"
 publishDate: "November 11, 2025"
 lastUpdated: "November 11, 2025"
-category: "furniture movers los angeles: professional heavy furniture moving services"
+category: "moving-professionals"
 readTime: ""
 author:
   name: "SOS Moving"

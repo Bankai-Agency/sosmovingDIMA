@@ -5,7 +5,7 @@ metaDescription: "Professional apartment moving in LA. Elevator scheduling, stai
 featuredImage: "/images/blog/68ff676bda1e6698d4d1b77c_apartment-movers-los-angeles-img.jpg"
 publishDate: "October 24, 2025"
 lastUpdated: "October 24, 2025"
-category: "apartment movers los angeles: specialists in multi-unit buildings"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Interstate moving requires USDOT license, federal regulations,
 featuredImage: "/images/blog/69660f0717f354bdd5d708a3_interstate-movers-state-to-state-legal-requirements.png"
 publishDate: "January 13, 2026"
 lastUpdated: "January 13, 2026"
-category: "interstate movers - state to state legal requirements"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

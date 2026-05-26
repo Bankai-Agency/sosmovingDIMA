@@ -5,7 +5,7 @@ metaDescription: "Downsizing for retirement in LA? How to sort 30 years of belon
 featuredImage: "/images/blog/69cf934979bcb45e2eab02f7_retirement-moving-to-smaller-home.jpg"
 publishDate: "April 4, 2026"
 lastUpdated: "April 4, 2026"
-category: "retirement moving to smaller home"
+category: "local-moving-tips"
 readTime: ""
 author:
   name: "SOS Moving"

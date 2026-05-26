@@ -5,7 +5,7 @@ metaDescription: "Released & full value protection. What's not included in cover
 featuredImage: "/images/blog/645ab1d979228749fc5bf242_what-to-know-about-moving-insurance-coverage.jpg"
 publishDate: "April 11, 2022"
 lastUpdated: "April 11, 2022"
-category: "what to know about moving company insurance and coverage?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Things you should know before moving to LA. Your neighborhood 
 featuredImage: "/images/blog/645ab1d9792287c1825bf205_what-to-know-before-moving-to-los-angeles.jpg"
 publishDate: "October 3, 2022"
 lastUpdated: "October 3, 2022"
-category: "what to know before moving to los angeles?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

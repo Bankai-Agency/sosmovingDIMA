@@ -5,7 +5,7 @@ metaDescription: "Read the tips and follow the steps to prepare yourself to prop
 featuredImage: "/images/blog/645ab1d9792287f0265bf130_how-to-move-out-of-your-parents-house.jpg"
 publishDate: "December 19, 2022"
 lastUpdated: "December 19, 2022"
-category: "how to move out of your parents’ house?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

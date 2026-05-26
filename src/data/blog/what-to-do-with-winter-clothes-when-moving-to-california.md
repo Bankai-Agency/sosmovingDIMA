@@ -5,7 +5,7 @@ metaDescription: "Here are some tips for you on what to do with winter clothes w
 featuredImage: "/images/blog/645ab1d979228775355bf368_pexels-alexander-kovalev-1701164-1.jpg"
 publishDate: "April 17, 2021"
 lastUpdated: "April 17, 2021"
-category: "what to do with winter clothes when moving to california?"
+category: "long-distance"
 readTime: ""
 author:
   name: "SOS Moving"

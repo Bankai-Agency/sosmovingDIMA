@@ -5,7 +5,7 @@ metaDescription: "The idea of decluttering your home is to get rid of not essent
 featuredImage: "/images/blog/645ab1d979228743df5bf113_how-to-declutter.jpg"
 publishDate: "January 6, 2023"
 lastUpdated: "January 6, 2023"
-category: "how to get rid of items you actually don't need?"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

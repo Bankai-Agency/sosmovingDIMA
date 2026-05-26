@@ -5,7 +5,7 @@ metaDescription: "Are you planning on moving your art collection? If you do, tak
 featuredImage: "/images/blog/645ab1d979228706055bf380_dan-burton-k8Y_BqUjzxQ-unsplash-1.jpg"
 publishDate: "April 9, 2021"
 lastUpdated: "April 9, 2021"
-category: "reasons to hire professionals for moving your art collection from la"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

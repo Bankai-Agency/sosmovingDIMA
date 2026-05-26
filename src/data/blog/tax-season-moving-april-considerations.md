@@ -5,7 +5,7 @@ metaDescription: "Moving during tax season? How April timing affects deductions,
 featuredImage: "/images/blog/69b934636ab0688c695a6ec7_tax-season-moving-april-considerations.jpg"
 publishDate: "March 19, 2026"
 lastUpdated: "March 19, 2026"
-category: "tax season moving - april considerations"
+category: "moving-day-preparation"
 readTime: ""
 author:
   name: "SOS Moving"

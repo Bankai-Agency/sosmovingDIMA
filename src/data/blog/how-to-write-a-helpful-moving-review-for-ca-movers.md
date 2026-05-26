@@ -5,7 +5,7 @@ metaDescription: "Do you need help with writing moving reviews? SOS Moving and S
 featuredImage: "/images/blog/645ab1d9792287343d5bf320_pexels-photo-4050315-e1621958580318.jpeg"
 publishDate: "June 6, 2021"
 lastUpdated: "June 6, 2021"
-category: "how to write a helpful moving review for ca movers?"
+category: "los-angeles"
 readTime: ""
 author:
   name: "SOS Moving"

@@ -5,7 +5,7 @@ metaDescription: "Do you need to move with your large family? In order to stay w
 featuredImage: "/images/blog/645ab1d97922876cb15bf2de_tyler-nix-V3dHmb1MOXM-unsplash-scaled-e1625371927788.jpg"
 publishDate: "July 6, 2021"
 lastUpdated: "July 6, 2021"
-category: "big family relocation checklist"
+category: "general"
 readTime: ""
 author:
   name: "SOS Moving"

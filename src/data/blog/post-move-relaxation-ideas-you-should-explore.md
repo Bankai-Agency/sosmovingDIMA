@@ -5,7 +5,7 @@ metaDescription: "Going through a relocation can be fatiguing. You may want to i
 featuredImage: "/images/blog/645ab1d9792287a5335bf3e5_pexels-ketut-subiyanto-4245992-scaled-e1611714547636.jpg"
 publishDate: "February 2, 2021"
 lastUpdated: "February 2, 2021"
-category: "post-move relaxation ideas you should explore"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

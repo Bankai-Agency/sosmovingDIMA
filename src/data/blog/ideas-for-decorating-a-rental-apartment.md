@@ -5,7 +5,7 @@ metaDescription: "If you want to know some interesting ideas for decorating a re
 featuredImage: "/images/blog/645ab1d979228797f15bf428_basket-1846135_1280.jpg"
 publishDate: "January 3, 2021"
 lastUpdated: "January 3, 2021"
-category: "ideas for decorating a rental apartment"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"

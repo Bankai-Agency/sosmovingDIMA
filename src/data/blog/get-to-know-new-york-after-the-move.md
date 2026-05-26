@@ -5,7 +5,7 @@ metaDescription: "Do you want to move to New York City? Then, get to know New Yo
 featuredImage: "/images/blog/645ab1d979228730b35bf2fe_emily-xie-GFeWwTSY2_g-unsplash-scaled-e1624085361831-1.jpg"
 publishDate: "June 23, 2021"
 lastUpdated: "June 23, 2021"
-category: "get to know new york after the move"
+category: "after-the-move"
 readTime: ""
 author:
   name: "SOS Moving"
