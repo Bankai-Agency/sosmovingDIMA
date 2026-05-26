@@ -104,6 +104,13 @@ function extractBodyContent(html) {
   $('script').remove();
   $('noscript').remove();
 
+  // КРИТИЧНО: убрать дублирующиеся navbar и footer — они приходят
+  // глобально из src/app/(webflow)/layout.tsx. Без strip'а будет
+  // 2 navbar и 2 footer на странице.
+  $('footer').remove();
+  $('.navbar.w-nav').remove();
+  $('body > .navbar').remove();
+
   let content = '';
   $('body > *').each((_i, el) => {
     const tag = $(el).prop('tagName');
